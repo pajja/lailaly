@@ -1,15 +1,13 @@
 ul {
   list-style: none;
-  margin-left: -30px;
+  margin-left: -15px;
 }
 
 .home {
-  font-size: 2em;
+  font-size: 27px;
   font-weight: bold;
   text-decoration: none;
   color: black;
-  margin-top: 0.67em;
-  margin-bottom: 0.67em;
   margin-left: 0;
   margin-right: 0;
   font-family: 'Times New Roman', Times, serif;
@@ -32,3 +30,8 @@ ul {
 .page:hover {
   color: red;
 }
+
+.nav-bar{
+  margin-top: 8px;
+}
+

@@ -1,7 +1,21 @@
-.background:hover {
-  opacity: 0.8;
+.col-background-home {
+  position: relative; /* This makes sure that absolute positioning is relative to this container */
+  height: 100vh; /* Adjust based on your desired height, or remove if the height is controlled elsewhere */
 }
 
+.background-image-home {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* This centers the image */
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  width: auto; /* Adjust width as needed */
+  height: auto; /* Adjust height as needed */
+  max-width: 100%; /* Ensure it doesn't overflow its container */
+  max-height: 100%; /* Adjust based on your needs */
+}
 
-
-
+.background-image-home.visible {
+  opacity: 1;
+}

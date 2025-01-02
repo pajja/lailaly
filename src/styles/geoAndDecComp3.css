@@ -1,0 +1,35 @@
+.scroll-content-geo-dec-3 {
+  display: flex;
+  flex-direction: row;
+  gap: 150px;
+  overflow-x: scroll;
+  overflow-y: hidden; /* Prevents vertical overflow */
+  height: 100vh; /* Adjust to fit your viewport as needed */
+  scrollbar-width: none; 
+}
+
+.scroll-content-geo-dec-3::-webkit-scrollbar {
+  display: none;
+}
+
+.image-container-geoDecComp3 {
+  flex: 0 0 auto; /* Ensures each image container does not shrink */
+  padding-left: 180px;
+  padding-right: 180px;
+}
+
+.text-container-geoDecComp3 {
+  flex: 0 0 auto;
+  max-width: 800px; /* Prevents text from overflowing past the viewport width */
+  overflow: hidden; /* Ensures text stays within the horizontal bounds */
+  padding: 35px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.image-description-more {
+  text-align: center;
+  color: #ACACAC;
+  font-size: 14px;
+  margin-top: -13px;  
+}

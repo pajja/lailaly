@@ -1,0 +1,26 @@
+.text-container-deriveComp2 {
+  flex: 0 0 auto;
+  max-width: 750px; /* Prevents text from overflowing past the viewport width */
+  overflow: hidden; /* Ensures text stays within the horizontal bounds */
+  padding: 35px;
+  margin-right: 100px;
+  margin-left: 5px;
+}
+
+.image-container-deriveComp2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the image and description */
+  flex: 0 0 auto; /* Prevents images from shrinking */
+  margin-right: 40px;
+  height: auto;
+  width: 750px;
+  padding-top: 80px;
+}
+
+.image-deriveComp1 {
+  flex: 0 0 auto; /* Ensures each image container does not shrink */
+  padding-right: 80px;
+  padding-left: 50px;
+  padding-top: 10px;
+}

@@ -1,0 +1,25 @@
+.image-deriveComp3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the image and description */
+  flex: 0 0 auto; /* Prevents images from shrinking */
+  padding-left: 50px;
+  padding-right: 80px;
+}
+
+.gap-derive3 {
+  gap: 130px;
+}
+
+.gap-derive4 {
+  gap: 30px;
+}
+
+.image-deriveComp4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the image and description */
+  flex: 0 0 auto; /* Prevents images from shrinking */
+  padding-left: 160px;
+  padding-right: 180px;
+}

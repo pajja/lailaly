@@ -1,0 +1,34 @@
+.image-deriveComp5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the image and description */
+  flex: 0 0 auto; /* Prevents images from shrinking */
+  padding-left: 70px;
+  padding-right: 20px;
+}
+
+.text-container-deriveComp6 {
+  flex: 0 0 auto;
+  max-width: 650px; /* Prevents text from overflowing past the viewport width */
+  overflow: hidden; /* Ensures text stays within the horizontal bounds */
+  padding: 35px;
+  margin-right: 100px;
+  margin-left: 50px;
+}
+
+.image-deriveComp6{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  padding-bottom: 60px;
+  padding-right: 95px;
+}
+
+.image-deriveComp6 img {
+  width: 700px; /* Adjust this width as needed */
+  height: auto; /* Maintains aspect ratio */
+}
+
+

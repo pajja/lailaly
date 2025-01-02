@@ -1,0 +1,33 @@
+.container {
+  position: relative;
+  height: 98vh;
+  overflow: hidden; /* Hides the default scrollbar */
+}
+
+/* Image container to ensure images are side by side */
+.image-container-assemblagesComp2 {
+  display: flex;
+  flex-direction: row; /* Ensures images are in a row */
+  gap: 0px; /* Adds space between images */
+  flex-wrap: nowrap; /* Prevents wrapping */
+}
+
+.image-assemblagesComp2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the image and description */
+  flex: 0 0 auto; /* Prevents images from shrinking */
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.image-assemblagesComp2 img {
+  width: auto; /* Adjust this width as needed */
+  height: auto; /* Maintains aspect ratio */
+}
+
+.image-description {
+  margin-top: 10px; /* Adds space between the image and description */
+  text-align: center; /* Centers the text */
+  color: #d2d2d2;
+}

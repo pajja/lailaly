@@ -1,0 +1,35 @@
+.container {
+  position: relative;
+  height: 98vh;
+  overflow: hidden; /* Hides the default scrollbar */
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Image container to ensure images are side by side */
+.image-container-geoAndDecComp1 {
+  display: flex;
+  flex-direction: row; /* Ensures images are in a row */
+  gap: 0px; /* Adds space between images */
+  flex-wrap: nowrap; /* Prevents wrapping */
+}
+
+.image-geoAndDecComp1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the image and description */
+  flex: 0 0 auto; /* Prevents images from shrinking */
+  padding-left: 180px;
+  padding-right: 180px;
+}
+
+.image-geoAndDecComp1 img {
+  width: auto; /* Adjust this width as needed */
+  height: auto; /* Maintains aspect ratio */
+}
+
+.image-description {
+  margin-top: 10px; /* Adds space between the image and description */
+  text-align: center; /* Centers the text */
+  color: #d2d2d2;
+}

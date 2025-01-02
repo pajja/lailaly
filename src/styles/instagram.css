@@ -1,12 +1,3 @@
-.ig-logo img {
-  width: 30px;
-  height: auto;
-  position: absolute;
-  top: 0;
-  right: 30px;
-  margin: 10px;
-}
-
 .ig-logo {
   font-family: 'Times New Roman', Times, serif;
 }
@@ -15,7 +6,7 @@
 .ig:visited {
   margin: 10px;
   position: absolute;
-  top: 30px;
+  top: 0;
   right: 10px;
   color: blue;
 }

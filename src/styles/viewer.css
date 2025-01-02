@@ -1,0 +1,56 @@
+.viewer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container-viewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers items horizontally */
+  width: 800px;
+  height: 700px;
+}
+
+.composition-container-viewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers items horizontally */
+  width: 800px;
+  height: 700px;
+}
+
+.viewer img {
+  max-width: 100%;
+  max-height: 670px; /* Adjust the max height as needed */
+  object-fit: contain;
+}
+
+.viewer-button {
+  background: none; /* No background for button */
+  border: none; /* No border for button */
+  outline: none; /* Remove outline */
+  cursor: pointer;
+  padding: 0;
+  margin: 0 20px; /* Margin between buttons and image */
+}
+
+.viewer-button img {
+  width: 25px; /* Adjust as needed */
+  height: 25px; /* Adjust as needed */
+}
+
+.viewer-button:hover img {
+  transform: scale(1.1); /* Slightly enlarge on hover for effect */
+}
+
+.viewer-button:active img {
+  transform: scale(0.9); /* Slightly shrink on active for effect */
+}
+
+/* .image-description {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ACACAC;
+  text-align: center;
+} */
