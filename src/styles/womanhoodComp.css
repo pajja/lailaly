@@ -21,8 +21,8 @@
 .image-womanhoodComp3 {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers the image and description */
-  flex: 0 0 auto; /* Prevents images from shrinking */
+  align-items: center;
+  flex: 0 0 auto;
   padding-left: 140px;
   padding-right: 210px;
 }
@@ -61,16 +61,16 @@
 .image-womanhoodComp8 {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers the image and description */
-  flex: 0 0 auto; /* Prevents images from shrinking */
+  align-items: center;
+  flex: 0 0 auto;
   padding-left: 160px;
   padding-right: 160px;
 }
 
 .text-container-deriveComp2 {
   flex: 0 0 auto;
-  max-width: 750px; /* Prevents text from overflowing past the viewport width */
-  overflow: hidden; /* Ensures text stays within the horizontal bounds */
+  max-width: 750px;
+  overflow: hidden;
   padding: 35px;
   margin-right: 100px;
   margin-left: 5px;
@@ -90,8 +90,8 @@
 .image-womanhoodComp10 {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers the image and description */
-  flex: 0 0 auto; /* Prevents images from shrinking */
+  align-items: center;
+  flex: 0 0 auto;
   padding-left: 130px;
   padding-right: 170px;
 }

@@ -1,8 +1,8 @@
 .image-deriveComp3 {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers the image and description */
-  flex: 0 0 auto; /* Prevents images from shrinking */
+  align-items: center;
+  flex: 0 0 auto;
   padding-left: 50px;
   padding-right: 80px;
 }
@@ -18,8 +18,8 @@
 .image-deriveComp4 {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers the image and description */
-  flex: 0 0 auto; /* Prevents images from shrinking */
+  align-items: center;
+  flex: 0 0 auto;
   padding-left: 160px;
   padding-right: 180px;
 }

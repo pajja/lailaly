@@ -23,10 +23,10 @@ function Derive() {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-sm-2">
+        <div className="col-xxl-2">
           <NavBar />
         </div>
-        <div className="col-sm-8">
+        <div className="col-xxl-8">
           <ViewerDerive
             composition1={<DeriveComp1 />}
             composition2={<DeriveComp2 />}
@@ -37,7 +37,7 @@ function Derive() {
             composition7={<DeriveComp7 />}
           />
         </div>
-        <div className="col-sm-2 times-new-roman project-name">dérive</div>
+        <div className="col-xxl-2 times-new-roman project-name">dérive</div>
       </div>
     </div>
   );

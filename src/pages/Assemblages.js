@@ -11,17 +11,19 @@ function Assemblages() {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-sm-2">
+        <div className="col-xxl-2">
           <NavBar />
         </div>
-        <div className="col-sm-8 times-new-roman viewer">
+        <div className="col-xxl-8 times-new-roman">
           <Viewer
             images={assemblagesImages}
             composition={<AssemblagesComp />}
             composition2={<AssemblagesComp2 />}
           />
         </div>
-        <div className="col-sm-2 times-new-roman project-name">assemblages</div>
+        <div className="col-xxl-2 times-new-roman project-name">
+          assemblages
+        </div>
       </div>
     </div>
   );

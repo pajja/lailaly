@@ -1,22 +1,19 @@
-/* Container for the scrollable content */
 .container-a {
   position: relative;
   width: 800px;
   height: 98vh;
-  overflow: hidden; /* Hide the default scrollbar */
+  overflow: hidden;
 }
 
-/* Content inside the scrollable container */
 .scroll-content {
   display: flex;
   width: 100%;
   height: 100%;
-  overflow-x: scroll; /* Enable horizontal scrolling */
+  overflow-x: scroll;
   box-sizing: content-box;
   flex-direction: row;
 }
 
-/* Custom scrollbar container */
 .custom-scrollbar {
   position: absolute;
   bottom: 0;
@@ -24,20 +21,19 @@
   width: 100%;
   height: 20px;
   background-color: white;
-  z-index: 1000; /* Ensure this is in front of other elements */
+  z-index: 1000;
 }
 
-/* Custom scrollbar thumb */
 .scrollbar-thumb {
   height: 100%;
-  width: 50px; /* Initial width, can be adjusted with JS */
+  width: 50px;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   position: relative;
-  z-index: 1002; /* Ensure this is in front of other elements */
+  z-index: 1002;
 }
 
 .scrollbar-thumb:hover {
@@ -45,25 +41,23 @@
 }
 
 .scrollbar-thumb:hover .scrollbar-text {
-  color: #f1f1f1; /* Change text color on hover */
+  color: #f1f1f1;
 }
 
-/* Text inside the scrollbar thumb */
 .scrollbar-text {
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
   color: black;
-  font-size: 12px;
   white-space: nowrap;
-  user-select: none; /* Make text not selectable */
-  z-index: 1001; /* Ensure this is in front of other elements */
+  user-select: none;
+  z-index: 1001;
+  font-size: 13px;
 }
 
-/* Other styles remain unchanged */
 .image-container-assemblagesComp {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers items horizontally */
+  align-items: center;
   width: 800px;
   height: auto;
   flex: 1 0 auto;
@@ -96,7 +90,6 @@
   position: absolute;
   top: 91.5%;
   z-index: 2;
-  font-size: 14px;
 }
 
 .collage-description-2 {
@@ -106,17 +99,14 @@
   top: 3%;
   left: 55%;
   z-index: 2;
-  font-size: 14px;
 }
 
 .main-text {
-  /* color: #ACACAC; */
   color: black;
   text-align: center;
   z-index: 1;
-  font-size: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh; /* Example height */
+  height: 80vh;
 }

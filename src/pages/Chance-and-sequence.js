@@ -8,13 +8,13 @@ function ChanceAndSequence() {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-sm-2">
+        <div className="col-xxl-2">
           <NavBar />
         </div>
-        <div className="col-sm-8 times-new-roman viewer">
+        <div className="col-xxl-8 times-new-roman">
           <ChanceAndSequenceComp />
         </div>
-        <div className="col-sm-2 times-new-roman project-name">
+        <div className="col-xxl-2 times-new-roman project-name">
           chance and sequence
         </div>
       </div>

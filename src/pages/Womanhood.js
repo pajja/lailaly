@@ -39,10 +39,10 @@ function Womanhood() {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-sm-2">
+        <div className="col-xxl-2">
           <NavBar />
         </div>
-        <div className="col-sm-8">
+        <div className="col-xxl-8">
           <ViewerWomanhood
             composition1={
               <div className="mind-map">
@@ -201,7 +201,7 @@ function Womanhood() {
             }
           />
         </div>
-        <div className="col-sm-2 times-new-roman project-name">womanhood</div>
+        <div className="col-xxl-2 times-new-roman project-name">womanhood</div>
       </div>
     </div>
   );

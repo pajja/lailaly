@@ -1,12 +1,11 @@
 .scroll-container-vertical {
   position: static;
-  max-height: 98vh; /* Full view height */
-  overflow-y: auto; /* Enable vertical scrolling */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  scrollbar-width: none; /* For Firefox */
+  max-height: 98vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
 }
 
-/* Hide default vertical scrollbar */
 .scroll-container-vertical::-webkit-scrollbar {
   width: 0;
   background: transparent;
@@ -25,27 +24,25 @@
 .img-fluid-vertical {
   width: 100%;
   height: 300px;
-  object-fit: cover; /* Ensure proper fit */
+  object-fit: cover;
 }
 
-/* Custom scrollbar container */
 .custom-scrollbar-vertical {
   position: absolute;
-  right: 250px; /* Align scrollbar on the right */
+  right: 250px;
   top: 0;
   width: 20px;
   z-index: 1000;
 }
 
-/* Custom scrollbar thumb */
 .scrollbar-thumb-vertical {
   width: 100%;
-  height: 10px; /* Initial thumb height, adjusted with JS */
+  height: 10px; 
   background-color: white;
   cursor: pointer;
-  position: absolute; /* Make sure it's absolutely positioned */
+  position: absolute;
   z-index: 1002;
-  top: 0; /* Ensure thumb starts at the top */
+  top: 0; 
 }
 
 .scrollbar-thumb-vertical:hover {
@@ -56,22 +53,20 @@
   color: #f1f1f1;
 }
 
-/* Rotating the text inside the scrollbar thumb */
 .scrollbar-text-vertical {
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
   color: black;
-  font-size: 12px;
   user-select: none;
   display: flex;
-  flex-direction: column; /* Stack letters vertically */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
-  height: 100%; /* Ensure it takes up full thumb height */
+  height: 100%;
+  font-size: 13px;
 }
 
 .main-text-chance {
-  /* color: #ACACAC; */
   color: black;
   text-align: center;
   padding-left: 20px;
@@ -84,32 +79,32 @@
 }
 
 .chanceAndSequenceComp-text {
-  grid-column: 1 / -1; /* Makes the text span all columns */
+  grid-column: 1 / -1;
   padding: 20px;
   color: #ACACAC;
   text-align: center;
-  max-width: 100%; /* Full width within the container */
+  max-width: 100%;
   padding-top: 70px;
 }
 
 .container-last-chance {
   display: flex;
-  justify-content: center; /* Center the child grid horizontally */
-  grid-column: 1 / -1; /* Make it span across all columns */
+  justify-content: center;
+  grid-column: 1 / -1;
 }
 
 .images-last-chance {
   display: grid;
-  grid-template-columns: repeat(2, auto); /* Two columns, one for each image */
-  gap: 50px; /* Space between images */
-  justify-content: center; /* Center images within this container */
+  grid-template-columns: repeat(2, auto);
+  gap: 50px;
+  justify-content: center;
   padding: 100px;
 }
 
 .img-fluid-horizontal {
   width: 100%;
   height: 550px;
-  object-fit: cover; /* Ensure proper fit */
+  object-fit: cover;
 }
 
 

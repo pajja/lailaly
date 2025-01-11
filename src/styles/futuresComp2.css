@@ -1,9 +1,9 @@
 .scroll-container-vertical-futures2 {
   position: static;
-  max-height: 98vh; /* Full view height */
-  overflow-y: auto; /* Enable vertical scrolling */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  scrollbar-width: none; /* For Firefox */
+  max-height: 98vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
   width: 800px;
 }
 
@@ -36,10 +36,8 @@
 }
 
 .main-text-futuresComp2 {
-  /* color: #ACACAC; */
   color: black;
   text-align: center;
   z-index: 1;
-  font-size: 16px;
   text-align: justify;
 }

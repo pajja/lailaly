@@ -78,15 +78,15 @@ const GeoAndDecComp2 = () => {
             alt="Hilma af Klint Coll"
             className="collage"
           />
-          <p className="collage-desc-geo-1">
+          <p className="collage-desc-geo-1" style={{ fontSize: "14px" }}>
             Hilma af Klint’s series of paintings <br /> from 1913/15: Tree of
             Knowledge
           </p>
-          <p className="collage-desc-geo-2">
+          <p className="collage-desc-geo-2" style={{ fontSize: "14px" }}>
             Hilma af Klint, Grupp IX/UW, <br />
             Duvan, nr 9 (Group IX/UW, The Dove, no. 9), 1915
           </p>
-          <p className="collage-desc-geo-3">
+          <p className="collage-desc-geo-3" style={{ fontSize: "14px" }}>
             Hilma Af Klint, Evolution No.13 1908
           </p>
         </div>

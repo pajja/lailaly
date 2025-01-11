@@ -1,38 +1,28 @@
 .container {
   position: relative;
   width: 800px;
-  /* Full viewport width for the container */
   height: 98vh;
   overflow: hidden;
-  /* Hide the default scrollbar */
 }
 
 .text-container-geoAndDecComp2 {
   flex: 0 0 auto;
-  /* Prevent shrinking */
   padding: 35px;
   box-sizing: border-box;
   width: 800px;
-  /* Adjust the width as needed */
   white-space: normal;
-  /* Allow text to wrap */
   overflow: hidden;
-  /* Prevents overflow */
 }
 
 
 .image-container-geoAndDecComp2-nd {
   flex: 0 0 auto;
-  /* Prevents shrinking */
   width: auto;
-  /* Adjust width as needed */
   height: 100%;
-  /* Ensure the image fills the container's height */
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  /* Pushes the description to the bottom */
   padding-right: 120px;
 }
 
@@ -40,7 +30,6 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  /* Adjust spacing as needed */
   padding-left: 150px;
 }
 
@@ -49,19 +38,16 @@
   justify-content: space-between;
   gap: 20px;
   height: 100%;
-  /* Full height of the main container */
   width: auto;
-  /* Match width of the main container */
   margin: 20px;
-  /* Remove default margin */
   padding-right: 50px;
 }
 
 .image-description-nd {
   text-align: center;
   color: #d2d2d2;
-  font-size: 14px;
   margin-top: -13px;
+  font-size: 15px;
 }
 
 .scroll-content-geo-dec {
@@ -74,7 +60,6 @@
 
 .image-container-geoAndDecComp2 {
   position: relative;
-  /* Set position relative for absolute children */
   flex: 0 0 auto;
   width: auto;
   height: 100%;
@@ -89,7 +74,6 @@
   top: 52%;
   left: 4%;
   color: #d2d2d2;
-  font-size: 14px;
   z-index: 2;
 }
 
@@ -99,7 +83,6 @@
   top: 3%;
   left: 37%;
   color: #d2d2d2;
-  font-size: 14px;
   z-index: 2;
 }
 
@@ -108,6 +91,5 @@
   top: 47%;
   left: 63%;
   color: #d2d2d2;
-  font-size: 14px;
   z-index: 2;
 }

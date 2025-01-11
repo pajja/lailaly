@@ -23,7 +23,7 @@ function Home() {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-sm-2 nav-bar">
+        <div className="col-xxl-2 nav-bar">
           <nav>
             <ul>
               <li>
@@ -106,7 +106,7 @@ function Home() {
             </ul>
           </nav>
         </div>
-        <div className="col-sm-8 col-background-home">
+        <div className="col-xxl-8 col-background-home">
           {imageList.map((image, index) => (
             <img
               key={index}
@@ -118,7 +118,7 @@ function Home() {
             />
           ))}
         </div>
-        <div className="col-sm-2 ig-logo">
+        <div className="col-xxl-2 ig-logo">
           <Insta />
         </div>
       </div>

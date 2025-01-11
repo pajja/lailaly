@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import "../styles/assemblagesComp.css";
-import collage from "../assets/assemblages/IMG_3314_edited.jpg";
-import putTogether from "../assets/assemblages/put-together.png";
 
 const WomanhoodComp2 = () => {
   useEffect(() => {
