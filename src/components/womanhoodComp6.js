@@ -96,19 +96,19 @@ const WomanhoodComp6 = () => {
       <div className="scroll-content">
         <div className="image-container-geoAndDecComp1 times-new-roman gap0">
           <div className="image-womanhoodComp3" style={{ paddingTop: "10px" }}>
-            <img src={Painting1} alt="shapes | futures" />
+            <img src={Painting1} alt="" />
             <p className="image-description">Life drawing</p>
           </div>
           <div className="image-womanhoodComp3" style={{ paddingTop: "10px" }}>
-            <img src={Painting2} alt="shapes | futures" />
+            <img src={Painting2} alt="" />
             <p className="image-description">Life drawing</p>
           </div>
           <div className="image-womanhoodComp3 womanhood-6">
-            <img src={Painting3} alt="shapes | futures" />
+            <img src={Painting3} alt="" />
             <p className="image-description">Life drawing</p>
           </div>
           <div className="image-womanhoodComp3 womanhood-6-2 right-padding-0">
-            <img src={Painting4} alt="shapes | futures" />
+            <img src={Painting4} alt="" />
             <p className="image-description">Life drawing</p>
           </div>
         </div>

@@ -179,13 +179,13 @@ const GeoAndDecComp2 = () => {
             </div>
           </div>
           <div className="image-geoAndDecComp2">
-            <img src={tree} alt="Tree" />
+            <img src={tree} alt="" />
             <p className="image-description times-new-roman">
               Acrylic on paper, 297 x 420 mm
             </p>
           </div>
           <div className="image-geoAndDecComp2 pad-2 times-new-roman">
-            <img src={lovers} alt="Lovers" />
+            <img src={lovers} alt="" />
             <p className="image-description">
               Acrylic on paper, 148.5 x 210 mm
             </p>

@@ -139,16 +139,16 @@ const DeriveComp2 = () => {
             </div>
           </div>
           <div className="image-deriveComp2 times-new-roman">
-            <img src={shapes1} alt="Geometric shapes" />
+            <img src={shapes1} alt="" />
           </div>
           <div className="image-deriveComp2 times-new-roman">
-            <img src={shapes2} alt="Geometric shapes" />
+            <img src={shapes2} alt="" />
           </div>
           <div className="image-deriveComp2 times-new-roman">
-            <img src={shapes3} alt="Geometric shapes" />
+            <img src={shapes3} alt="" />
           </div>
           <div className="image-deriveComp2 times-new-roman">
-            <img src={shapes4} alt="Geometric shapes" />
+            <img src={shapes4} alt="" />
           </div>
         </div>
       </div>

@@ -147,10 +147,10 @@ const WomanhoodComp4 = () => {
           </p>
         </div>
         <div className="image-womanhoodComp4" style={{ marginRight: "100px" }}>
-          <img src={shapes1} alt="Geometric shapes" />
+          <img src={shapes1} alt="" />
         </div>
         <div className="image-womanhoodComp4">
-          <img src={shapes2} alt="Geometric shapes" />
+          <img src={shapes2} alt="" />
         </div>
       </div>
       <div className="custom-scrollbar">

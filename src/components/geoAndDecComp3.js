@@ -111,11 +111,17 @@ const GeoAndDecComp3 = () => {
       <div className="scroll-content-geo-dec-3">
         <div className="image-container-geoDecComp3">
           <div className="image-geoDecComp3 g3first times-new-roman">
-            <img src={blueYellow1} alt="Blue and yellow geometric shapes" />
+            <img
+              src={blueYellow1}
+              alt="First of Blue and yellow geometric shapes"
+            />
             <p className="image-description">Oil on paper, 148.4 x 210 mm</p>
           </div>
           <div className="image-geoDecComp3 times-new-roman">
-            <img src={blueYellow2} alt="Blue and yellow geometric shapes" />
+            <img
+              src={blueYellow2}
+              alt="Second of Blue and yellow geometric shapes"
+            />
             <p className="image-description">Oil on paper, 148.4 x 210 mm</p>
           </div>
           <div className="text-container-geoDecComp3 times-new-roman">
@@ -172,25 +178,25 @@ const GeoAndDecComp3 = () => {
             </div>
           </div>
           <div className="image-geoDecComp3 times-new-roman">
-            <img src={shapes1} alt="Geometric shapes" />
+            <img src={shapes1} alt="" />
             <p className="image-description">Oil on paper, 148.4 x 210 mm</p>
           </div>
           <div className="image-geoDecComp3 times-new-roman">
-            <img src={shapes2} alt="Geometric shapes" />
+            <img src={shapes2} alt="" />
             <p className="image-description">Oil on paper, 148.4 x 210 mm</p>
           </div>
           <div className="image-geoDecComp3 times-new-roman">
-            <img src={shapes3} alt="Geometric shapes" />
+            <img src={shapes3} alt="" />
             <p className="image-description">Oil on paper, 148.4 x 210 mm</p>
           </div>
           <div className="image-geoDecComp3 times-new-roman">
-            <img src={shapes4} alt="Geometric shapes" />
+            <img src={shapes4} alt="" />
             <p className="image-description">
               Oil and acrylic on paper, 148.4 x 210 mm
             </p>
           </div>
           <div className="image-geoDecComp3 g3last times-new-roman">
-            <img src={shapes5} alt="Geometric shapes" />
+            <img src={shapes5} alt="" />
             <p className="image-description">Oil on paper, 420 x 594 mm</p>
             <p className="image-description-more black">
               This oil piece is a more direct response to the pandemic.{" "}

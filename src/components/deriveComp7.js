@@ -128,7 +128,7 @@ const DeriveComp7 = () => {
             </div>
           </div>
           <div className="image-deriveComp7">
-            <img src={Painting1} alt="shapes | futures" />
+            <img src={Painting1} alt="" />
           </div>
           <div className="text-container-deriveComp7 widthd7-1 times-new-roman">
             <p className="main-text">
@@ -142,7 +142,7 @@ const DeriveComp7 = () => {
             </p>
           </div>
           <div className="image-deriveComp7">
-            <img src={Painting2} alt="shapes | futures" />
+            <img src={Painting2} alt="" />
           </div>
           <div className="text-container-deriveComp7 widthd7-2 times-new-roman">
             <div className="columns-two">
@@ -170,7 +170,7 @@ const DeriveComp7 = () => {
             </div>
           </div>
           <div className="image-deriveComp7 paddingd7">
-            <img src={Painting3} alt="shapes | futures" />
+            <img src={Painting3} alt="" />
           </div>
         </div>
       </div>

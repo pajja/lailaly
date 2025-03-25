@@ -96,22 +96,22 @@ const WomanhoodComp11 = () => {
       <div className="scroll-content">
         <div className="image-container-geoAndDecComp1 times-new-roman">
           <div className="image-womanhoodComp11">
-            <img src={Respect1} alt="shapes | futures" />
+            <img src={Respect1} alt="" />
           </div>
           <div className="image-womanhoodComp11">
-            <img src={Respect2} alt="shapes | futures" />
+            <img src={Respect2} alt="" />
             <p className="image-description black">
               'The saddest sack of organs I ever did see'
             </p>
           </div>
           <div className="image-womanhoodComp11">
-            <img src={Respect3} alt="shapes | futures" />
+            <img src={Respect3} alt="" />
             <p className="image-description black">
               'The unwanted watchful eye of the disease of creating life'
             </p>
           </div>
           <div className="image-womanhoodComp11">
-            <img src={Respect4} alt="shapes | futures" />
+            <img src={Respect4} alt="" />
           </div>
         </div>
       </div>

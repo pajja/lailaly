@@ -95,15 +95,15 @@ const FuturesComp3 = () => {
       <div className="scroll-content">
         <div className="image-container-futuresComp3 times-new-roman">
           <div className="image-futuresComp3">
-            <img src={Respect1} alt="shapes | futures" />
+            <img src={Respect1} alt="" />
             <p className="image-description">Pencil, 148 x 210 </p>
           </div>
           <div className="image-futuresComp3">
-            <img src={Respect2} alt="shapes | futures" />
+            <img src={Respect2} alt="" />
             <p className="image-description">Acrylic, 148 x 210 </p>
           </div>
           <div className="image-futuresComp3">
-            <img src={Respect3} alt="shapes | futures" />
+            <img src={Respect3} alt="" />
             <p className="image-description">Oil pastel, 148 x 210 </p>
           </div>
         </div>

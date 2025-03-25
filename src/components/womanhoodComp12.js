@@ -127,7 +127,7 @@ const WomanhoodComp12 = () => {
           </p>
         </div>
         <div className="image-womanhoodComp12 times-new-roman">
-          <img src={image} alt="shapes | futures" />
+          <img src={image} alt="" />
           <p className="image-description">Life drawing</p>
         </div>
       </div>

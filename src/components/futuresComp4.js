@@ -95,20 +95,20 @@ const FuturesComp4 = () => {
       <div className="scroll-content">
         <div className="image-container-futuresComp3 times-new-roman">
           <div className="image-futuresComp4">
-            <img src={ShapesFutures1} alt="shapes | futures" />
+            <img src={ShapesFutures1} alt="" />
             <p className="image-description">
               Watercolour, oil pastel and pencil on paper 148 x 210
             </p>
           </div>
           <div className="image-futuresComp4 smaller-f4">
-            <img src={ShapesFutures2} alt="shapes | futures" />
+            <img src={ShapesFutures2} alt="" />
             <p className="image-description">
               Watercolour, oil pastel, pencil and thread on paper <br /> 148 x
               210{" "}
             </p>
           </div>
           <div className="image-futuresComp4">
-            <img src={ShapesFutures3} alt="shapes | futures" />
+            <img src={ShapesFutures3} alt="" />
             <p className="image-description">Oil pastel on paper 148 x 210</p>
           </div>
         </div>

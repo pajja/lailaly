@@ -157,13 +157,13 @@ const WomanhoodComp13 = () => {
           </p>
         </div>
         <div className="image-womanhoodComp13 less-pad-w13 times-new-roman">
-          <img src={shapes1} alt="Geometric shapes" />
+          <img src={shapes1} alt="" />
           <p className="image-description times-new-roman black">
             'He forces her to become the thing that causes him an erection.'
           </p>
         </div>
         <div className="image-womanhoodComp13 less-pad-w13 times-new-roman">
-          <img src={shapes2} alt="Geometric shapes" />
+          <img src={shapes2} alt="" />
           <p className="image-description times-new-roman black">
             {" "}
             'The first thing woman he drains is his mother. She is devoted.{" "}
@@ -171,7 +171,7 @@ const WomanhoodComp13 = () => {
           </p>
         </div>
         <div className="image-womanhoodComp13 less-pad-w13 times-new-roman">
-          <img src={shapes3} alt="Geometric shapes" />
+          <img src={shapes3} alt="" />
           <p className="image-description times-new-roman black">
             'Our whole lives, before and after, will always be corrupted by the
             biological ability to create human life.'
@@ -191,13 +191,13 @@ const WomanhoodComp13 = () => {
           </p>
         </div>
         <div className="image-womanhoodComp13 times-new-roman">
-          <img src={shapes4} alt="Geometric shapes" />
+          <img src={shapes4} alt="" />
           <p className="image-description times-new-roman">
             Marlene Dumas' work
           </p>
         </div>
         <div className="image-womanhoodComp13 times-new-roman">
-          <img src={shapes5} alt="Geometric shapes" />
+          <img src={shapes5} alt="" />
           <p className="image-description times-new-roman">
             Marlene Dumas' work
           </p>

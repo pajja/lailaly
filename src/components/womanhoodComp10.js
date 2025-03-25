@@ -99,18 +99,18 @@ const WomanhoodComp10 = () => {
             className="image-womanhoodComp10"
             style={{ marginTop: "10px", marginLeft: "-10px" }}
           >
-            <img src={Respect1} alt="shapes | futures" />
+            <img src={Respect1} alt="" />
           </div>
           <div className="image-womanhoodComp10" style={{ marginTop: "5px" }}>
-            <img src={Respect2} alt="shapes | futures" />
+            <img src={Respect2} alt="" />
             <p className="image-description">Prints on shiny print paper</p>
           </div>
           <div className="image-womanhoodComp10" style={{ marginTop: "10px" }}>
-            <img src={Respect3} alt="shapes | futures" />
+            <img src={Respect3} alt="" />
             <p className="image-description">Print on Hosho paper</p>
           </div>
           <div className="image-womanhoodComp10" style={{ marginTop: "10px" }}>
-            <img src={Respect4} alt="shapes | futures" />
+            <img src={Respect4} alt="" />
           </div>
         </div>
       </div>

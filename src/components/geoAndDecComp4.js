@@ -107,16 +107,16 @@ const GeoAndDecComp4 = () => {
       <div className="scroll-content-geo-dec-3">
         <div className="image-container-geoDecComp3">
           <div className="image-geoDecComp4 times-new-roman">
-            <img src={blueYellow1} alt="Blue and yellow geometric shapes" />
+            <img src={blueYellow1} alt="" />
             <p className="image-description">
               Photograph of game pieces on chess board
             </p>
           </div>
           <div className="image-geoDecComp4 times-new-roman">
-            <img src={blueYellow2} alt="Blue and yellow geometric shapes" />
+            <img src={blueYellow2} alt="" />
           </div>
           <div className="image-geoDecComp4 times-new-roman">
-            <img src={shapes1} alt="Geometric shapes" />
+            <img src={shapes1} alt="" />
             <p className="image-description">
               Acrylic, watercolour and pen on paper, 297 x 420 mm
             </p>

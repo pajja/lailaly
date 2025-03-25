@@ -125,14 +125,14 @@ const DeriveComp5 = () => {
             </div>
           </div>
           <div className="image-deriveComp5 bsk-margin">
-            <img src={leafCollage} alt="poleroid | derive" />
+            <img src={leafCollage} alt="" />
           </div>
           <div className="image-deriveComp5">
-            <img src={ballpoint1} alt="poleroid | derive" />
+            <img src={ballpoint1} alt="" />
             <p className="image-description">Ballpoint pen on paper A4</p>
           </div>
           <div className="image-deriveComp5 bsk-padding">
-            <img src={ballpoint2} alt="poleroid | derive" />
+            <img src={ballpoint2} alt="" />
             <p className="image-description">Ballpoint pen on paper A4</p>
           </div>
         </div>

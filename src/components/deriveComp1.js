@@ -106,7 +106,7 @@ const DeriveComp1 = () => {
       <div className="scroll-content-geo-dec-3">
         <div className="image-container-assemblagesComp">
           <div className="image-deriveComp1">
-            <img src={paper1} alt="Paper" />
+            <img src={paper1} alt="" />
           </div>
           <div className="text-container-deriveComp1">
             <div className="columns-three">
@@ -149,7 +149,7 @@ const DeriveComp1 = () => {
             </div>
           </div>
           <div className="image-deriveComp1 leafs">
-            <img src={leaf1} alt="Leafs" />
+            <img src={leaf1} alt="" />
           </div>
         </div>
       </div>

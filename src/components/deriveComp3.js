@@ -97,15 +97,15 @@ const DeriveComp3 = () => {
       <div className="scroll-content">
         <div className="image-container-geoAndDecComp1 times-new-roman gap-derive3">
           <div className="image-deriveComp3">
-            <img src={Poleroid1} alt="poleroid | derive" />
+            <img src={Poleroid1} alt="" />
             <p className="image-description">Polaroid, 10.752 x 8.847 cm </p>
           </div>
           <div className="image-deriveComp3">
-            <img src={Poleroid2} alt="poleroid | derive" />
+            <img src={Poleroid2} alt="" />
             <p className="image-description">Polaroid, 10.752 x 8.847 cm </p>
           </div>
           <div className="image-deriveComp3">
-            <img src={Poleroid3} alt="poleroid | derive" />
+            <img src={Poleroid3} alt="" />
             <p className="image-description">Polaroid, 10.752 x 8.847 cm </p>
           </div>
         </div>

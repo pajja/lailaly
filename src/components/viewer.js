@@ -31,7 +31,11 @@ const Viewer = ({ images, composition, composition2 }) => {
             }}
           >
             <button className="viewer-button" onClick={handlePrev}>
-              <img src={greyArrow2} alt="Previous" className="arrow-image" />
+              <img
+                src={greyArrow2}
+                alt="Click for Previous"
+                className="arrow-image"
+              />
             </button>
           </div>
           <div
@@ -71,7 +75,11 @@ const Viewer = ({ images, composition, composition2 }) => {
             }}
           >
             <button className="viewer-button" onClick={handleNext}>
-              <img src={greyArrow1} alt="Next" className="arrow-image" />
+              <img
+                src={greyArrow1}
+                alt="Click for Next"
+                className="arrow-image"
+              />
             </button>
           </div>
         </div>

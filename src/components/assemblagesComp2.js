@@ -94,13 +94,13 @@ const AssemblagesComp2 = () => {
       <div className="scroll-content">
         <div className="image-container-assemblagesComp2 times-new-roman">
           <div className="image-assemblagesComp2">
-            <img src={asPen1} alt="Laila" />
+            <img src={asPen1} alt="" />
             <p className="image-description">
               Pen and wax on paper, 148 x 210mm
             </p>
           </div>
           <div className="image-assemblagesComp2">
-            <img src={asPen2} alt="Laila" />
+            <img src={asPen2} alt="" />
             <p className="image-description">
               Pen and wax on paper, 148 x 210mm
             </p>

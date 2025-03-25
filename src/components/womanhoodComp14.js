@@ -120,22 +120,22 @@ const WomanhoodComp14 = () => {
             </p>
           </div>
           <div className="image-womanhoodComp14 first-margin-w14">
-            <img src={Painting1} alt="shapes | futures" />
+            <img src={Painting1} alt="" />
           </div>
           <div className="image-womanhoodComp14">
-            <img src={Painting2} alt="shapes | futures" />
+            <img src={Painting2} alt="" />
           </div>
           <div className="image-womanhoodComp14">
-            <img src={Painting3} alt="shapes | futures" />
+            <img src={Painting3} alt="" />
           </div>
           <div className="image-womanhoodComp14">
-            <img src={Painting4} alt="shapes | futures" />
+            <img src={Painting4} alt="" />
           </div>
           <div className="image-womanhoodComp14">
-            <img src={Painting5} alt="shapes | futures" />
+            <img src={Painting5} alt="" />
           </div>
           <div className="image-womanhoodComp14 last-w14">
-            <img src={Painting6} alt="shapes | futures" />
+            <img src={Painting6} alt="" />
           </div>
           <div className="text-container-womanhoodComp14 last-pad-w14">
             <p className="main-text times-new-roman">

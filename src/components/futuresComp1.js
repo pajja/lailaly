@@ -116,7 +116,7 @@ const FuturesComp1 = () => {
             </div>
           </div>
           <div className="clock-image">
-            <img src={Clock} alt="clock" />
+            <img src={Clock} alt="" />
             <p className="image-description">Christian Marclay's The Clock</p>
           </div>
         </div>
@@ -191,7 +191,7 @@ const FuturesComp1 = () => {
           </div>
         </div>
         <div className="image-futuresComp1">
-          <img src={Dont} alt="I don't want anything | image" />
+          <img src={Dont} alt="" />
           <p className="image-description">Oil on paper 148 x 210</p>
         </div>
       </div>
