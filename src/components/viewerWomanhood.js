@@ -35,30 +35,59 @@ const ViewerWomanhood = ({
 
   return (
     <div className="viewer">
-      <button className="viewer-button" onClick={handlePrev}>
-        <img src={greyArrow2} alt="Previous" className="arrow-image" />
-      </button>
-      <div className="composition-container-viewer">
-        {currentIndex === 0 && <div>{composition1}</div>}
-        {currentIndex === 1 && <div>{composition2}</div>}
-        {currentIndex === 2 && <div>{composition3}</div>}
-        {currentIndex === 3 && <div>{composition4}</div>}
-        {currentIndex === 4 && <div>{composition5}</div>}
-        {currentIndex === 5 && <div>{composition6}</div>}
-        {currentIndex === 6 && <div>{composition7}</div>}
-        {currentIndex === 7 && <div>{composition8}</div>}
-        {currentIndex === 8 && <div>{composition9}</div>}
-        {currentIndex === 9 && <div>{composition10}</div>}
-        {currentIndex === 10 && <div>{composition11}</div>}
-        {currentIndex === 11 && <div>{composition12}</div>}
-        {currentIndex === 12 && <div>{composition13}</div>}
-        {currentIndex === 13 && <div>{composition14}</div>}
-        {currentIndex === 14 && <div>{composition15}</div>}
-        {currentIndex === 15 && <div>{composition16}</div>}
+      <div className="container">
+        <div className="row">
+          <div
+            className="col-1"
+            style={{
+              display: "flex",
+              justifyContent: "flex-end",
+            }}
+          >
+            <button className="viewer-button" onClick={handlePrev}>
+              <img src={greyArrow2} alt="Previous" className="arrow-image" />
+            </button>{" "}
+          </div>
+          <div
+            className="col-10"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <div className="composition-container-viewer">
+              {currentIndex === 0 && <div>{composition1}</div>}
+              {currentIndex === 1 && <div>{composition2}</div>}
+              {currentIndex === 2 && <div>{composition3}</div>}
+              {currentIndex === 3 && <div>{composition4}</div>}
+              {currentIndex === 4 && <div>{composition5}</div>}
+              {currentIndex === 5 && <div>{composition6}</div>}
+              {currentIndex === 6 && <div>{composition7}</div>}
+              {currentIndex === 7 && <div>{composition8}</div>}
+              {currentIndex === 8 && <div>{composition9}</div>}
+              {currentIndex === 9 && <div>{composition10}</div>}
+              {currentIndex === 10 && <div>{composition11}</div>}
+              {currentIndex === 11 && <div>{composition12}</div>}
+              {currentIndex === 12 && <div>{composition13}</div>}
+              {currentIndex === 13 && <div>{composition14}</div>}
+              {currentIndex === 14 && <div>{composition15}</div>}
+              {currentIndex === 15 && <div>{composition16}</div>}
+            </div>
+          </div>
+          <div
+            className="col-1"
+            style={{
+              display: "flex",
+              justifyContent: "flex-start",
+            }}
+          >
+            <button className="viewer-button" onClick={handleNext}>
+              <img src={greyArrow1} alt="Next" className="arrow-image" />
+            </button>
+          </div>
+        </div>
       </div>
-      <button className="viewer-button" onClick={handleNext}>
-        <img src={greyArrow1} alt="Next" className="arrow-image" />
-      </button>
     </div>
   );
 };

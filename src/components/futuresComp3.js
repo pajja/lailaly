@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "../styles/geoAndDecComp1.css";
+import "../styles/futuresComp3.css";
 import Respect1 from "../assets/futures/IMG_4901_edited.png";
 import Respect2 from "../assets/futures/IMG_4902_edited.png";
 import Respect3 from "../assets/futures/IMG_4903_edited.jpg";
@@ -13,16 +14,10 @@ const FuturesComp3 = () => {
     // Helper functions to disable and enable text selection
     const disableTextSelection = () => {
       document.body.style.userSelect = "none"; // Disable text selection
-      document.body.style.webkitUserSelect = "none";
-      document.body.style.mozUserSelect = "none";
-      document.body.style.msUserSelect = "none";
     };
 
     const enableTextSelection = () => {
       document.body.style.userSelect = ""; // Re-enable text selection
-      document.body.style.webkitUserSelect = "";
-      document.body.style.mozUserSelect = "";
-      document.body.style.msUserSelect = "";
     };
 
     const updateThumbPosition = () => {
@@ -43,51 +38,77 @@ const FuturesComp3 = () => {
     content.addEventListener("scroll", updateThumbPosition);
     updateThumbPosition();
 
-    thumb.addEventListener("mousedown", function (e) {
-      disableTextSelection(); // Disable text selection on drag
-      const startX = e.clientX;
-      const startLeft = parseFloat(thumb.style.left);
+    const startDrag = (e, isTouch = false) => {
+      e.preventDefault(); // Add this line
+      disableTextSelection();
 
-      const onMouseMove = (e) => {
-        const deltaX = e.clientX - startX;
+      const startX = isTouch ? e.touches[0].clientX : e.clientX;
+      const startLeft = parseFloat(thumb.style.left) || 0; // Add fallback
+
+      const onMove = (moveEvent) => {
+        moveEvent.preventDefault(); // Add this line
+        const clientX = isTouch
+          ? moveEvent.touches[0].clientX
+          : moveEvent.clientX;
+        const deltaX = clientX - startX;
         const newLeft = Math.min(
           container.clientWidth - thumb.clientWidth,
           Math.max(0, startLeft + deltaX)
         );
+
+        thumb.style.left = `${newLeft}px`;
         content.scrollLeft =
           (newLeft / container.clientWidth) * content.scrollWidth;
       };
 
-      const onMouseUp = () => {
-        enableTextSelection(); // Re-enable text selection when drag ends
-        document.removeEventListener("mousemove", onMouseMove);
-        document.removeEventListener("mouseup", onMouseUp);
+      const onEnd = () => {
+        enableTextSelection();
+        document.removeEventListener(
+          isTouch ? "touchmove" : "mousemove",
+          onMove
+        );
+        document.removeEventListener(isTouch ? "touchend" : "mouseup", onEnd);
       };
 
-      document.addEventListener("mousemove", onMouseMove);
-      document.addEventListener("mouseup", onMouseUp, { once: true });
-    });
+      document.addEventListener(isTouch ? "touchmove" : "mousemove", onMove, {
+        passive: false,
+      });
+      document.addEventListener(isTouch ? "touchend" : "mouseup", onEnd);
+    };
+
+    // Create bound event handlers
+    const handleMouseDown = (e) => startDrag(e, false);
+    const handleTouchStart = (e) => startDrag(e, true);
+
+    thumb.addEventListener("mousedown", handleMouseDown);
+    thumb.addEventListener("touchstart", handleTouchStart);
+
+    return () => {
+      content.removeEventListener("scroll", updateThumbPosition);
+      thumb.removeEventListener("mousedown", handleMouseDown);
+      thumb.removeEventListener("touchstart", handleTouchStart);
+    };
   }, []);
 
   return (
     <div className="container">
       <div className="scroll-content">
-        <div className="image-container-geoAndDecComp1 times-new-roman">
-          <div className="image-geoAndDecComp1">
+        <div className="image-container-futuresComp3 times-new-roman">
+          <div className="image-futuresComp3">
             <img src={Respect1} alt="shapes | futures" />
             <p className="image-description">Pencil, 148 x 210 </p>
           </div>
-          <div className="image-geoAndDecComp1">
+          <div className="image-futuresComp3">
             <img src={Respect2} alt="shapes | futures" />
             <p className="image-description">Acrylic, 148 x 210 </p>
           </div>
-          <div className="image-geoAndDecComp1">
+          <div className="image-futuresComp3">
             <img src={Respect3} alt="shapes | futures" />
             <p className="image-description">Oil pastel, 148 x 210 </p>
           </div>
         </div>
       </div>
-      <div className="custom-scrollbar">
+      <div className="custom-scrollbar f3">
         <div className="scrollbar-thumb">
           <span className="scrollbar-text">scroll me</span>
         </div>

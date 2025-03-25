@@ -2,27 +2,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.image-container-viewer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 800px;
-  height: 700px;
+  margin-top: 10px;
 }
 
 .composition-container-viewer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 800px;
-  height: 700px;
 }
 
 .viewer img {
   max-width: 100%;
-  max-height: 670px;
+  max-height: 690px;
   object-fit: contain;
 }
 
@@ -32,7 +23,8 @@
   outline: none;
   cursor: pointer;
   padding: 0;
-  margin: 0 20px;
+  margin: 0 55px;
+  z-index: 1000;
 }
 
 .viewer-button img {
@@ -51,15 +43,62 @@
 }
 
 .image-container-viewer {
-  height: 97vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .composition-container-viewer {
-  height: 97vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#assemblages-image-1 {
+  padding: 0px;
+}
+
+#assemblages-image-2 {
+  padding: 0px;
+}
+
+@media (max-width: 450px) {
+  #assemblages-image-1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #assemblages-image-2 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .viewer-button img {
+    margin: 0px;
+  }
+
+  .viewer-button {
+    margin: 0px;
+  }
+
+  .composition-container-viewer {
+    width: 100%;
+  }
+
+  .col-1 {
+    padding: 1px;
+    /* DO THIS IN THE END */
+    /* background-color: white;
+    z-index: 1000; */
+  }
+
+
+  .col-xxl-8 {
+    padding: 0px;
+    margin: 0px;
+  }
 }

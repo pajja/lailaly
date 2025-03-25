@@ -6,8 +6,8 @@ import image2 from "../assets/chance-and-seq/IMG_2947_edited-3.png";
 
 const ChanceAndSequenceComp = () => {
   useEffect(() => {
-    const container = document.querySelector(".scroll-container-vertical");
-    const content = document.querySelector(".image-grid-vertical");
+    const container = document.querySelector(".container-vertical");
+    const content = document.querySelector(".scroll-content-vertical");
     const thumb = document.querySelector(".scrollbar-thumb-vertical");
 
     console.log("container: ", container);
@@ -15,6 +15,23 @@ const ChanceAndSequenceComp = () => {
     console.log("thumb: ", thumb);
 
     if (!container || !content || !thumb) return;
+
+    // Reposition scrollbar on load and resize
+    const positionScrollbar = () => {
+      const containerRect = container.getBoundingClientRect();
+      const scrollbar = document.querySelector(".custom-scrollbar-vertical");
+      const offset = 15;
+      // Position the scrollbar at the right edge of the container
+      scrollbar.style.right = `${
+        window.innerWidth - containerRect.right - offset
+      }px`;
+      scrollbar.style.top = `${containerRect.top}px`;
+      scrollbar.style.height = `${containerRect.height}px`;
+    };
+
+    // Position scrollbar initially and on resize
+    positionScrollbar();
+    window.addEventListener("resize", positionScrollbar);
 
     // Helper functions to disable and enable text selection
     const disableTextSelection = () => {
@@ -27,16 +44,21 @@ const ChanceAndSequenceComp = () => {
 
     const updateThumbPosition = () => {
       const contentHeight = content.scrollHeight;
-      console.log("contentHeight: ", contentHeight);
       const containerHeight = container.clientHeight;
-      console.log("containerHeight: ", containerHeight);
       const scrollTop = container.scrollTop;
 
+      // Calculate thumb height proportionally with a minimum size
       const thumbHeight = Math.max(
         (containerHeight / contentHeight) * containerHeight,
-        10 // Set a minimum thumb height
+        30 // Minimum thumb height
       );
-      const thumbTop = (scrollTop / contentHeight) * containerHeight;
+
+      // Calculate thumb position
+      const scrollableHeight = contentHeight - containerHeight;
+      const scrollRatio =
+        scrollableHeight <= 0 ? 0 : scrollTop / scrollableHeight;
+      const maxThumbTop = containerHeight - thumbHeight;
+      const thumbTop = scrollRatio * maxThumbTop;
 
       thumb.style.height = `${thumbHeight}px`;
       thumb.style.top = `${thumbTop}px`;
@@ -45,44 +67,98 @@ const ChanceAndSequenceComp = () => {
     container.addEventListener("scroll", updateThumbPosition);
     updateThumbPosition();
 
-    thumb.addEventListener("mousedown", function (e) {
-      disableTextSelection(); // Disable text selection on drag
+    const handleMouseDown = function (e) {
+      e.preventDefault();
+      disableTextSelection();
+
+      // Get the container and scrollbar bounds for positioning
+      const containerRect = container.getBoundingClientRect();
+      const thumbRect = thumb.getBoundingClientRect();
+
+      // Calculate the initial position
       const startY = e.clientY;
-      const startTop = parseFloat(thumb.style.top);
-      const onMouseMove = (e) => {
+      const startTop = thumbRect.top - containerRect.top;
+
+      const onMouseMove = function (e) {
+        // Calculate the new position relative to the container
         const deltaY = e.clientY - startY;
+
+        // Ensure the thumb stays within the scrollbar bounds
+        const newTop = Math.min(
+          containerRect.height - thumbRect.height,
+          Math.max(0, startTop + deltaY)
+        );
+
+        // Position the thumb
+        thumb.style.top = `${newTop}px`;
+
+        // Calculate scroll position
+        const scrollRatio = newTop / (containerRect.height - thumbRect.height);
+        const maxScrollTop = content.scrollHeight - containerRect.height;
+
+        // Update scroll position
+        container.scrollTop = scrollRatio * maxScrollTop;
+      };
+
+      const onMouseUp = function () {
+        enableTextSelection();
+        document.removeEventListener("mousemove", onMouseMove);
+        document.removeEventListener("mouseup", onMouseUp);
+      };
+
+      document.addEventListener("mousemove", onMouseMove);
+      document.addEventListener("mouseup", onMouseUp);
+    };
+
+    thumb.addEventListener("mousedown", handleMouseDown);
+
+    // Define the touch handler as a named function
+    const handleTouchStart = function (e) {
+      e.preventDefault();
+      disableTextSelection();
+
+      const touch = e.touches[0];
+      const startY = touch.clientY;
+      const startTop = parseFloat(thumb.style.top);
+
+      const onTouchMove = (e) => {
+        const touch = e.touches[0];
+        const deltaY = touch.clientY - startY;
         const newTop = Math.min(
           container.clientHeight - thumb.clientHeight,
           Math.max(0, startTop + deltaY)
         );
         thumb.style.top = `${newTop}px`;
 
-        // Adjust the scroll position based on the thumb's new position
         const scrollRatio =
           newTop / (container.clientHeight - thumb.clientHeight);
-
         const maxScrollTop = content.scrollHeight - container.clientHeight;
         container.scrollTop = scrollRatio * maxScrollTop;
       };
 
-      const onMouseUp = () => {
-        enableTextSelection(); // Re-enable text selection when drag ends
-        document.removeEventListener("mousemove", onMouseMove);
-        document.removeEventListener("mouseup", onMouseUp);
+      const onTouchEnd = () => {
+        enableTextSelection();
+        document.removeEventListener("touchmove", onTouchMove);
+        document.removeEventListener("touchend", onTouchEnd);
       };
 
-      document.addEventListener("mousemove", onMouseMove);
-      document.addEventListener("mouseup", onMouseUp, { once: true });
-    });
+      document.addEventListener("touchmove", onTouchMove, { passive: false });
+      document.addEventListener("touchend", onTouchEnd, { once: true });
+    };
+
+    // Add the event listener using the named function
+    thumb.addEventListener("touchstart", handleTouchStart);
 
     return () => {
       container.removeEventListener("scroll", updateThumbPosition);
+      thumb.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("resize", positionScrollbar);
     };
   }, []);
 
   return (
-    <div className="scroll-container-vertical">
-      <div className="image-grid-vertical">
+    <div className="container-vertical">
+      <div className="scroll-content-vertical">
         {ChanceAndSequenceImages.map((image, index) => (
           <div key={index} className="image-item-vertical">
             <img
@@ -158,7 +234,6 @@ const ChanceAndSequenceComp = () => {
           </div>
         </div>
       </div>
-
       <div className="custom-scrollbar-vertical">
         <div className="scrollbar-thumb-vertical">
           <span className="scrollbar-text-vertical">

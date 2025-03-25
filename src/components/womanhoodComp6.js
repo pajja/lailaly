@@ -15,16 +15,10 @@ const WomanhoodComp6 = () => {
     // Helper functions to disable and enable text selection
     const disableTextSelection = () => {
       document.body.style.userSelect = "none"; // Disable text selection
-      document.body.style.webkitUserSelect = "none";
-      document.body.style.mozUserSelect = "none";
-      document.body.style.msUserSelect = "none";
     };
 
     const enableTextSelection = () => {
       document.body.style.userSelect = ""; // Re-enable text selection
-      document.body.style.webkitUserSelect = "";
-      document.body.style.mozUserSelect = "";
-      document.body.style.msUserSelect = "";
     };
 
     const updateThumbPosition = () => {
@@ -45,30 +39,56 @@ const WomanhoodComp6 = () => {
     content.addEventListener("scroll", updateThumbPosition);
     updateThumbPosition();
 
-    thumb.addEventListener("mousedown", function (e) {
-      disableTextSelection(); // Disable text selection on drag
-      const startX = e.clientX;
-      const startLeft = parseFloat(thumb.style.left);
+    const startDrag = (e, isTouch = false) => {
+      e.preventDefault(); // Add this line
+      disableTextSelection();
 
-      const onMouseMove = (e) => {
-        const deltaX = e.clientX - startX;
+      const startX = isTouch ? e.touches[0].clientX : e.clientX;
+      const startLeft = parseFloat(thumb.style.left) || 0; // Add fallback
+
+      const onMove = (moveEvent) => {
+        moveEvent.preventDefault(); // Add this line
+        const clientX = isTouch
+          ? moveEvent.touches[0].clientX
+          : moveEvent.clientX;
+        const deltaX = clientX - startX;
         const newLeft = Math.min(
           container.clientWidth - thumb.clientWidth,
           Math.max(0, startLeft + deltaX)
         );
+
+        thumb.style.left = `${newLeft}px`;
         content.scrollLeft =
           (newLeft / container.clientWidth) * content.scrollWidth;
       };
 
-      const onMouseUp = () => {
-        enableTextSelection(); // Re-enable text selection when drag ends
-        document.removeEventListener("mousemove", onMouseMove);
-        document.removeEventListener("mouseup", onMouseUp);
+      const onEnd = () => {
+        enableTextSelection();
+        document.removeEventListener(
+          isTouch ? "touchmove" : "mousemove",
+          onMove
+        );
+        document.removeEventListener(isTouch ? "touchend" : "mouseup", onEnd);
       };
 
-      document.addEventListener("mousemove", onMouseMove);
-      document.addEventListener("mouseup", onMouseUp, { once: true });
-    });
+      document.addEventListener(isTouch ? "touchmove" : "mousemove", onMove, {
+        passive: false,
+      });
+      document.addEventListener(isTouch ? "touchend" : "mouseup", onEnd);
+    };
+
+    // Create bound event handlers
+    const handleMouseDown = (e) => startDrag(e, false);
+    const handleTouchStart = (e) => startDrag(e, true);
+
+    thumb.addEventListener("mousedown", handleMouseDown);
+    thumb.addEventListener("touchstart", handleTouchStart);
+
+    return () => {
+      content.removeEventListener("scroll", updateThumbPosition);
+      thumb.removeEventListener("mousedown", handleMouseDown);
+      thumb.removeEventListener("touchstart", handleTouchStart);
+    };
   }, []);
 
   return (

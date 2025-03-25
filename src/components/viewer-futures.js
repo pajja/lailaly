@@ -25,20 +25,49 @@ const ViewerFutures = ({
 
   return (
     <div className="viewer">
-      <button className="viewer-button" onClick={handlePrev}>
-        <img src={greyArrow2} alt="Previous" className="arrow-image" />
-      </button>
-      <div className="composition-container-viewer">
-        {currentIndex === 0 && <div>{composition1}</div>}
-        {currentIndex === 1 && <div>{composition2}</div>}
-        {currentIndex === 2 && <div>{composition3}</div>}
-        {currentIndex === 3 && <div>{composition4}</div>}
-        {currentIndex === 4 && <div>{composition5}</div>}
-        {currentIndex === 5 && <div>{composition6}</div>}
+      <div className="container">
+        <div className="row">
+          <div
+            className="col-1"
+            style={{
+              display: "flex",
+              justifyContent: "flex-end",
+            }}
+          >
+            <button className="viewer-button" onClick={handlePrev}>
+              <img src={greyArrow2} alt="Previous" className="arrow-image" />
+            </button>
+          </div>
+          <div
+            className="col-10"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <div className="composition-container-viewer">
+              {currentIndex === 0 && <div>{composition1}</div>}
+              {currentIndex === 1 && <div>{composition2}</div>}
+              {currentIndex === 2 && <div>{composition3}</div>}
+              {currentIndex === 3 && <div>{composition4}</div>}
+              {currentIndex === 4 && <div>{composition5}</div>}
+              {currentIndex === 5 && <div>{composition6}</div>}
+            </div>
+          </div>
+          <div
+            className="col-1"
+            style={{
+              display: "flex",
+              justifyContent: "flex-start",
+            }}
+          >
+            <button className="viewer-button" onClick={handleNext}>
+              <img src={greyArrow1} alt="Next" className="arrow-image" />
+            </button>
+          </div>
+        </div>
       </div>
-      <button className="viewer-button" onClick={handleNext}>
-        <img src={greyArrow1} alt="Next" className="arrow-image" />
-      </button>
     </div>
   );
 };

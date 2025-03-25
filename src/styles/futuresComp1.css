@@ -1,34 +1,109 @@
+.custom-scrollbar.f1 {
+  bottom: 0;
+  left: 0;
+}
+
 .scroll-content-futures1 {
   display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  flex-wrap: nowrap;
+  width: 100%;
   height: 100%;
-  scrollbar-width: none;
-  gap: 50px;
+  overflow-x: scroll;
+  box-sizing: content-box;
+  flex-direction: row;
 }
 
 .scroll-content::-webkit-scrollbar {
   display: none;
 }
 
-.text-container-futures, .image-container-futuresComp1  {
-  flex: 0 0 800px;
-  width: 800px;
-  box-sizing: border-box;
+.text-container-futures  {
+  display: flex;
+  flex: 0 0 auto;
+  width: 100%;
   height: 100%;
-  padding: 25px;
+  padding: 15px;
+  box-sizing: border-box;
+  white-space: normal;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.text-container-futures.first-f1 {
+  position: relative;
+}
+
+.image-futuresComp1 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex: 0 0 auto;
+  width: 105%;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
-.image-container-futuresComp1 {
-  margin-right: 10px;
+.image-futuresComp1 img {
+  width: auto;
+  height: auto;
 }
 
 .clock-image {
-  width: 350px;
-  padding-bottom: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+  margin-top: 10px;
+  flex-direction: column;
+}
+
+@media (max-width: 450px) {
+  .custom-scrollbar.f1 {
+    bottom: 0;
+    left: 44px;
+  }
+
+  .text-container-futures {
+    margin-left: 66px;
+    width: 215%;
+    height: auto;
+    flex-direction: row;
+    padding: 15px;
+  }
+
+  .text-container-futures.second-f1 {
+    margin-left: 25px;
+    width: 140%;
+  }
+
+  .text-container-futures.third-f1 {
+    margin-left: 20px;
+    width: 70%;
+  }
+
+  .text-container-futures.fourth-f1 {
+    margin-left: 25px;
+    width: 140%;
+  }
+
+  .clock-image {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 600%;
+  }
+
+  .image-futuresComp1 {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .image-futuresComp1 img {
+    width: 70%;
+    height: auto;
+  }
 }

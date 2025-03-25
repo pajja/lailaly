@@ -1,0 +1,44 @@
+.custom-scrollbar.f3 {
+  bottom: 0;
+  left: 0;
+}
+
+.image-container-futuresComp3 {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  flex-wrap: nowrap;
+}
+
+.image-futuresComp3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  padding-left: 120px;
+  padding-right: 180px;
+}
+
+.image-futuresComp3 img {
+  width: auto;
+  height: auto;
+}
+
+@media (max-width: 450px) {
+  .custom-scrollbar.f3 {
+    bottom: 0;
+    left: -30px;
+  }
+
+  .image-futuresComp3 {
+    margin-left: -17px;
+    padding-left: 0;
+    padding-right: 60px;
+  }
+
+  .image-futuresComp3 img {
+    width: 92%;
+    height: 92%;
+  }
+}

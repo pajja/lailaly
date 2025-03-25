@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/viewer.css";
+import "../styles/assemblagesComp.css";
 import greyArrow1 from "../assets/arrows/grey-arrow1.png";
 import greyArrow2 from "../assets/arrows/grey-arrow2.png";
 
@@ -20,30 +21,61 @@ const Viewer = ({ images, composition, composition2 }) => {
 
   return (
     <div className="viewer">
-      <button className="viewer-button" onClick={handlePrev}>
-        <img src={greyArrow2} alt="Previous" className="arrow-image" />
-      </button>
-      <div className="image-container-viewer">
-        {currentIndex < images.length ? (
-          <>
-            <img
-              src={images[currentIndex].src}
-              alt={`Image ${currentIndex + 1}`}
-            />
-            <p className="image-description">
-              {images[currentIndex].description}
-            </p>
-          </>
-        ) : currentIndex === images.length ? (
-          // <ImagesAssemblagesComp />
-          <div>{composition}</div>
-        ) : (
-          <div>{composition2}</div>
-        )}
+      <div className="container">
+        <div className="row">
+          <div
+            className="col-1"
+            style={{
+              display: "flex",
+              justifyContent: "flex-end",
+            }}
+          >
+            <button className="viewer-button" onClick={handlePrev}>
+              <img src={greyArrow2} alt="Previous" className="arrow-image" />
+            </button>
+          </div>
+          <div
+            className="col-10"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <div>
+              {currentIndex < images.length ? (
+                <>
+                  <div className="image-assemblages">
+                    <img
+                      id={images[currentIndex].id}
+                      src={images[currentIndex].src}
+                      alt={`Image ${currentIndex + 1}`}
+                    />
+                    <p className="image-description">
+                      {images[currentIndex].description}
+                    </p>
+                  </div>
+                </>
+              ) : currentIndex === images.length ? (
+                <div>{composition}</div>
+              ) : (
+                <div>{composition2}</div>
+              )}
+            </div>
+          </div>
+          <div
+            className="col-1"
+            style={{
+              display: "flex",
+              justifyContent: "flex-start",
+            }}
+          >
+            <button className="viewer-button" onClick={handleNext}>
+              <img src={greyArrow1} alt="Next" className="arrow-image" />
+            </button>
+          </div>
+        </div>
       </div>
-      <button className="viewer-button" onClick={handleNext}>
-        <img src={greyArrow1} alt="Next" className="arrow-image" />
-      </button>
     </div>
   );
 };

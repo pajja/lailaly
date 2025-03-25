@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../components/nav-bar";
 import "../styles/times-new-roman.css";
 import "../styles/project-name.css";
+import "../styles/futuresComp4.css";
 import ViewerFutures from "../components/viewer-futures";
 import FuturesComp1 from "../components/futuresComp1";
 import FuturesComp2 from "../components/futuresComp2";
@@ -12,19 +13,22 @@ import ShapesFutures2 from "../assets/futures/IMG_4993_edited.jpg";
 
 function Futures() {
   return (
-    <div className="container-fluid">
+    <div
+      className="container-fluid"
+      style={{ overflowX: "hidden", overflowY: "hidden" }}
+    >
       <div className="row">
-        <div className="col-xxl-2">
+        <div className="col-lg-2">
           <NavBar />
         </div>
-        <div className="col-xxl-8">
+        <div className="col-lg-8">
           <ViewerFutures
             composition1={<FuturesComp1 />}
             composition2={<FuturesComp2 />}
             composition3={<FuturesComp3 />}
             composition4={<FuturesComp4 />}
             composition5={
-              <div style={{ paddingTop: "10px" }}>
+              <div className="image-futures5">
                 <img src={ShapesFutures1}></img>
                 <p className="image-description times-new-roman">
                   Oil on unprimed canvas
@@ -32,7 +36,7 @@ function Futures() {
               </div>
             }
             composition6={
-              <div style={{ paddingTop: "10px" }}>
+              <div className="image-futures6">
                 <img src={ShapesFutures2}></img>
                 <p className="image-description times-new-roman">
                   Oil on unprimed canvas{" "}
@@ -41,7 +45,7 @@ function Futures() {
             }
           />
         </div>
-        <div className="col-xxl-2 times-new-roman project-name">futures</div>
+        <div className="col-lg-2 times-new-roman project-name">futures</div>
       </div>
     </div>
   );

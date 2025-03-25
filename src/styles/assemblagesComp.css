@@ -1,8 +1,22 @@
-.container-a {
+.container {
   position: relative;
-  width: 800px;
-  height: 98vh;
-  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+  height: 97vh;
+}
+
+img {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.col-background-home img {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+.col-10 {
+  padding: 0;
 }
 
 .scroll-content {
@@ -18,15 +32,20 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
-  height: 20px;
+  width: 110%;
+  height: 17px;
   background-color: white;
   z-index: 1000;
 }
 
+.custom-scrollbar.a1 {
+  bottom: 0;
+  left: 0;
+}
+
 .scrollbar-thumb {
   height: 100%;
-  width: 50px;
+  min-width: 50px;
   background-color: white;
   display: flex;
   align-items: center;
@@ -54,59 +73,114 @@
   font-size: 13px;
 }
 
+/* assemblages comp 1 */
+.image-assemblages{
+  margin: 0;
+  height: 97vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .image-container-assemblagesComp {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  flex-wrap: nowrap;
+  width: 750px;
+}
+
+.image-assemblagesComp {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 800px;
+  justify-content: center;
+  flex: 0 0 auto;
+  padding-left: 150px;
+  padding-right: 180px;
+}
+
+.image-assemblagesComp img {
+  width: auto;
   height: auto;
-  flex: 1 0 auto;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
 }
 
 .text-container-assemblagesComp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 0 0 auto;
-  width: 800px;
-  padding: 35px;
+  width: 95%;
+  padding: 15px;
   box-sizing: border-box;
   white-space: normal;
-  z-index: 1;
 }
 
-.collage {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
+.paddingrightA {
+  padding-right: 60px;
 }
 
-.collage-description {
-  color: #d2d2d2;
-  text-align: center;
-  position: absolute;
-  top: 91.5%;
-  z-index: 2;
-}
-
-.collage-description-2 {
-  color: #d2d2d2;
-  text-align: center;
-  position: absolute;
-  top: 3%;
-  left: 55%;
-  z-index: 2;
+.columns-five {
+  column-count: 1;
 }
 
 .main-text {
   color: black;
   text-align: center;
-  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: auto;
+}
+
+.image-description {
+  margin-top: 5px; 
+  text-align: center;
+  color: #d2d2d2;
+  font-size: 15px;
+}
+
+
+@media (max-width: 450px) {
+  .container {
+    height: 75vh;
+    padding: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .image-container-assemblagesComp {
+    width: 100%;
+  }
+
+  .custom-scrollbar.a1 {
+    bottom: 0;
+    left: -28px;
+  }
+
+  .text-container-assemblagesComp {
+    width: 500%;
+    margin-top: 20px;
+  }
+
+  .columns-five {
+    column-count: 5;
+    column-gap: 40px;
+    column-width: 1px;
+  }
+
+  .image-assemblagesComp {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .paddingrightA {
+    padding-right: 30px;
+  }
+
+  .image-assemblagesComp img {
+    width: 90%;
+    height: 90%;
+  }
 }

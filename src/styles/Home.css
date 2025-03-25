@@ -1,7 +1,14 @@
-/* Mobile: 320px–767px  */
-/* Tablet: 768px–1024px */
-/* Desktop: 1025px and above */
-
+/* important resolutions */
+/* 3840x2160 */
+/* 2880x1800 */
+/* 2560x1440 */
+/* 1920x1080 */
+/* 1440x900 */
+/* 1400x900 */
+/* 1366x768 */
+/* 1280x800 */
+/* 1280x720 */
+/* 1024x768 */
 
 .col-background-home {
   position: relative;
@@ -23,47 +30,5 @@
 
 .background-image-home.visible {
   opacity: 1;
-}
-
-@media (max-width: 1400px) {
-  .col-background-home {
-    height: 80vh;
-  }
-  .background-image-home {
-    top: 30%;
-  }
-}
-
-@media (max-width: 1050px) {
-  .col-background-home {
-    height: 70vh;
-  }
-}
-
-@media (max-width: 960px) {
-  .col-background-home {
-    height: 60vh;
-  }
-}
-
-@media (max-width: 630px) {
-  .col-background-home {
-    height: 100vh;
-  }
-  .background-image-home {
-    top: 50%;
-  }
-}
-
-@media (max-width: 440px) {
-  .col-background-home {
-    height: 70vh;
-  }
-}
-
-@media (max-width: 400px) {
-  .col-background-home {
-    height: 60vh;
-  }
 }
 

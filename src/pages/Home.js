@@ -21,20 +21,25 @@ function Home() {
   ];
 
   return (
-    <div className="container-fluid">
+    <div
+      className="container-fluid"
+      style={{ overflowX: "hidden", overflowY: "hidden" }}
+    >
       <div className="row">
-        <div className="col-xxl-2 nav-bar">
-          <nav>
-            <ul>
-              <li>
-                <Link
-                  onMouseEnter={() => setBackground(homeImages.backgroundImage)}
-                  className="home"
-                  to="/"
-                >
-                  Laila Sorabji
-                </Link>
-              </li>
+        <div className="col-lg-2">
+          <ul className="ul-home">
+            <li>
+              <Link
+                onMouseEnter={() => setBackground(homeImages.backgroundImage)}
+                className="home"
+                to="/"
+              >
+                Laila Sorabji
+              </Link>
+            </li>
+          </ul>
+          <nav className="nav-bar">
+            <ul style={{ display: "block" }}>
               <li>
                 <Link
                   onMouseEnter={() =>
@@ -106,7 +111,7 @@ function Home() {
             </ul>
           </nav>
         </div>
-        <div className="col-xxl-8 col-background-home">
+        <div className="col-lg-8 col-background-home">
           {imageList.map((image, index) => (
             <img
               key={index}
@@ -118,7 +123,7 @@ function Home() {
             />
           ))}
         </div>
-        <div className="col-xxl-2 ig-logo">
+        <div className="col-lg-2 ig-logo">
           <Insta />
         </div>
       </div>

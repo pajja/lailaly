@@ -1,16 +1,8 @@
 import React, { useEffect } from "react";
 import "../styles/assemblagesComp2.css";
-
-const imagesAssemblages2 = [
-  {
-    src: require("../assets/assemblages/IMG_3325_edited.jpg"),
-    description: "Pen and wax on paper, 148 x 210mm",
-  },
-  {
-    src: require("../assets/assemblages/IMG_3326_edited.jpg"),
-    description: "Pen and wax on paper, 148 x 210mm",
-  },
-];
+import asPen1 from "../assets/assemblages/IMG_3325_edited.jpg";
+import asPen2 from "../assets/assemblages/IMG_3326_edited.jpg";
+import "../styles/assemblagesComp.css";
 
 const AssemblagesComp2 = () => {
   useEffect(() => {
@@ -46,12 +38,14 @@ const AssemblagesComp2 = () => {
     updateThumbPosition();
 
     const startDrag = (e, isTouch = false) => {
+      e.preventDefault(); // Add this line
       disableTextSelection();
 
       const startX = isTouch ? e.touches[0].clientX : e.clientX;
-      const startLeft = parseFloat(thumb.style.left);
+      const startLeft = parseFloat(thumb.style.left) || 0; // Add fallback
 
       const onMove = (moveEvent) => {
+        moveEvent.preventDefault(); // Add this line
         const clientX = isTouch
           ? moveEvent.touches[0].clientX
           : moveEvent.clientX;
@@ -75,17 +69,23 @@ const AssemblagesComp2 = () => {
         document.removeEventListener(isTouch ? "touchend" : "mouseup", onEnd);
       };
 
-      document.addEventListener(isTouch ? "touchmove" : "mousemove", onMove);
+      document.addEventListener(isTouch ? "touchmove" : "mousemove", onMove, {
+        passive: false, // Add this option
+      });
       document.addEventListener(isTouch ? "touchend" : "mouseup", onEnd);
     };
 
-    thumb.addEventListener("mousedown", (e) => startDrag(e, false));
-    thumb.addEventListener("touchstart", (e) => startDrag(e, true));
+    // Create bound event handlers that we can use for both adding and removing
+    const handleMouseDown = (e) => startDrag(e, false);
+    const handleTouchStart = (e) => startDrag(e, true);
+
+    thumb.addEventListener("mousedown", handleMouseDown);
+    thumb.addEventListener("touchstart", handleTouchStart);
 
     return () => {
       content.removeEventListener("scroll", updateThumbPosition);
-      thumb.removeEventListener("mousedown", (e) => startDrag(e, false));
-      thumb.removeEventListener("touchstart", (e) => startDrag(e, true));
+      thumb.removeEventListener("mousedown", handleMouseDown);
+      thumb.removeEventListener("touchstart", handleTouchStart);
     };
   }, []);
 
@@ -93,15 +93,21 @@ const AssemblagesComp2 = () => {
     <div className="container">
       <div className="scroll-content">
         <div className="image-container-assemblagesComp2 times-new-roman">
-          {imagesAssemblages2.map((image, index) => (
-            <div key={index} className="image-assemblagesComp2">
-              <img src={image.src} alt={`Image ${index + 1}`} />
-              <p className="image-description">{image.description}</p>
-            </div>
-          ))}
+          <div className="image-assemblagesComp2">
+            <img src={asPen1} alt="Laila" />
+            <p className="image-description">
+              Pen and wax on paper, 148 x 210mm
+            </p>
+          </div>
+          <div className="image-assemblagesComp2">
+            <img src={asPen2} alt="Laila" />
+            <p className="image-description">
+              Pen and wax on paper, 148 x 210mm
+            </p>
+          </div>
         </div>
       </div>
-      <div className="custom-scrollbar">
+      <div className="custom-scrollbar a2">
         <div className="scrollbar-thumb">
           <span className="scrollbar-text">scroll me</span>
         </div>

@@ -1,34 +1,120 @@
+.custom-scrollbar.g3 {
+  bottom: 0;
+  left: 0;
+}
+
 .scroll-content-geo-dec-3 {
   display: flex;
   flex-direction: row;
-  gap: 150px;
   overflow-x: scroll;
   overflow-y: hidden;
-  height: 100vh;
-  scrollbar-width: none; 
-}
-
-.scroll-content-geo-dec-3::-webkit-scrollbar {
-  display: none;
+  height: 100%;
+  width: 100%;
 }
 
 .image-container-geoDecComp3 {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  flex-wrap: nowrap;
+}
+
+.image-geoDecComp3 {
+  display: flex;
   flex: 0 0 auto;
-  padding-left: 180px;
-  padding-right: 180px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 158px;
+  padding-right: 178px;
+}
+
+.image-geoDecComp3 img {
+  width: auto;
+  height: auto;
+}
+
+.image-geoDecComp4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  flex-direction: column;
+  padding-left: 50px;
+  padding-right: 190px;
+}
+
+.image-geoDecComp4 img {
+  width: auto;
+  height: auto;
 }
 
 .text-container-geoDecComp3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 0 0 auto;
-  max-width: 800px;
+  width: 25%;
   overflow: hidden;
-  padding: 35px;
-  margin-right: 100px;
-  margin-left: 100px;
+  padding: 15px;
 }
 
 .image-description-more {
   text-align: center;
-  margin-top: -13px;  
+  margin-top: -16px;  
   font-size: 15px;
+}
+
+@media (max-width: 450px) {
+  .custom-scrollbar.g3 {
+    bottom: 0;
+    left: 220px;
+  }
+
+  .image-description-more {
+    padding-right: 40px;
+  }
+
+  .image-geoDecComp3 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .image-geoDecComp3 img {
+    width: 90%;
+    height: 90%;
+    margin-right: 60px;
+  }
+
+  .image-geoDecComp3.g3first {
+    margin-left: 250px;
+  }
+
+  .image-geoDecComp3.g3last {
+    padding-right: 180px;
+  }
+
+  .image-geoDecComp3.g3last img {
+    width: 87%;
+    height: 87%;
+  }
+
+  .text-container-geoDecComp3 {
+    padding: 0px;
+    width: 130%;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 80px;
+  }
+
+  .image-geoDecComp4 {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+  }
+
+  .image-geoDecComp4 img {
+    width: 100%;
+    height: 100%;
+  }
 }

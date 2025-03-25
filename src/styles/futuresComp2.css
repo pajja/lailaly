@@ -1,43 +1,120 @@
-.scroll-container-vertical-futures2 {
-  position: static;
-  max-height: 98vh;
+.container-vertical-futures2 {
+  position: relative;
+  max-height: 97vh;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: none;
-  width: 800px;
+  width: 760px;
 }
 
-.scroll-container-vertical-futures2::-webkit-scrollbar {
+.container-vertical-futures2::-webkit-scrollbar {
   width: 0;
   background: transparent;
 }
 
-.image-grid-vertical-futures2 {
-  display: grid;
-  grid-template-columns: 250px auto;
-  gap: 20px;
+.scroll-content-vertical-futures2 {
+  height: 97vh;
 }
 
-.image-container-futuresComp2 img{
-  margin-top: 50px;
-  padding-top: 15px;
-  padding-bottom: 0;
+.womanhood-centered{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.futuresComp2-scroll {
-  right: 345px;
+/* .futuresComp2-scroll {
+  top: 0px;
+  right: 0px;
+} */
+
+.custom-scrollbar-vertical.futuresComp2-scroll {
+  position: fixed; /* Changed from default/static/absolute */
+  right: 0; /* Will be adjusted by JS */
+  top: 0;
+  width: 20px;
+  height: 100%;
+  z-index: 1000;
+}
+
+.wrapper-futuresComp2 {
+  position: relative;
+  overflow: hidden;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.float-right-1 {
+  float: right;
+  width: 75%;
+  shape-outside: inset(0 0 100px 0);
+  padding-bottom: 80px;
+}
+
+.float-right-2 {
+  float: right;
+  clear: right;
+  width: 75%; 
+  shape-outside: inset(0 0 0 0);
+}
+
+.float-right-1 img, 
+.float-right-2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 10px 0 0 20px;
 }
 
 .text-container-futuresComp2 {
-  padding: 35px;
-  padding-left: 0;
-  padding-right: 20px;
-  margin-top: 25px;
+  margin-top: 5px;
 }
 
 .main-text-futuresComp2 {
+  display: block;
   color: black;
-  text-align: center;
   z-index: 1;
   text-align: justify;
+}
+
+.wrapper-futuresComp2::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 450px) {
+  .futuresComp2-scroll {
+    right: 20px;
+    top: -10px;
+  }
+
+  .container-vertical-futures2 {
+    max-height: 76vh;
+  }
+
+  .float-right-1,
+  .float-right-2 {
+    float: none; 
+    width: 58%;  
+    clear: both;
+    shape-outside: none;  
+    padding: 0;
+  }
+
+  .float-right-1 img, 
+  .float-right-2 img {
+    width: 100%;
+  }
+
+  .text-container-futuresComp2 {
+    width: 53%;  
+    margin: 0 0 0 25px;
+  }
+  
+  /* Add some breathing room between sections */
+  .wrapper-futuresComp2 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 200px;
+  }
 }

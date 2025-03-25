@@ -9,21 +9,22 @@ import AssemblagesComp2 from "../components/assemblagesComp2";
 
 function Assemblages() {
   return (
-    <div className="container-fluid">
+    <div
+      className="container-fluid"
+      style={{ overflowX: "hidden", overflowY: "hidden" }}
+    >
       <div className="row">
-        <div className="col-xxl-2">
+        <div className="col-lg-2">
           <NavBar />
         </div>
-        <div className="col-xxl-8 times-new-roman">
+        <div className="col-lg-8 times-new-roman">
           <Viewer
             images={assemblagesImages}
             composition={<AssemblagesComp />}
             composition2={<AssemblagesComp2 />}
           />
         </div>
-        <div className="col-xxl-2 times-new-roman project-name">
-          assemblages
-        </div>
+        <div className="col-lg-2 times-new-roman project-name">assemblages</div>
       </div>
     </div>
   );

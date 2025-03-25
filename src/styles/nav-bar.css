@@ -1,6 +1,7 @@
-ul {
+.nav-bar ul {
   list-style: none;
   margin-left: -15px;
+  margin-top: -8px;
 }
 
 .home {
@@ -13,8 +14,17 @@ ul {
   font-family: 'Times New Roman', Times, serif;
 }
 
+.ul-home {
+  list-style: none;
+  margin-left: -15px;
+  margin-top: 10px;
+}
+
 .page{
   font-family: 'Times New Roman', Times, serif;
+  display: block;
+  margin-bottom: 8px;
+  line-height: 1.1;
 }
 
 .home:hover {
@@ -31,7 +41,33 @@ ul {
   color: red;
 }
 
-.nav-bar{
-  margin-top: 8px;
+.nav-menu-button {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 15px;
+  padding-bottom: 10px;
+  margin-top: -12px;
+}
+
+@media (max-width: 450px) {
+  .nav-bar ul {
+    margin-left: -25px;
+    display: none;
+  }
+
+  .ul-home {
+    margin-left: -25px;
+  }
+
+  .nav-bar ul.active {
+    display: block;
+  }
+
+  .nav-menu-button {
+    display: block;
+    font-weight: bold;
+  }
 }
 

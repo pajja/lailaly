@@ -11,22 +11,17 @@ import DeriveComp5 from "../components/deriveComp5";
 import DeriveComp6 from "../components/deriveComp6";
 import DeriveComp7 from "../components/deriveComp7";
 
-// composition 1: a walk
-// composition 2: textures
-// cmoposition 3: polaroids
-// composition 4: oil pastel on paper
-// composition 5: textures and ballpoint
-// composition 6: combination of leaves
-// composition 7: drawings
-
 function Derive() {
   return (
-    <div className="container-fluid">
+    <div
+      className="container-fluid"
+      style={{ overflowX: "hidden", overflowY: "hidden" }}
+    >
       <div className="row">
-        <div className="col-xxl-2">
+        <div className="col-lg-2">
           <NavBar />
         </div>
-        <div className="col-xxl-8">
+        <div className="col-lg-8">
           <ViewerDerive
             composition1={<DeriveComp1 />}
             composition2={<DeriveComp2 />}
@@ -37,7 +32,7 @@ function Derive() {
             composition7={<DeriveComp7 />}
           />
         </div>
-        <div className="col-xxl-2 times-new-roman project-name">dérive</div>
+        <div className="col-lg-2 times-new-roman project-name">dérive</div>
       </div>
     </div>
   );

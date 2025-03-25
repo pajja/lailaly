@@ -1,44 +1,61 @@
-.scroll-container-vertical {
-  position: static;
+.container-vertical {
+  position: relative;
   max-height: 98vh;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: none;
 }
 
-.scroll-container-vertical::-webkit-scrollbar {
+.container-vertical::-webkit-scrollbar {
   width: 0;
   background: transparent;
 }
 
-.image-grid-vertical {
+.scroll-content-vertical {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 
 .image-item-vertical {
-  padding: 5px;
+  padding: 4px;
 }
 
 .img-fluid-vertical {
   width: 100%;
-  height: 300px;
+  height: auto;
   object-fit: cover;
 }
 
 .custom-scrollbar-vertical {
-  position: absolute;
-  right: 250px;
+  position: fixed;
+  right: 0; /* Will be adjusted by JS */
   top: 0;
   width: 20px;
+  height: 100%;
   z-index: 1000;
 }
+
+/* @media (max-width: 1500px) {
+  .custom-scrollbar-vertical {
+    right: 240px;
+  }
+}
+@media (max-width: 1440px) {
+  .custom-scrollbar-vertical {
+    right: 235px;
+  }
+}
+@media (max-width: 1400px) {
+  .custom-scrollbar-vertical {
+    right: 228px;
+  }
+} */
 
 .scrollbar-thumb-vertical {
   width: 100%;
   height: 10px; 
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
   cursor: pointer;
   position: absolute;
   z-index: 1002;
@@ -69,8 +86,8 @@
 .main-text-chance {
   color: black;
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .title-text-chance {
@@ -107,4 +124,42 @@
   object-fit: cover;
 }
 
+@media (max-width: 450px) {
+  .scroll-content-vertical {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+    margin-right: 20px;
+  }
+
+  /* .custom-scrollbar-vertical {
+    right: 0px;
+    top: 50px;
+  } */
+
+  .image-item-vertical {
+    padding: 0px;
+    margin-bottom: 7px;
+  }
+
+  .img-fluid-vertical {
+    width: 100%;
+    height: 100%;
+  }
+
+  .chanceAndSequenceComp-text {
+    padding: 12px;
+    padding-top: 50px;
+  }
+
+  .images-last-chance {
+    grid-template-columns: repeat(1, auto);
+    gap: 0px;
+    padding: 30px;
+  }
+  
+  .img-fluid-horizontal {
+    width: 100%;
+    height: 100%;
+  }
+}
 
