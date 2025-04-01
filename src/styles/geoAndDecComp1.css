@@ -31,14 +31,19 @@
     left: -50px;
   }
 
+  .image-container-geoAndDecComp1 {
+    gap: 80px;
+  }
+
   .image-geoAndDecComp1 {
-    padding-left: 30px;
-    padding-right: 70px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
   }
 
   .image-geoAndDecComp1 img {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
   }
 }
 
