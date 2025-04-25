@@ -154,7 +154,7 @@ const DeriveComp1 = () => {
         </div>
       </div>
       <div className="custom-scrollbar d1">
-        <div className="scrollbar-thumb">
+        <div className="scrollbar-thumb d1">
           <span className="scrollbar-text">scroll me</span>
         </div>
       </div>

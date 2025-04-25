@@ -95,9 +95,9 @@ const WomanhoodComp4 = () => {
 
   return (
     <div className="container">
-      <div className="scroll-content-geo-dec-3">
+      <div className="scroll-content-geo-dec-3 gapw3">
         <div className="text-container-womanhoodComp-universal text-w4-1 times-new-roman">
-          <p className="main-text padding-womanhood">
+          <p className="main-text">
             Here I have been experimenting with imagery and symbols I associate
             with Womanhood and the difficult experiences faced. I have been
             trying monotypes at home with my own resources and using knowledge
@@ -110,34 +110,37 @@ const WomanhoodComp4 = () => {
           </p>
         </div>
         <div className="text-container-womanhoodComp-universal text-w4-2 times-new-roman">
-          <p className="main-text padding-womanhood">
-            Some of the symbols also resonate with biological diagrams and
-            anatomical drawings. I have decided to include some resonance of
-            this as I feel strongly that historically biological research, that
-            has predominantly been done by white men, has had a large degree of
-            prejudice woven into it's supposedly objective data. This has become
-            apparent to me whilst reading the Charles King book The Reinvention
-            of Humanity. The book explores the many paths of the past of
-            Anthropology and it discusses how biological research and findings
-            often hindered the findings of Anthropological research as people
-            took the words of scientists as absolute truths and did not ever
-            question how exact they were. This often results in existing
-            prejudices being solidified as facts to the public. Eugenics
-            movements in countries such as the US has been backed up in the past
-            by biology like this. The biological 'facts' that I am specifically
-            referring to and has interested me regarding women's lives is the
-            assumed concepts of women being 'naturally' more maternal,
-            physically weaker and slower and naturally their purpose is to carry
-            offspring and care for others. Not to mention the notion that rape
-            is natural as animals don't have consent, larger breasts are
-            attractive from an evolutionary and natural selection basis and many
-            others. What I am trying to convey is that biology has been taken as
-            objective when in fact, socialisation and the impact of a
-            patriarchal culture has had far more of an impact than we know.{" "}
-          </p>
+          <div className="columns-two">
+            <p className="main-text">
+              Some of the symbols also resonate with biological diagrams and
+              anatomical drawings. I have decided to include some resonance of
+              this as I feel strongly that historically biological research,
+              that has predominantly been done by white men, has had a large
+              degree of prejudice woven into it's supposedly objective data.
+              This has become apparent to me whilst reading the Charles King
+              book The Reinvention of Humanity. The book explores the many paths
+              of the past of Anthropology and it discusses how biological
+              research and findings often hindered the findings of
+              Anthropological research as people took the words of scientists as
+              absolute truths and did not ever question how exact they were.
+              This often results in existing prejudices being solidified as
+              facts to the public. Eugenics movements in countries such as the
+              US has been backed up in the past by biology like this. The
+              biological 'facts' that I am specifically referring to and has
+              interested me regarding women's lives is the assumed concepts of
+              women being 'naturally' more maternal, physically weaker and
+              slower and naturally their purpose is to carry offspring and care
+              for others. Not to mention the notion that rape is natural as
+              animals don't have consent, larger breasts are attractive from an
+              evolutionary and natural selection basis and many others. What I
+              am trying to convey is that biology has been taken as objective
+              when in fact, socialisation and the impact of a patriarchal
+              culture has had far more of an impact than we know.{" "}
+            </p>
+          </div>
         </div>
         <div className="text-container-womanhoodComp-universal text-w4-3 times-new-roman">
-          <p className="main-text padding-womanhood">
+          <p className="main-text">
             Some symbols I have used is the beans like shapes. These are mainly
             pointing towards an image of a foetus as well as ovaries, testicals,
             breasts or just general organs. I also have egg shapes and human
@@ -146,15 +149,15 @@ const WomanhoodComp4 = () => {
             women may have. ​
           </p>
         </div>
-        <div className="image-womanhoodComp4" style={{ marginRight: "100px" }}>
+        <div className="image-womanhoodComp4">
           <img src={shapes1} alt="" />
         </div>
         <div className="image-womanhoodComp4">
           <img src={shapes2} alt="" />
         </div>
       </div>
-      <div className="custom-scrollbar">
-        <div className="scrollbar-thumb">
+      <div className="custom-scrollbar w4">
+        <div className="scrollbar-thumb w4">
           <span className="scrollbar-text">scroll me</span>
         </div>
       </div>

@@ -1,16 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/geoAndDecComp1.css";
-
-const GeoAndDecComp1Images = [
-  {
-    src: require("../assets/geometry-and-dec/IMG_3176_edited.jpg"),
-    description: "Ink and pen on paper, 210 x 297 mm",
-  },
-  {
-    src: require("../assets/geometry-and-dec/IMG_3175_edited.jpg"),
-    description: "Acrylic and pencil on paper, 210 x 297 mm",
-  },
-];
+import geoDecImg from "../assets/geometry-and-dec/IMG_3176_edited.jpg";
+import geoDecImg2 from "../assets/geometry-and-dec/IMG_3175_edited.jpg";
 
 const GeoAndDecComp1 = () => {
   useEffect(() => {
@@ -100,17 +91,23 @@ const GeoAndDecComp1 = () => {
   return (
     <div className="container">
       <div className="scroll-content">
-        <div className="image-container-geoAndDecComp1 times-new-roman">
-          {GeoAndDecComp1Images.map((image, index) => (
-            <div key={index} className="image-geoAndDecComp1">
-              <img src={image.src} alt={`Image ${index + 1}`} />
-              <p className="image-description">{image.description}</p>
-            </div>
-          ))}
+        <div className="image-container-geoAndDecComp1 times-new-roman g1">
+          <div className="image-geoAndDecComp1">
+            <img src={geoDecImg} alt="Image 1" />
+            <p className="image-description">
+              Ink and pen on paper, 210 x 297 mm
+            </p>
+          </div>
+          <div className="image-geoAndDecComp1 last-g1">
+            <img src={geoDecImg2} alt="Image 2" />
+            <p className="image-description">
+              Acrylic and pencil on paper, 210 x 297 mm
+            </p>
+          </div>
         </div>
       </div>
       <div className="custom-scrollbar g1">
-        <div className="scrollbar-thumb">
+        <div className="scrollbar-thumb g1">
           <span className="scrollbar-text">scroll me</span>
         </div>
       </div>

@@ -114,7 +114,7 @@ const FuturesComp4 = () => {
         </div>
       </div>
       <div className="custom-scrollbar f4">
-        <div className="scrollbar-thumb">
+        <div className="scrollbar-thumb f4">
           <span className="scrollbar-text">scroll me</span>
         </div>
       </div>

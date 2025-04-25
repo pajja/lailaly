@@ -5,11 +5,11 @@
   margin-top: 10px;
 }
 
-.composition-container-viewer {
+/* .composition-container-viewer {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 .viewer img {
   max-width: 100%;
@@ -95,7 +95,6 @@
     /* background-color: white;
     z-index: 1000; */
   }
-
 
   .col-xxl-8 {
     padding: 0px;

@@ -6,6 +6,7 @@ import "../styles/project-name.css";
 import AssemblagesComp from "../components/assemblagesComp";
 import Viewer from "../components/viewer";
 import AssemblagesComp2 from "../components/assemblagesComp2";
+import "../styles/nav-bar.css";
 
 function Assemblages() {
   return (
@@ -17,7 +18,7 @@ function Assemblages() {
         <div className="col-lg-2">
           <NavBar />
         </div>
-        <div className="col-lg-8 times-new-roman">
+        <div className="col-lg-8 main times-new-roman">
           <Viewer
             images={assemblagesImages}
             composition={<AssemblagesComp />}

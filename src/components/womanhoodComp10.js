@@ -94,28 +94,25 @@ const WomanhoodComp10 = () => {
   return (
     <div className="container">
       <div className="scroll-content">
-        <div className="image-container-geoAndDecComp1 times-new-roman">
-          <div
-            className="image-womanhoodComp10"
-            style={{ marginTop: "10px", marginLeft: "-10px" }}
-          >
+        <div className="image-container-geoAndDecComp1 times-new-roman gapw15">
+          <div className="image-womanhoodComp10">
             <img src={Respect1} alt="" />
           </div>
-          <div className="image-womanhoodComp10" style={{ marginTop: "5px" }}>
+          <div className="image-womanhoodComp10">
             <img src={Respect2} alt="" />
             <p className="image-description">Prints on shiny print paper</p>
           </div>
-          <div className="image-womanhoodComp10" style={{ marginTop: "10px" }}>
+          <div className="image-womanhoodComp10">
             <img src={Respect3} alt="" />
             <p className="image-description">Print on Hosho paper</p>
           </div>
-          <div className="image-womanhoodComp10" style={{ marginTop: "10px" }}>
+          <div className="image-womanhoodComp10">
             <img src={Respect4} alt="" />
           </div>
         </div>
       </div>
-      <div className="custom-scrollbar">
-        <div className="scrollbar-thumb">
+      <div className="custom-scrollbar w10">
+        <div className="scrollbar-thumb w10">
           <span className="scrollbar-text">scroll me</span>
         </div>
       </div>

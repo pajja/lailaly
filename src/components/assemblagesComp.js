@@ -150,7 +150,7 @@ const AssemblagesComp = () => {
               </p>
             </div>
           </div>
-          <div className="image-assemblagesComp paddingrightA">
+          <div className="image-assemblagesComp last-a1">
             <img src={putTogether} alt="" className="collage" />
             <p className="image-description">
               Neo Rauche, Max Ernst, Akiko Tangiguchi
@@ -159,7 +159,7 @@ const AssemblagesComp = () => {
         </div>
       </div>
       <div className="custom-scrollbar a1">
-        <div className="scrollbar-thumb">
+        <div className="scrollbar-thumb a1">
           <span className="scrollbar-text">scroll me</span>
         </div>
       </div>

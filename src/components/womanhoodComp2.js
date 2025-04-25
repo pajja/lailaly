@@ -89,7 +89,7 @@ const WomanhoodComp2 = () => {
   return (
     <div className="container">
       <div className="scroll-content gap">
-        <div className="text-container-womanhoodComp2-1">
+        <div className="text-container-womanhoodComp2 onew2">
           <div className="columns-two">
             <p className="main-text times-new-roman">
               As my final major project I was debating whether to carry on my
@@ -115,7 +115,7 @@ const WomanhoodComp2 = () => {
             </p>
           </div>
         </div>
-        <div className="text-container-womanhoodComp2-2">
+        <div className="text-container-womanhoodComp2 twow2">
           <div className="columns-three">
             <p className="main-text times-new-roman">
               Symbols and imagery have so much power with the connotations
@@ -157,7 +157,7 @@ const WomanhoodComp2 = () => {
             </p>
           </div>
         </div>
-        <div className="text-container-womanhoodComp2-3">
+        <div className="text-container-womanhoodComp2 threew2">
           <div className="columns-two">
             <p className="main-text times-new-roman">
               Hilma Af Klint is an artist that I have looked at in the past who
@@ -189,7 +189,7 @@ const WomanhoodComp2 = () => {
         </div>
       </div>
       <div className="custom-scrollbar w2">
-        <div className="scrollbar-thumb">
+        <div className="scrollbar-thumb w2">
           <span className="scrollbar-text">scroll me</span>
         </div>
       </div>

@@ -10,6 +10,13 @@
 /* 1280x720 */
 /* 1024x768 */
 
+/* my mobile widths */
+/* max-width: 450px; */
+/* max-width: 400px; */
+/* max-width: 380px; */
+/* max-width: 360px; */
+/* max-width: 325px; */
+
 .col-background-home {
   position: relative;
   height: 100vh;
@@ -30,5 +37,11 @@
 
 .background-image-home.visible {
   opacity: 1;
+}
+
+@media (max-width: 450px) {
+  .col-background-home {
+    height: 68vh;
+  }
 }
 

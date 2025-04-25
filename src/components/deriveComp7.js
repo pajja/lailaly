@@ -96,8 +96,8 @@ const DeriveComp7 = () => {
   return (
     <div className="container">
       <div className="scroll-content">
-        <div className="image-container-geoAndDecComp1 times-new-roman">
-          <div className="text-container-deriveComp7 times-new-roman">
+        <div className="image-container-geoAndDecComp1 times-new-roman gap-derive7">
+          <div className="text-container-deriveComp7-1 times-new-roman">
             <div className="columns-two">
               <p className="main-text">
                 I wanted to make a larger piece from the leaves I had collected
@@ -130,21 +130,23 @@ const DeriveComp7 = () => {
           <div className="image-deriveComp7">
             <img src={Painting1} alt="" />
           </div>
-          <div className="text-container-deriveComp7 widthd7-1 times-new-roman">
-            <p className="main-text">
-              Another way I could display this piece was on the wall. These
-              natural, fragile, delicate and ephemeral pressed and stitched
-              leaves would juxtapose the process of mounting and framing them on
-              the white, stark walls of a gallery. The subject could look out of
-              place or possibly like a relic. Such as artefacts with rich
-              culture and meaning from far away countries are often put on
-              plinths and gawked at by the silent public in museums.
-            </p>
+          <div className="text-container-deriveComp7-2 times-new-roman">
+            <div className="columns-one">
+              <p className="main-text">
+                Another way I could display this piece was on the wall. These
+                natural, fragile, delicate and ephemeral pressed and stitched
+                leaves would juxtapose the process of mounting and framing them
+                on the white, stark walls of a gallery. The subject could look
+                out of place or possibly like a relic. Such as artefacts with
+                rich culture and meaning from far away countries are often put
+                on plinths and gawked at by the silent public in museums.
+              </p>
+            </div>
           </div>
           <div className="image-deriveComp7">
             <img src={Painting2} alt="" />
           </div>
-          <div className="text-container-deriveComp7 widthd7-2 times-new-roman">
+          <div className="text-container-deriveComp7-3 times-new-roman">
             <div className="columns-two">
               <p className="main-text">
                 I was also interested in expanding on the ephemeral aspect of
@@ -169,13 +171,13 @@ const DeriveComp7 = () => {
               </p>
             </div>
           </div>
-          <div className="image-deriveComp7 paddingd7">
+          <div className="image-deriveComp7">
             <img src={Painting3} alt="" />
           </div>
         </div>
       </div>
       <div className="custom-scrollbar d7">
-        <div className="scrollbar-thumb">
+        <div className="scrollbar-thumb d7">
           <span className="scrollbar-text">scroll me</span>
         </div>
       </div>

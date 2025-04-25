@@ -190,13 +190,13 @@ const FuturesComp1 = () => {
             </div>
           </div>
         </div>
-        <div className="image-futuresComp1">
+        <div className="image-futuresComp1 lastf1">
           <img src={Dont} alt="" />
           <p className="image-description">Oil on paper 148 x 210</p>
         </div>
       </div>
       <div className="custom-scrollbar f1">
-        <div className="scrollbar-thumb">
+        <div className="scrollbar-thumb f1">
           <span className="scrollbar-text">scroll me</span>
         </div>
       </div>

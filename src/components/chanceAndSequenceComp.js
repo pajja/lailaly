@@ -20,7 +20,8 @@ const ChanceAndSequenceComp = () => {
     const positionScrollbar = () => {
       const containerRect = container.getBoundingClientRect();
       const scrollbar = document.querySelector(".custom-scrollbar-vertical");
-      const offset = 15;
+      // Adjust offset based on screen width
+      const offset = window.innerWidth <= 450 ? 13 : 17;
       // Position the scrollbar at the right edge of the container
       scrollbar.style.right = `${
         window.innerWidth - containerRect.right - offset

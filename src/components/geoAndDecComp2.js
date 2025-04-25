@@ -99,7 +99,9 @@ const GeoAndDecComp2 = () => {
       }
     }, 50); // Small delay (50ms)
 
-    return () => clearTimeout(timeoutId); // Clear the timeout if the component unmounts
+    return () => {
+      clearTimeout(timeoutId); // Clear the timeout if the component unmounts
+    };
   }, []);
 
   return (
@@ -178,21 +180,21 @@ const GeoAndDecComp2 = () => {
               </p>
             </div>
           </div>
-          <div className="image-geoAndDecComp2">
+          <div className="image-geoAndDecComp2 normalg2">
             <img src={tree} alt="" />
             <p className="image-description times-new-roman">
               Acrylic on paper, 297 x 420 mm
             </p>
           </div>
-          <div className="image-geoAndDecComp2 pad-2 times-new-roman">
+          <div className="image-geoAndDecComp2 normalg2">
             <img src={lovers} alt="" />
-            <p className="image-description">
+            <p className="image-description times-new-roman">
               Acrylic on paper, 148.5 x 210 mm
             </p>
           </div>
         </div>
         <div className="custom-scrollbar g2">
-          <div className="scrollbar-thumb">
+          <div className="scrollbar-thumb g2">
             <span className="scrollbar-text">scroll me</span>
           </div>
         </div>

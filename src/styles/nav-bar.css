@@ -52,6 +52,10 @@
   color: black;
 }
 
+.main {
+  margin-top: 0px;
+}
+
 @media (max-width: 450px) {
   .nav-bar ul {
     margin-left: -25px;
@@ -69,6 +73,10 @@
   .nav-menu-button {
     display: block;
     font-weight: bold;
+  }
+
+  .main {
+    margin-top: 0px;
   }
 }
 

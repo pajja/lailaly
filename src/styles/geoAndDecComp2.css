@@ -1,6 +1,15 @@
+/* specifications */
+.columns-four {
+  column-count: 1;
+}
+
+/* g2 */
 .custom-scrollbar.g2 {
-  bottom: 0;
   left: 0;
+}
+
+.scrollbar-thumb.g2 {
+  max-width: 160px;
 }
 
 .text-container-geoAndDecComp2 {
@@ -9,18 +18,9 @@
   justify-content: center;
   flex: 0 0 auto;
   padding: 15px;
+  margin: 0 20px 0 80px;
   width: 92%;
   box-sizing: border-box;
-  margin-top: 10px;
-}
-
-.columns-four {
-  column-count: 1;
-}
-
-.image-geoAndDecComp2-nd img {
-  width: auto;
-  height: auto;
 }
 
 .image-desc-container {
@@ -42,53 +42,45 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-left: 140px;
-  padding-right: 170px;
-}
-
-.image-geoAndDecComp2.pad-2 {
-  padding-right: 200px;
-}
-
-.image-geoAndDecComp2.pad-1 {
-  padding-left: 0px;
-  padding-right: 100px;
+  padding: 0;
+  width: 100%;
 }
 
 .image-geoAndDecComp2 img {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.image-geoAndDecComp2.pad-1 {
+  width: 140%;
 }
 
 @media (max-width: 450px) {
+  /* g2 */
   .custom-scrollbar.g2 {
-    bottom: 0;
-    left: -7px;
+    left: 0px;
   }
 
-  .image-geoAndDecComp2 {
-    padding-left: 20px;
-    padding-right: 20px;
+  .scrollbar-thumb.g2 {
+    max-width: 50px;
+  }
+
+  .image-geoAndDecComp2.normalg2 {
+    width: 100%;
+  }
+
+  .image-geoAndDecComp2.normalg2 img {
+    width: 84%;
+    height: 84%;
   }
 
   .image-geoAndDecComp2.pad-1 {
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-left: -28px;
+    width: 180%;
   }
 
-  .image-geoAndDecComp2.pad-2 {
-    padding-right: 50px;
-  }
-
-  .image-geoAndDecComp2 img {
-    width: 90%;
-    height: 90%;
-  }
-
-  .image-geoAndDecComp2-nd img {
-    width: 90%;
-    height: 90%;
+  .image-geoAndDecComp2.pad-1 img {
+    width: 95%;
+    height: 95%;
   }
 
   .image-desc-container {
@@ -96,17 +88,19 @@
   }
 
   .image-description.fontg2 {
-    font-size: 13.5px;
+    font-size: 10px;
   }
 
+  .text-container-geoAndDecComp2 {
+    padding: 0px;
+    width: 340%;
+    margin: 0;
+  }
+
+  /* specifications */
   .columns-four {
     column-count: 4;
     column-gap: 40px;
     column-width: 1px;
-  }
-  .text-container-geoAndDecComp2 {
-    padding: 0px;
-    width: 380%;
-    margin-top: 30px;
   }
 }

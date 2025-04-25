@@ -10,6 +10,7 @@ import DeriveComp4 from "../components/deriveComp4";
 import DeriveComp5 from "../components/deriveComp5";
 import DeriveComp6 from "../components/deriveComp6";
 import DeriveComp7 from "../components/deriveComp7";
+import "../styles/nav-bar.css";
 
 function Derive() {
   return (
@@ -21,7 +22,7 @@ function Derive() {
         <div className="col-lg-2">
           <NavBar />
         </div>
-        <div className="col-lg-8">
+        <div className="col-lg-8 main">
           <ViewerDerive
             composition1={<DeriveComp1 />}
             composition2={<DeriveComp2 />}

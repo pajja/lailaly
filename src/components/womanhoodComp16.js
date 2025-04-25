@@ -9,80 +9,102 @@ const WomanhoodComp16 = () => {
     const thumb = document.querySelector(".scrollbar-thumb-vertical");
     const scrollbar = document.querySelector(".custom-scrollbar-vertical");
 
-    console.log("container: ", container);
-    console.log("content: ", content);
-    console.log("thumb: ", thumb);
-
     if (!container || !content || !thumb || !scrollbar) return;
 
     // Helper functions to disable and enable text selection
     const disableTextSelection = () => {
-      document.body.style.userSelect = "none"; // Disable text selection
+      document.body.style.userSelect = "none";
     };
 
     const enableTextSelection = () => {
-      document.body.style.userSelect = ""; // Re-enable text selection
+      document.body.style.userSelect = "";
     };
 
-    // Position the scrollbar at the right edge of the container
+    // Define updateThumbPosition BEFORE it's used in positionScrollbar
+    function updateThumbPosition() {
+      const contentHeight = content.scrollHeight;
+      const containerHeight = container.clientHeight;
+      const scrollTop = container.scrollTop;
+
+      // More accurate calculations for the thumb
+      const scrollableHeight = contentHeight - containerHeight;
+      const ratio = containerHeight / contentHeight;
+
+      // Better minimum height calculation based on screen size
+      const minHeight = Math.min(30, containerHeight * 0.1);
+      const thumbHeight = Math.max(ratio * containerHeight, minHeight);
+
+      // More precise positioning
+      const thumbTop =
+        scrollableHeight > 0
+          ? (scrollTop / scrollableHeight) * (containerHeight - thumbHeight)
+          : 0;
+
+      thumb.style.height = `${thumbHeight}px`;
+      thumb.style.top = `${thumbTop}px`;
+    }
+
+    // Improved positioning for responsive screens
     const positionScrollbar = () => {
       const containerRect = container.getBoundingClientRect();
-      const offset = 0; // Adjust this value as needed
+      const offset = 30; // Smaller offset for better mobile experience
 
-      // Set the right position to stick to the container edge
-      scrollbar.style.right = `${
-        window.innerWidth - containerRect.right - offset
-      }px`;
+      // Position scrollbar correctly on all screen sizes
+      if (window.innerWidth <= 768) {
+        // Mobile positioning - closer to edge
+        scrollbar.style.right = `${offset}px`;
+      } else {
+        // Desktop positioning
+        scrollbar.style.right = `${
+          window.innerWidth - containerRect.right - offset
+        }px`;
+      }
+
       scrollbar.style.top = `${containerRect.top}px`;
       scrollbar.style.height = `${containerRect.height}px`;
+
+      // Update the thumb position when resizing
+      updateThumbPosition();
     };
 
     // Run on load and whenever window is resized
     positionScrollbar();
     window.addEventListener("resize", positionScrollbar);
 
-    const updateThumbPosition = () => {
-      const contentHeight = content.scrollHeight;
-      console.log("contentHeight: ", contentHeight);
-      const containerHeight = container.clientHeight;
-      console.log("containerHeight: ", containerHeight);
-      const scrollTop = container.scrollTop;
-
-      const thumbHeight = Math.max(
-        (containerHeight / contentHeight) * containerHeight,
-        10 // Set a minimum thumb height
-      );
-      const thumbTop = (scrollTop / contentHeight) * containerHeight;
-
-      thumb.style.height = `${thumbHeight}px`;
-      thumb.style.top = `${thumbTop}px`;
+    // Improved scroll handling
+    const handleScroll = () => {
+      requestAnimationFrame(updateThumbPosition);
     };
 
-    container.addEventListener("scroll", updateThumbPosition);
+    container.addEventListener("scroll", handleScroll);
     updateThumbPosition();
 
+    // Mouse drag handler
     thumb.addEventListener("mousedown", function (e) {
-      disableTextSelection(); // Disable text selection on drag
+      e.preventDefault(); // Prevent text selection
+      disableTextSelection();
+
       const startY = e.clientY;
-      const startTop = parseFloat(thumb.style.top);
+      const startTop = parseFloat(thumb.style.top) || 0;
+      const thumbHeight = thumb.clientHeight;
+      const trackHeight = container.clientHeight;
+
       const onMouseMove = (e) => {
         const deltaY = e.clientY - startY;
         const newTop = Math.min(
-          container.clientHeight - thumb.clientHeight,
+          trackHeight - thumbHeight,
           Math.max(0, startTop + deltaY)
         );
         thumb.style.top = `${newTop}px`;
 
-        // Adjust the scroll position based on the thumb's new position
-        const scrollRatio =
-          newTop / (container.clientHeight - thumb.clientHeight);
-
-        const maxScrollTop = content.scrollHeight - container.clientHeight;
+        // Improved scroll ratio calculation
+        const scrollRatio = newTop / (trackHeight - thumbHeight);
+        const maxScrollTop = content.scrollHeight - trackHeight;
         container.scrollTop = scrollRatio * maxScrollTop;
       };
 
       const onMouseUp = () => {
-        enableTextSelection(); // Re-enable text selection when drag ends
+        enableTextSelection();
         document.removeEventListener("mousemove", onMouseMove);
         document.removeEventListener("mouseup", onMouseUp);
       };
@@ -91,27 +113,29 @@ const WomanhoodComp16 = () => {
       document.addEventListener("mouseup", onMouseUp, { once: true });
     });
 
-    // Define the touch handler as a named function
+    // Improved touch event handler
     const handleTouchStart = function (e) {
       e.preventDefault();
       disableTextSelection();
 
       const touch = e.touches[0];
       const startY = touch.clientY;
-      const startTop = parseFloat(thumb.style.top);
+      const startTop = parseFloat(thumb.style.top) || 0;
+      const thumbHeight = thumb.clientHeight;
+      const trackHeight = container.clientHeight;
 
       const onTouchMove = (e) => {
         const touch = e.touches[0];
         const deltaY = touch.clientY - startY;
         const newTop = Math.min(
-          container.clientHeight - thumb.clientHeight,
+          trackHeight - thumbHeight,
           Math.max(0, startTop + deltaY)
         );
         thumb.style.top = `${newTop}px`;
 
-        const scrollRatio =
-          newTop / (container.clientHeight - thumb.clientHeight);
-        const maxScrollTop = content.scrollHeight - container.clientHeight;
+        // Improved scroll calculation for touch
+        const scrollRatio = newTop / (trackHeight - thumbHeight);
+        const maxScrollTop = content.scrollHeight - trackHeight;
         container.scrollTop = scrollRatio * maxScrollTop;
       };
 
@@ -125,21 +149,49 @@ const WomanhoodComp16 = () => {
       document.addEventListener("touchend", onTouchEnd, { once: true });
     };
 
-    // Add the event listener using the named function
-    thumb.addEventListener("touchstart", handleTouchStart);
+    // Add the thumb touch event
+    thumb.addEventListener("touchstart", handleTouchStart, { passive: false });
+
+    // Add touch support for the scrollbar track
+    scrollbar.addEventListener(
+      "touchstart",
+      (e) => {
+        // Only if we're not touching the thumb directly
+        if (e.target === scrollbar) {
+          const touchY = e.touches[0].clientY;
+          const scrollbarRect = scrollbar.getBoundingClientRect();
+          const relativeY = touchY - scrollbarRect.top;
+          const thumbHeight = thumb.clientHeight;
+
+          // Move the scroll to where the user tapped
+          const newTop = Math.min(
+            container.clientHeight - thumbHeight,
+            Math.max(0, relativeY - thumbHeight / 2)
+          );
+
+          thumb.style.top = `${newTop}px`;
+
+          const scrollRatio = newTop / (container.clientHeight - thumbHeight);
+          const maxScrollTop = content.scrollHeight - container.clientHeight;
+          container.scrollTop = scrollRatio * maxScrollTop;
+        }
+      },
+      { passive: false }
+    );
 
     return () => {
-      container.removeEventListener("scroll", updateThumbPosition);
+      container.removeEventListener("scroll", handleScroll);
       thumb.removeEventListener("touchstart", handleTouchStart);
-      window.removeEventListener("resize", positionScrollbar); // Clean up resize listener
+      window.removeEventListener("resize", positionScrollbar);
+      scrollbar.removeEventListener("touchstart", () => {});
     };
   }, []);
 
   return (
-    <div className="container-vertical-futures2">
-      <div className="scroll-content-vertical-futures2 womanhood-centered">
-        <div className="womanhood-7-3 womanhood-16">
-          <p className="main-text times-new-roman">
+    <div className="container-vertical-futures2 w7">
+      <div className="scroll-content-vertical-futures2">
+        <div className="womanhood-7-3">
+          <p className="main-text times-new-roman w7">
             On reflecting on my time during my FMP, I feel my work has been
             successful. I have tackled complex, controversial and deep topics
             throughout Womanhood such as the root of the patriarchy, the male

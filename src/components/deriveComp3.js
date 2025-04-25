@@ -110,8 +110,8 @@ const DeriveComp3 = () => {
           </div>
         </div>
       </div>
-      <div className="custom-scrollbar">
-        <div className="scrollbar-thumb">
+      <div className="custom-scrollbar d3">
+        <div className="scrollbar-thumb d3">
           <span className="scrollbar-text">scroll me</span>
         </div>
       </div>

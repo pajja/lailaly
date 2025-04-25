@@ -93,7 +93,7 @@ const WomanhoodComp15 = () => {
   return (
     <div className="container">
       <div className="scroll-content">
-        <div className="image-container-geoAndDecComp1 times-new-roman gap0">
+        <div className="image-container-geoAndDecComp1 times-new-roman gapw15">
           <div className="text-container-womanhoodComp15">
             <p className="main-text times-new-roman">
               I managed to get into the print room one more time to take these
@@ -104,13 +104,13 @@ const WomanhoodComp15 = () => {
           <div className="image-womanhoodComp15">
             <img src={Painting4} alt="" />
           </div>
-          <div className="image-womanhoodComp15 smaller-w15">
+          <div className="image-womanhoodComp15">
             <img src={Painting5} alt="" />
             <p className="image-description times-new-roman black">
               'It is his very nature to do so'
             </p>
           </div>
-          <div className="image-womanhoodComp15 smaller-w15">
+          <div className="image-womanhoodComp15">
             <img src={Painting6} alt="" />
             <p className="image-description times-new-roman black">
               'You'll be fucked with or without it, whatever you do'
@@ -118,8 +118,8 @@ const WomanhoodComp15 = () => {
           </div>
         </div>
       </div>
-      <div className="custom-scrollbar">
-        <div className="scrollbar-thumb">
+      <div className="custom-scrollbar w15">
+        <div className="scrollbar-thumb w15">
           <span className="scrollbar-text">scroll me</span>
         </div>
       </div>

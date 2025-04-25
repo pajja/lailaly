@@ -1,6 +1,10 @@
+/* f3 */
 .custom-scrollbar.f3 {
-  bottom: 0;
   left: 0;
+}
+
+.scrollbar-thumb.f3 {
+  max-width: 250px;
 }
 
 .image-container-futuresComp3 {
@@ -16,29 +20,25 @@
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  padding-left: 120px;
-  padding-right: 180px;
+  width: 100%;
 }
 
 .image-futuresComp3 img {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 450px) {
+  /* f3 */
   .custom-scrollbar.f3 {
-    bottom: 0;
     left: -30px;
   }
 
-  .image-futuresComp3 {
-    margin-left: -17px;
-    padding-left: 0;
-    padding-right: 60px;
+  .scrollbar-thumb.f3 {
+    max-width: 100px;
   }
 
-  .image-futuresComp3 img {
-    width: 92%;
-    height: 92%;
+  .image-container-futuresComp3 {
+    gap: 50px;
   }
 }

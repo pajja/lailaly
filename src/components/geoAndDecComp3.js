@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/geoAndDecComp3.css";
 import blueYellow1 from "../assets/geometry-and-dec/IMG_3183_edited.jpg";
 import blueYellow2 from "../assets/geometry-and-dec/IMG_3181_edited.jpg";
@@ -9,7 +9,20 @@ import shapes4 from "../assets/geometry-and-dec/IMG_2965_edited.jpg";
 import shapes5 from "../assets/geometry-and-dec/IMG_2964_edited.jpg";
 
 const GeoAndDecComp3 = () => {
+  const [scrollText, setScrollText] = useState("scroll me");
+
   useEffect(() => {
+    // Function to update scroll text - now always set to "scroll me"
+    const updateScrollText = () => {
+      setScrollText("scroll me");
+    };
+
+    // Initial call
+    updateScrollText();
+
+    // Add event listener for window resize (keeping for any other potential functionality)
+    window.addEventListener("resize", updateScrollText);
+
     const timeoutId = setTimeout(() => {
       const container = document.querySelector(".container");
       const content = document.querySelector(".scroll-content-geo-dec-3");
@@ -103,7 +116,10 @@ const GeoAndDecComp3 = () => {
       }
     }, 50); // Small delay (50ms)
 
-    return () => clearTimeout(timeoutId); // Clear the timeout if the component unmounts
+    return () => {
+      clearTimeout(timeoutId); // Clear the timeout if the component unmounts
+      window.removeEventListener("resize", updateScrollText); // Clean up the event listener
+    };
   }, []);
 
   return (
@@ -204,8 +220,8 @@ const GeoAndDecComp3 = () => {
           </div>
         </div>
         <div className="custom-scrollbar g3">
-          <div className="scrollbar-thumb">
-            <span className="scrollbar-text">scroll me</span>
+          <div className="scrollbar-thumb g3">
+            <span className="scrollbar-text">{scrollText}</span>
           </div>
         </div>
       </div>

@@ -90,7 +90,7 @@ const WomanhoodComp9 = () => {
   }, []);
 
   return (
-    <div className="container" style={{ width: "770px" }}>
+    <div className="container">
       <div className="scroll-content">
         <div className="image-container-geoAndDecComp1 times-new-roman">
           <div className="image-womanhoodComp9">
@@ -99,13 +99,13 @@ const WomanhoodComp9 = () => {
           <div className="image-womanhoodComp9 smallerw9">
             <img src={Respect2} alt="" />
           </div>
-          <div className="image-womanhoodComp9 smallerw9">
+          <div className="image-womanhoodComp9">
             <img src={Respect3} alt="" />
           </div>
         </div>
       </div>
-      <div className="custom-scrollbar">
-        <div className="scrollbar-thumb">
+      <div className="custom-scrollbar w9">
+        <div className="scrollbar-thumb w9">
           <span className="scrollbar-text">scroll me</span>
         </div>
       </div>

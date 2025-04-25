@@ -5,16 +5,25 @@ const WomanhoodComp7 = () => {
   useEffect(() => {
     const container = document.querySelector(".container-vertical-futures2");
     const content = document.querySelector(".scroll-content-vertical-futures2");
-    const thumb = document.querySelector(".scrollbar-thumb-vertical");
-    const scrollbar = document.querySelector(
-      ".custom-scrollbar-vertical.futuresComp2-scroll"
+    const thumb = document.querySelector(
+      ".custom-scrollbar-vertical.w7 .scrollbar-thumb-vertical"
     );
+    const scrollbar = document.querySelector(".custom-scrollbar-vertical.w7");
 
     console.log("container: ", container);
     console.log("content: ", content);
     console.log("thumb: ", thumb);
+    console.log("scrollbar: ", scrollbar);
 
-    if (!container || !content || !thumb || !scrollbar) return;
+    if (!container || !content || !thumb || !scrollbar) {
+      console.error("Elements not found", {
+        container,
+        content,
+        thumb,
+        scrollbar,
+      });
+      return;
+    }
 
     // Helper functions to disable and enable text selection
     const disableTextSelection = () => {
@@ -27,14 +36,12 @@ const WomanhoodComp7 = () => {
 
     const updateThumbPosition = () => {
       const contentHeight = content.scrollHeight;
-      console.log("contentHeight: ", contentHeight);
       const containerHeight = container.clientHeight;
-      console.log("containerHeight: ", containerHeight);
       const scrollTop = container.scrollTop;
 
       const thumbHeight = Math.max(
         (containerHeight / contentHeight) * containerHeight,
-        10 // Set a minimum thumb height
+        30 // Set a minimum thumb height
       );
       const thumbTop = (scrollTop / contentHeight) * containerHeight;
 
@@ -75,47 +82,59 @@ const WomanhoodComp7 = () => {
       document.addEventListener("mouseup", onMouseUp, { once: true });
     });
 
-    // Define the touch handler as a named function
+    // Improved touch handler for mobile devices
     const handleTouchStart = function (e) {
       e.preventDefault();
       disableTextSelection();
 
       const touch = e.touches[0];
       const startY = touch.clientY;
-      const startTop = parseFloat(thumb.style.top);
+
+      // Get current top position or default to 0
+      const currentTop = thumb.style.top ? parseFloat(thumb.style.top) : 0;
+      console.log("Touch start - startY:", startY, "currentTop:", currentTop);
 
       const onTouchMove = (e) => {
+        e.preventDefault(); // Prevent scrolling while dragging
         const touch = e.touches[0];
         const deltaY = touch.clientY - startY;
-        const newTop = Math.min(
-          container.clientHeight - thumb.clientHeight,
-          Math.max(0, startTop + deltaY)
-        );
+
+        // Calculate new position with bounds checking
+        const thumbHeight = thumb.offsetHeight;
+        const maxTop = container.clientHeight - thumbHeight;
+        const newTop = Math.max(0, Math.min(maxTop, currentTop + deltaY));
+
         thumb.style.top = `${newTop}px`;
 
-        const scrollRatio =
-          newTop / (container.clientHeight - thumb.clientHeight);
+        // Calculate scroll position based on thumb position
+        const scrollRatio = newTop / (maxTop || 1); // Avoid division by zero
         const maxScrollTop = content.scrollHeight - container.clientHeight;
-        container.scrollTop = scrollRatio * maxScrollTop;
+        const newScrollTop = scrollRatio * maxScrollTop;
+
+        container.scrollTop = newScrollTop;
       };
 
       const onTouchEnd = () => {
+        console.log("Touch end event triggered");
         enableTextSelection();
-        document.removeEventListener("touchmove", onTouchMove);
+        document.removeEventListener("touchmove", onTouchMove, {
+          passive: false,
+        });
         document.removeEventListener("touchend", onTouchEnd);
       };
 
+      // Use passive: false to allow preventDefault in touchmove
       document.addEventListener("touchmove", onTouchMove, { passive: false });
-      document.addEventListener("touchend", onTouchEnd, { once: true });
+      document.addEventListener("touchend", onTouchEnd);
     };
 
     // Add the event listener using the named function
-    thumb.addEventListener("touchstart", handleTouchStart);
+    thumb.addEventListener("touchstart", handleTouchStart, { passive: false });
 
     // Add this new function to position the scrollbar at the right edge of container
     const positionScrollbar = () => {
       const containerRect = container.getBoundingClientRect();
-      const offset = 0; // Adjust this value to control the gap between container and scrollbar
+      const offset = 5; // Adjust this value to control the gap between container and scrollbar
 
       // Set the right position to stick to the container edge
       scrollbar.style.right = `${
@@ -123,6 +142,16 @@ const WomanhoodComp7 = () => {
       }px`;
       scrollbar.style.top = `${containerRect.top}px`;
       scrollbar.style.height = `${containerRect.height}px`;
+
+      // Update thumb position after repositioning
+      updateThumbPosition();
+
+      // Debug info for positioning
+      console.log("Positioned scrollbar:", {
+        right: scrollbar.style.right,
+        top: scrollbar.style.top,
+        height: scrollbar.style.height,
+      });
     };
 
     // Run on load and whenever window is resized
@@ -132,15 +161,15 @@ const WomanhoodComp7 = () => {
     return () => {
       container.removeEventListener("scroll", updateThumbPosition);
       thumb.removeEventListener("touchstart", handleTouchStart);
-      window.removeEventListener("resize", positionScrollbar); // Add this line
+      window.removeEventListener("resize", positionScrollbar);
     };
   }, []);
 
   return (
-    <div className="container-vertical-futures2">
-      <div className="scroll-content-vertical-futures2 womanhood-centered">
+    <div className="container-vertical-futures2 w7">
+      <div className="scroll-content-vertical-futures2">
         <div className="womanhood-7-3">
-          <div className="padding-womanhood times-new-roman">
+          <div className="times-new-roman">
             <a
               href="https://docs.google.com/presentation/d/1rZHBxCStT1x1JZ5BbWboeYcxa7YSCuEU9bknt1Qskxs/edit?usp=sharing"
               target="_blank"
@@ -148,7 +177,7 @@ const WomanhoodComp7 = () => {
               Link to the presentation
             </a>
           </div>
-          <p className="main-text times-new-roman">
+          <p className="main-text times-new-roman w7">
             {" "}
             Presenting my Pecha Kucha went well. I got all my research forward
             clearly and got some good feedback. One piece of insight I received
@@ -193,8 +222,7 @@ const WomanhoodComp7 = () => {
           </p>
         </div>
       </div>
-
-      <div className="custom-scrollbar-vertical futuresComp2-scroll">
+      <div className="custom-scrollbar-vertical w7">
         <div className="scrollbar-thumb-vertical">
           <span className="scrollbar-text-vertical">
             s<br />

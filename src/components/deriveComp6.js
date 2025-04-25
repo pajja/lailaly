@@ -113,13 +113,13 @@ const DeriveComp6 = () => {
           <div className="image-deriveComp6">
             <img src={leaf2} alt="" />
           </div>
-          <div className="image-deriveComp6 margind6">
+          <div className="image-deriveComp6">
             <img src={leafCollage} alt="" />
           </div>
         </div>
       </div>
       <div className="custom-scrollbar d6">
-        <div className="scrollbar-thumb">
+        <div className="scrollbar-thumb d6">
           <span className="scrollbar-text">scroll me</span>
         </div>
       </div>

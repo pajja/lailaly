@@ -94,27 +94,27 @@ const WomanhoodComp6 = () => {
   return (
     <div className="container">
       <div className="scroll-content">
-        <div className="image-container-geoAndDecComp1 times-new-roman gap0">
-          <div className="image-womanhoodComp3" style={{ paddingTop: "10px" }}>
+        <div className="image-container-geoAndDecComp1 times-new-roman">
+          <div className="image-womanhoodComp3 womanhood-6">
             <img src={Painting1} alt="" />
             <p className="image-description">Life drawing</p>
           </div>
-          <div className="image-womanhoodComp3" style={{ paddingTop: "10px" }}>
+          <div className="image-womanhoodComp3 womanhood-6 twow6">
             <img src={Painting2} alt="" />
             <p className="image-description">Life drawing</p>
           </div>
-          <div className="image-womanhoodComp3 womanhood-6">
+          <div className="image-womanhoodComp3 womanhood-6 threew6">
             <img src={Painting3} alt="" />
             <p className="image-description">Life drawing</p>
           </div>
-          <div className="image-womanhoodComp3 womanhood-6-2 right-padding-0">
+          <div className="image-womanhoodComp3 womanhood-6">
             <img src={Painting4} alt="" />
             <p className="image-description">Life drawing</p>
           </div>
         </div>
       </div>
-      <div className="custom-scrollbar">
-        <div className="scrollbar-thumb">
+      <div className="custom-scrollbar w6">
+        <div className="scrollbar-thumb w6">
           <span className="scrollbar-text">scroll me</span>
         </div>
       </div>

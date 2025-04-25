@@ -112,7 +112,7 @@ const GeoAndDecComp4 = () => {
               Photograph of game pieces on chess board
             </p>
           </div>
-          <div className="image-geoDecComp4 times-new-roman">
+          <div className="image-geoDecComp4 middle-g4 times-new-roman">
             <img src={blueYellow2} alt="" />
           </div>
           <div className="image-geoDecComp4 times-new-roman">
@@ -122,8 +122,8 @@ const GeoAndDecComp4 = () => {
             </p>
           </div>
         </div>
-        <div className="custom-scrollbar">
-          <div className="scrollbar-thumb">
+        <div className="custom-scrollbar g4">
+          <div className="scrollbar-thumb g4">
             <span className="scrollbar-text">scroll me</span>
           </div>
         </div>

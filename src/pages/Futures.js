@@ -10,6 +10,7 @@ import FuturesComp3 from "../components/futuresComp3";
 import FuturesComp4 from "../components/futuresComp4";
 import ShapesFutures1 from "../assets/futures/IMG_4694_edited-2.jpg";
 import ShapesFutures2 from "../assets/futures/IMG_4993_edited.jpg";
+import "../styles/nav-bar.css";
 
 function Futures() {
   return (
@@ -21,7 +22,7 @@ function Futures() {
         <div className="col-lg-2">
           <NavBar />
         </div>
-        <div className="col-lg-8">
+        <div className="col-lg-8 main">
           <ViewerFutures
             composition1={<FuturesComp1 />}
             composition2={<FuturesComp2 />}

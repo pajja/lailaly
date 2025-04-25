@@ -101,7 +101,7 @@ const WomanhoodComp3 = () => {
   return (
     <div className="container">
       <div className="scroll-content">
-        <div className="image-container-geoAndDecComp1 times-new-roman gap0">
+        <div className="image-container-geoAndDecComp1 times-new-roman gapw3">
           <div className="image-womanhoodComp3 firstw3">
             <img src={Painting1} alt="" />
           </div>
@@ -138,7 +138,7 @@ const WomanhoodComp3 = () => {
         </div>
       </div>
       <div className="custom-scrollbar w3">
-        <div className="scrollbar-thumb">
+        <div className="scrollbar-thumb w3">
           <span className="scrollbar-text">scroll me</span>
         </div>
       </div>

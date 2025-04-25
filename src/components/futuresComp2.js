@@ -143,7 +143,14 @@ const FuturesComp2 = () => {
     // Position the scrollbar at the right edge of the container
     const positionScrollbar = () => {
       const containerRect = container.getBoundingClientRect();
-      const offset = 20;
+      // Get the scrollbar offset from CSS variable (with a fallback)
+      const offsetValue =
+        getComputedStyle(document.documentElement)
+          .getPropertyValue("--scrollbar-offset")
+          .trim() || "20px";
+      // Remove 'px' and convert to number
+      const offset = parseInt(offsetValue, 10) || 20;
+
       // Set the right position to stick to the container edge
       scrollbar.style.right = `${
         window.innerWidth - containerRect.right - offset

@@ -1,25 +1,17 @@
+/* d5 */
 .custom-scrollbar.d5 {
-  bottom: 0;
   left: 0;
 }
 
-.custom-scrollbar.d6 {
-  bottom: 0;
-  left: 0;
-}
-
-.custom-scrollbar.d7 {
-  bottom: 0;
-  left: 0;
+.scrollbar-thumb.d5 {
+  max-width: 170px;
 }
 
 .text-container-deriveComp5 {
   display: flex;
   flex: 0 0 auto;
-  width: 90%;
-  padding: 55px;
-  padding-right: 60px;
-  padding-left: 60px;
+  width: 100%;
+  padding: 50px;
   align-items: center;
   justify-content: center;
 }
@@ -30,28 +22,29 @@
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  padding-left: 0px;
-  padding-right: 0px;
-  width: 80%;
-}
-
-.bsk-padding {
-  padding-right: 140px;
+  width: 100%;
 }
 
 .image-deriveComp5 img {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
+}
+
+/* d6 */
+.custom-scrollbar.d6 {
+  left: 0;
+}
+
+.scrollbar-thumb.d6 {
+  max-width: 170px;
 }
 
 .text-container-deriveComp6 {
   display: flex;
   flex: 0 0 auto;
-  width: 90%;
+  width: 100%;
   overflow: hidden;
-  padding: 35px;
-  margin-right: 30px;
-  margin-left: 30px;
+  padding: 75px;
   align-items: center;
   justify-content: center;
 }
@@ -62,30 +55,51 @@
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  padding-right: 5px;
   width: 100%;
-}
-
-.image-deriveComp6.margind6 {
-  margin: 0;
-  padding-right: 140px;
 }
 
 .image-deriveComp6 img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
-.text-container-deriveComp7 {
+/* d7 */
+.custom-scrollbar.d7 {
+  left: 0;
+}
+
+.scrollbar-thumb.d7 {
+  max-width: 130px;
+}
+
+.text-container-deriveComp7-1 {
   display: flex;
   flex: 0 0 auto;
-  width: 60%;
-  padding: 15px;
-  padding-left: 50px;
-  padding-right: 50px;
-  display: flex;
+  padding: 30px;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.text-container-deriveComp7-2 {
+  display: flex;
+  flex: 0 0 auto;
+  padding: 35px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.text-container-deriveComp7-3 {
+  display: flex;
+  flex: 0 0 auto;
+  padding: 25px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
 }
 
 .image-deriveComp7 {
@@ -94,126 +108,76 @@
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  padding-left: 100px;
-  padding-right: 100px;
-}
-
-.image-deriveComp7.paddingd7 {
-  padding-right: 170px;
+  width: 100%;
 }
 
 .image-deriveComp7 img {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
 } 
 
+.gap-derive7 {
+  gap: 0px;
+}
+
+/* other */
+.columns-one {
+  column-count: 1;
+}
+
 @media (max-width: 450px) {
+  /* d5 */
   .custom-scrollbar.d5 {
-    bottom: 0;
-    left: 0px;
-  }
-
-  .custom-scrollbar.d6 {
-    bottom: 0;
-    left: -40px;
-  }
-
-  .custom-scrollbar.d7 {
-    bottom: 0;
     left: -25px;
   }
-  
-  .image-deriveComp5 {
-    padding-left: 20px;
-    padding-right: 50px;
-    width: 100%;
-  }
 
-  .bsk-padding {
-    padding-right: 0px;
-  }
-
-  .image-deriveComp5 img {
-    width: 90%;
-    height: 90%;
+  .scrollbar-thumb.d5 {
+    max-width: 70px;
   }
 
   .text-container-deriveComp5 {
-    padding-bottom: 0px;
-    width: 190%;
-    padding-left: 40px;
-    padding-top: 50px;
-    padding-right: 40px;
-    margin-top: 0px;
+    width: 205%;
+    padding: 0 10px;
   }
 
-  .bsk-margin {
-    margin-right: 20px;
+  /* d6 */
+  .custom-scrollbar.d6 {
+    left: -30px;
   }
 
-  .bsk-margin img {
-    width: 100%;
-    height: 100%;
+  .scrollbar-thumb.d6 {
+    max-width: 85px;
   }
-
 
   .text-container-deriveComp6 {
-    width: 100%;
-    padding: 15px;
-    margin-right: 50px;
-    margin-left: 0px;
+    padding: 10px;
   }
 
-  .image-deriveComp6 {
-    padding-right: 0px;
-    margin-right: 40px;
-    padding-bottom: 0px;
+  /* d7 */
+  .custom-scrollbar.d7 {
+    left: -25px;
   }
 
-  .image-deriveComp6 img {
-    width: 100%;
-    height: 100%;
+  .scrollbar-thumb.d7 {
+    max-width: 40px;
   }
 
-  .image-deriveComp6.margind6 {
-    width: 140%;
-    margin-left: -90px;
-    padding-right: 0px;
+  .text-container-deriveComp7-1 {
+    padding: 0px;
+    width: 210%;
   }
 
-  .image-deriveComp6.margind6 img {
-    width: 85%;
-    height: 85%;
+  .text-container-deriveComp7-2 {
+    padding: 0px;
+    width: 90%;
   }
 
-  .text-container-deriveComp7 {
+  .text-container-deriveComp7-3 {
     padding: 0px;
     width: 200%;
-    margin-top: 0px;
-
   }
 
-  .image-deriveComp7 {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .image-deriveComp7 img {
-    width: 87%;
-    height: 87%;
-  }
-
-  .image-deriveComp7.paddingd7 {
-    padding-right: 65px;
-  }
-
-  .text-container-deriveComp7.widthd7-1 {
-    width: 100%;
-  }
-
-  .text-container-deriveComp7.widthd7-2 {
-    width: 200%;
+  .gap-derive7 {
+    gap: 40px;
   }
 }
-
-

@@ -20,6 +20,7 @@ import WomanhoodComp15 from "../components/womanhoodComp15";
 import WomanhoodComp7 from "../components/womanhoodComp7";
 import WomanhoodComp16 from "../components/womanhoodComp16";
 import WomanhoodComp13 from "../components/womanhoodComp13";
+import "../styles/nav-bar.css";
 
 function Womanhood() {
   return (
@@ -31,7 +32,7 @@ function Womanhood() {
         <div className="col-lg-2">
           <NavBar />
         </div>
-        <div className="col-lg-8">
+        <div className="col-lg-8 main">
           <ViewerWomanhood
             composition1={
               <div className="mind-map">

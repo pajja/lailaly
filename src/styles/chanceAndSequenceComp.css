@@ -1,3 +1,4 @@
+/* container and vertical scroll */
 .container-vertical {
   position: relative;
   max-height: 98vh;
@@ -11,20 +12,17 @@
   background: transparent;
 }
 
+.container-last-chance {
+  display: flex;
+  justify-content: center;
+  grid-column: 1 / -1;
+}
+
 .scroll-content-vertical {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-}
-
-.image-item-vertical {
-  padding: 4px;
-}
-
-.img-fluid-vertical {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  gap: 0px;
+  margin-top: 4px;
 }
 
 .custom-scrollbar-vertical {
@@ -36,25 +34,9 @@
   z-index: 1000;
 }
 
-/* @media (max-width: 1500px) {
-  .custom-scrollbar-vertical {
-    right: 240px;
-  }
-}
-@media (max-width: 1440px) {
-  .custom-scrollbar-vertical {
-    right: 235px;
-  }
-}
-@media (max-width: 1400px) {
-  .custom-scrollbar-vertical {
-    right: 228px;
-  }
-} */
-
 .scrollbar-thumb-vertical {
   width: 100%;
-  height: 10px; 
+  height: 1px; 
   background-color: rgba(255, 255, 255, 0);
   cursor: pointer;
   position: absolute;
@@ -83,11 +65,13 @@
   font-size: 13px;
 }
 
+/* text */
 .main-text-chance {
   color: black;
-  text-align: center;
-  padding-left: 30px;
-  padding-right: 30px;
+  text-align: justify;
+  text-align-last: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .title-text-chance {
@@ -99,15 +83,22 @@
   grid-column: 1 / -1;
   padding: 20px;
   color: #ACACAC;
+  display: block;
   text-align: center;
-  max-width: 100%;
+  width: 100%;
   padding-top: 70px;
 }
 
-.container-last-chance {
-  display: flex;
-  justify-content: center;
-  grid-column: 1 / -1;
+/* images */
+.image-item-vertical {
+  padding: 5px 2px;
+  width: 100%;
+}
+
+.img-fluid-vertical {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .images-last-chance {
@@ -120,35 +111,38 @@
 
 .img-fluid-horizontal {
   width: 100%;
-  height: 550px;
+  height: 100%;
   object-fit: cover;
+  border: 1px solid #f9f9f9;
 }
 
 @media (max-width: 450px) {
+  /* Container and vertical scroll */
+  .container-vertical {
+    max-height: 90vh;
+  }
+
   .scroll-content-vertical {
     grid-template-columns: repeat(2, 1fr);
     gap: 0px;
-    margin-right: 20px;
+    margin-right: 7px;
   }
 
-  /* .custom-scrollbar-vertical {
-    right: 0px;
-    top: 50px;
-  } */
+  /* Text */
+  .chanceAndSequenceComp-text {
+    padding: 0px;
+    padding-top: 40px;
+  }
 
+  /* Images */
   .image-item-vertical {
     padding: 0px;
-    margin-bottom: 7px;
+    margin-bottom: 7px; 
   }
 
   .img-fluid-vertical {
     width: 100%;
     height: 100%;
-  }
-
-  .chanceAndSequenceComp-text {
-    padding: 12px;
-    padding-top: 50px;
   }
 
   .images-last-chance {
@@ -158,8 +152,8 @@
   }
   
   .img-fluid-horizontal {
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
   }
 }
 

@@ -92,28 +92,20 @@ const WomanhoodComp8 = () => {
   return (
     <div className="container">
       <div className="scroll-content">
-        <div className="image-container-geoAndDecComp1 times-new-roman">
+        <div className="image-container-geoAndDecComp1 times-new-roman w8">
           <div className="image-womanhoodComp8">
             <img src={Respect1} alt="" />
           </div>
           <div className="image-womanhoodComp8">
             <img src={Respect2} alt="" />
           </div>
-          <div
-            className="image-womanhoodComp8"
-            style={{
-              maxWidth: "100%",
-              width: "90%",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
+          <div className="image-womanhoodComp8">
             <img src={Respect3} alt="" />
           </div>
         </div>
       </div>
-      <div className="custom-scrollbar">
-        <div className="scrollbar-thumb">
+      <div className="custom-scrollbar w8">
+        <div className="scrollbar-thumb w8">
           <span className="scrollbar-text">scroll me</span>
         </div>
       </div>

@@ -124,21 +124,21 @@ const DeriveComp5 = () => {
               </p>
             </div>
           </div>
-          <div className="image-deriveComp5 bsk-margin">
+          <div className="image-deriveComp5">
             <img src={leafCollage} alt="" />
           </div>
           <div className="image-deriveComp5">
             <img src={ballpoint1} alt="" />
             <p className="image-description">Ballpoint pen on paper A4</p>
           </div>
-          <div className="image-deriveComp5 bsk-padding">
+          <div className="image-deriveComp5">
             <img src={ballpoint2} alt="" />
             <p className="image-description">Ballpoint pen on paper A4</p>
           </div>
         </div>
       </div>
       <div className="custom-scrollbar d5">
-        <div className="scrollbar-thumb">
+        <div className="scrollbar-thumb d5">
           <span className="scrollbar-text">scroll me</span>
         </div>
       </div>
