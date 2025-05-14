@@ -44,13 +44,14 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 .scrollbar-text {
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
+  font-family: 'Inconsolata', monospace;
+  /* font-family: 'Times New Roman', Times, serif; */
+  /* font-weight: bold; */
   color: black;
   white-space: nowrap;
   user-select: none;
   z-index: 1001;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 /* specifications */
@@ -80,7 +81,7 @@ img {
   justify-content: center;
   align-items: center;
   height: auto;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .image-description {
