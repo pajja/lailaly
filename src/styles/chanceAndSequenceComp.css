@@ -44,13 +44,13 @@
   top: 0; 
 }
 
-.scrollbar-thumb-vertical:hover {
+/* .scrollbar-thumb-vertical:hover {
   background-color: #f1f1f1;
 }
 
 .scrollbar-thumb-vertical:hover .scrollbar-text-vertical {
   color: #f1f1f1;
-}
+} */
 
 .scrollbar-text-vertical {
   font-family: 'Times New Roman', Times, serif;

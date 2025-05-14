@@ -42,8 +42,8 @@
 .float-right-1 {
   float: right;
   width: 75%;
-  shape-outside: inset(0 0 100px 0);
-  padding-bottom: 80px;
+  shape-outside: inset(0 0 80px 0);
+  padding-bottom: 70px;
 }
 
 .float-right-2 {
@@ -70,6 +70,7 @@
   color: black;
   z-index: 1;
   text-align: justify;
+  font-size: 14px;
 }
 
 .wrapper-futuresComp2::after {

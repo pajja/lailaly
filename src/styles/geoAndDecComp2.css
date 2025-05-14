@@ -9,8 +9,7 @@
 }
 
 .scrollbar-thumb.g2 {
-  max-width: 160px;
-}
+  max-width: 160px;}
 
 .text-container-geoAndDecComp2 {
   display: flex;
@@ -32,7 +31,7 @@
 }
 
 .image-description.fontg2 {
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .image-geoAndDecComp2 {

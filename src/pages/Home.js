@@ -8,10 +8,10 @@ import Magnifier from "../components/magnifier";
 import "../styles/magnifier.css";
 
 function Home() {
-  const [background, setBackground] = useState(homeImages.backgroundImage);
+  const [background, setBackground] = useState(null); // Start with no image background
+  const [showVideo, setShowVideo] = useState(true); // Start with video showing
 
   const imageList = [
-    homeImages.backgroundImage,
     homeImages.geometryAndDecolonisationBackground,
     homeImages.assemblagesBackground,
     homeImages.chanceAndSequenceBackground,
@@ -30,11 +30,13 @@ function Home() {
           <ul className="ul-home">
             <li>
               <Link
-                onMouseEnter={() => setBackground(homeImages.backgroundImage)}
+                onMouseEnter={() => {
+                  setBackground(null); // Don't show any background image
+                }}
                 className="home"
                 to="/"
               >
-                Laila Sorabji
+                laila sorabji
               </Link>
             </li>
           </ul>
@@ -42,11 +44,9 @@ function Home() {
             <ul style={{ display: "block" }}>
               <li>
                 <Link
-                  onMouseEnter={() =>
-                    setBackground(
-                      homeImages.geometryAndDecolonisationBackground
-                    )
-                  }
+                  onMouseEnter={() => {
+                    setBackground(null); // Don't show any background image
+                  }}
                   className="page"
                   to="/geometry-and-decolonisation"
                 >
@@ -55,9 +55,9 @@ function Home() {
               </li>
               <li>
                 <Link
-                  onMouseEnter={() =>
-                    setBackground(homeImages.assemblagesBackground)
-                  }
+                  onMouseEnter={() => {
+                    setBackground(null); // Don't show any background image
+                  }}
                   className="page"
                   to="/assemblages"
                 >
@@ -66,9 +66,9 @@ function Home() {
               </li>
               <li>
                 <Link
-                  onMouseEnter={() =>
-                    setBackground(homeImages.chanceAndSequenceBackground)
-                  }
+                  onMouseEnter={() => {
+                    setBackground(null); // Don't show any background image
+                  }}
                   className="page"
                   to="/chance-and-sequence"
                 >
@@ -77,9 +77,9 @@ function Home() {
               </li>
               <li>
                 <Link
-                  onMouseEnter={() =>
-                    setBackground(homeImages.deriveBackground)
-                  }
+                  onMouseEnter={() => {
+                    setBackground(null); // Don't show any background image
+                  }}
                   className="page"
                   to="/derive"
                 >
@@ -88,9 +88,9 @@ function Home() {
               </li>
               <li>
                 <Link
-                  onMouseEnter={() =>
-                    setBackground(homeImages.futuresBackground)
-                  }
+                  onMouseEnter={() => {
+                    setBackground(null); // Don't show any background image
+                  }}
                   className="page"
                   to="/futures"
                 >
@@ -99,9 +99,9 @@ function Home() {
               </li>
               <li>
                 <Link
-                  onMouseEnter={() =>
-                    setBackground(homeImages.womanhoodBackground)
-                  }
+                  onMouseEnter={() => {
+                    setBackground(null); // Don't show any background image
+                  }}
                   className="page"
                   to="/womanhood"
                 >
@@ -112,6 +112,15 @@ function Home() {
           </nav>
         </div>
         <div className="col-lg-8 col-background-home">
+          {showVideo && (
+            <video
+              src={homeImages.backgroundVideo}
+              autoPlay
+              muted
+              loop
+              className="background-image-home visible"
+            />
+          )}
           {imageList.map((image, index) => (
             <img
               key={index}

@@ -14,7 +14,7 @@ function NavBar() {
       <ul className="ul-home">
         <li>
           <Link className="home" to="/">
-            Laila Sorabji
+            laila sorabji
           </Link>
         </li>
       </ul>

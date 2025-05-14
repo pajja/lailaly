@@ -17,6 +17,13 @@
 /* max-width: 360px; */
 /* max-width: 325px; */
 
+body {
+  background-image: url('../assets/home-pic/background-noise.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .col-background-home {
   position: relative;
   height: 100vh;
