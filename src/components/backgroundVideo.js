@@ -4,7 +4,7 @@ import "../styles/backgroundVideo.css";
 const BackgroundVideo = () => {
   return (
     <video className="background-video" autoPlay loop muted playsInline>
-      <source src="/elegia-short-animation-1s.mp4" type="video/mp4" />
+      <source src="/elegia-short-animation-1s-output.mp4" type="video/mp4" />
     </video>
   );
 };

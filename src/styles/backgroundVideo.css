@@ -12,3 +12,10 @@
   opacity: 0.6;
 }
 
+@media (max-width: 450px) {
+  .background-video {
+    bottom: -15%;
+    left: -75%;
+  }
+}
+
