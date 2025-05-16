@@ -6,30 +6,26 @@ const BackgroundVideo = () => {
 
   useEffect(() => {
     const video = videoRef.current;
-
     if (!video) return;
 
-    const handleCanPlay = () => {
-      // Try to play when it's fully ready
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            // Autoplay success
-            console.log("Video autoplayed successfully.");
-          })
-          .catch((error) => {
-            // Autoplay failed
-            console.warn("Video autoplay failed:", error);
-          });
-      }
+    const tryPlay = () => {
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          const promise = video.play();
+          if (promise !== undefined) {
+            promise
+              .then(() => {
+                console.log("Video started");
+              })
+              .catch((err) => {
+                console.warn("Autoplay blocked", err);
+              });
+          }
+        }, 200); // Delay helps bypass timing issues
+      });
     };
 
-    video.addEventListener("canplay", handleCanPlay);
-
-    return () => {
-      video.removeEventListener("canplay", handleCanPlay);
-    };
+    tryPlay();
   }, []);
 
   return (
