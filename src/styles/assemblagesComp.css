@@ -41,8 +41,6 @@
   z-index: 1002;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
-
 .scrollbar-text {
   font-family: 'Inconsolata', monospace;
   /* font-family: 'Times New Roman', Times, serif; */
@@ -51,7 +49,7 @@
   white-space: nowrap;
   user-select: none;
   z-index: 1001;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 /* specifications */
@@ -89,7 +87,11 @@ img {
   text-align: center;
   color: #ACACAC;
   font-size: 12px;
-  font-family: 'Inconsolata', monospace;
+  font-family: "times new roman", Times, serif;
+}
+
+.font14px {
+  font-size: 14px;
 }
 
 /* assemblages */

@@ -6,10 +6,11 @@ import "../styles/nav-bar.css";
 import homeImages from "../components/imagesHome";
 import Magnifier from "../components/magnifier";
 import "../styles/magnifier.css";
+import BackgroundVideo from "../components/backgroundVideo";
 
 function Home() {
-  const [background, setBackground] = useState(null); // Start with no image background
-  const [showVideo, setShowVideo] = useState(true); // Start with video showing
+  // const [background, setBackground] = useState(null);
+  // const [showVideo, setShowVideo] = useState(true);
 
   const imageList = [
     homeImages.geometryAndDecolonisationBackground,
@@ -23,16 +24,20 @@ function Home() {
   return (
     <div
       className="container-fluid"
-      style={{ overflowX: "hidden", overflowY: "hidden" }}
+      style={{
+        overflowX: "hidden",
+        overflowY: "hidden",
+      }}
     >
+      <BackgroundVideo />
       <div className="row">
         <div className="col-lg-2">
           <ul className="ul-home">
             <li>
               <Link
-                onMouseEnter={() => {
-                  setBackground(null); // Don't show any background image
-                }}
+                // onMouseEnter={() => {
+                //   setBackground(null);
+                // }}
                 className="home"
                 to="/"
               >
@@ -44,9 +49,9 @@ function Home() {
             <ul style={{ display: "block" }}>
               <li>
                 <Link
-                  onMouseEnter={() => {
-                    setBackground(null); // Don't show any background image
-                  }}
+                  // onMouseEnter={() => {
+                  //   setBackground(null);
+                  // }}
                   className="page"
                   to="/geometry-and-decolonisation"
                 >
@@ -55,9 +60,9 @@ function Home() {
               </li>
               <li>
                 <Link
-                  onMouseEnter={() => {
-                    setBackground(null); // Don't show any background image
-                  }}
+                  // onMouseEnter={() => {
+                  //   setBackground(null);
+                  // }}
                   className="page"
                   to="/assemblages"
                 >
@@ -66,9 +71,9 @@ function Home() {
               </li>
               <li>
                 <Link
-                  onMouseEnter={() => {
-                    setBackground(null); // Don't show any background image
-                  }}
+                  // onMouseEnter={() => {
+                  //   setBackground(null);
+                  // }}
                   className="page"
                   to="/chance-and-sequence"
                 >
@@ -77,9 +82,9 @@ function Home() {
               </li>
               <li>
                 <Link
-                  onMouseEnter={() => {
-                    setBackground(null); // Don't show any background image
-                  }}
+                  // onMouseEnter={() => {
+                  //   setBackground(null);
+                  // }}
                   className="page"
                   to="/derive"
                 >
@@ -88,9 +93,9 @@ function Home() {
               </li>
               <li>
                 <Link
-                  onMouseEnter={() => {
-                    setBackground(null); // Don't show any background image
-                  }}
+                  // onMouseEnter={() => {
+                  //   setBackground(null);
+                  // }}
                   className="page"
                   to="/futures"
                 >
@@ -99,9 +104,9 @@ function Home() {
               </li>
               <li>
                 <Link
-                  onMouseEnter={() => {
-                    setBackground(null); // Don't show any background image
-                  }}
+                  // onMouseEnter={() => {
+                  //   setBackground(null);
+                  // }}
                   className="page"
                   to="/womanhood"
                 >
@@ -112,7 +117,7 @@ function Home() {
           </nav>
         </div>
         <div className="col-lg-8 col-background-home">
-          {showVideo && (
+          {/* {showVideo && (
             <video
               src={homeImages.backgroundVideo}
               autoPlay
@@ -120,8 +125,8 @@ function Home() {
               loop
               className="background-image-home visible"
             />
-          )}
-          {imageList.map((image, index) => (
+          )} */}
+          {/* {imageList.map((image, index) => (
             <img
               key={index}
               src={image}
@@ -130,7 +135,7 @@ function Home() {
                 background === image ? "visible" : ""
               }`}
             />
-          ))}
+          ))} */}
         </div>
         <div className="col-lg-2 ig-logo">
           <Insta />

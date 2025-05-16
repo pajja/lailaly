@@ -100,13 +100,13 @@ const WomanhoodComp11 = () => {
           </div>
           <div className="image-womanhoodComp11">
             <img src={Respect2} alt="" />
-            <p className="image-description black">
+            <p className="image-description font14px black">
               'The saddest sack of organs I ever did see'
             </p>
           </div>
           <div className="image-womanhoodComp11">
             <img src={Respect3} alt="" />
-            <p className="image-description black">
+            <p className="image-description font14px black">
               'The unwanted watchful eye of the disease of creating life'
             </p>
           </div>

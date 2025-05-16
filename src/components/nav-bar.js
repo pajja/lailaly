@@ -19,10 +19,7 @@ function NavBar() {
         </li>
       </ul>
       <nav className="nav-bar">
-        <button
-          className="nav-menu-button times-new-roman"
-          onClick={toggleMenu}
-        >
+        <button className="nav-menu-button" onClick={toggleMenu}>
           {isMenuOpen ? "press to close menu" : "press to open menu"}
         </button>
         <ul className={isMenuOpen ? "active" : ""}>

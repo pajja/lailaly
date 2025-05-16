@@ -163,13 +163,13 @@ const WomanhoodComp13 = () => {
         </div>
         <div className="image-womanhoodComp13 times-new-roman">
           <img src={shapes1} alt="" />
-          <p className="image-description times-new-roman black">
+          <p className="image-description font14px times-new-roman black">
             'He forces her to become the thing that causes him an erection.'
           </p>
         </div>
         <div className="image-womanhoodComp13 times-new-roman">
           <img src={shapes2} alt="" />
-          <p className="image-description times-new-roman black">
+          <p className="image-description font14px times-new-roman black">
             {" "}
             'The first thing woman he drains is his mother. She is devoted.{" "}
             <br /> He uses her up. He adjusts his parasitism to other females.'
@@ -177,7 +177,7 @@ const WomanhoodComp13 = () => {
         </div>
         <div className="image-womanhoodComp13 times-new-roman">
           <img src={shapes3} alt="" />
-          <p className="image-description times-new-roman black">
+          <p className="image-description font14px times-new-roman black">
             'Our whole lives, before and after, will always be corrupted by the
             biological ability to create human life.'
           </p>

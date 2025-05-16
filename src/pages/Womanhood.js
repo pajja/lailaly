@@ -37,7 +37,7 @@ function Womanhood() {
             composition1={
               <div className="mind-map">
                 <img src={mindMap1} alt="Starting Mind Map" />
-                <p className="image-description times-new-roman black">
+                <p className="image-description font14px times-new-roman black">
                   Starting mind map{" "}
                 </p>
               </div>
@@ -49,7 +49,7 @@ function Womanhood() {
               <div className="mind-map">
                 <img src={mindMap2} alt="Mind Map for imagery used in prints" />
                 <p
-                  className="image-description times-new-roman black"
+                  className="image-description font14px times-new-roman black"
                   style={{ marginTop: "20px" }}
                 >
                   Mind map for imagery used in prints{" "}

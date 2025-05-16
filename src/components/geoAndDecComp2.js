@@ -115,16 +115,16 @@ const GeoAndDecComp2 = () => {
               className="collage"
             />
             <div className="image-desc-container">
-              <p className="image-description fontg2">
+              <p className="image-description">
                 Hilma af Klint’s series of paintings <br /> from 1913/15: Tree
                 of Knowledge
               </p>
-              <p className="image-description fontg2">
+              <p className="image-description">
                 Hilma af Klint, Grupp IX/UW, Duvan,
                 <br />
                 nr 9 (Group IX/UW, The Dove, no. 9), 1915
               </p>
-              <p className="image-description fontg2">
+              <p className="image-description">
                 Hilma Af Klint, Evolution No.13, <br /> 1908
               </p>
             </div>

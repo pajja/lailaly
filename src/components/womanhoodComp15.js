@@ -106,13 +106,13 @@ const WomanhoodComp15 = () => {
           </div>
           <div className="image-womanhoodComp15">
             <img src={Painting5} alt="" />
-            <p className="image-description times-new-roman black">
+            <p className="image-description font14px times-new-roman black">
               'It is his very nature to do so'
             </p>
           </div>
           <div className="image-womanhoodComp15">
             <img src={Painting6} alt="" />
-            <p className="image-description times-new-roman black">
+            <p className="image-description font14px times-new-roman black">
               'You'll be fucked with or without it, whatever you do'
             </p>
           </div>

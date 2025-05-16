@@ -53,8 +53,7 @@
 } */
 
 .scrollbar-text-vertical {
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
+  font-family: 'Inconsolata', monospace;
   color: black;
   user-select: none;
   display: flex;

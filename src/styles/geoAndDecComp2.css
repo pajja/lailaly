@@ -30,10 +30,6 @@
   margin-top: -10px;
 }
 
-.image-description.fontg2 {
-  font-size: 12px;
-}
-
 .image-geoAndDecComp2 {
   position: relative;
   flex: 0 0 auto;
@@ -84,10 +80,6 @@
 
   .image-desc-container {
     gap: 10px;
-  }
-
-  .image-description.fontg2 {
-    font-size: 10px;
   }
 
   .text-container-geoAndDecComp2 {

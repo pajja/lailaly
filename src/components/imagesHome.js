@@ -1,6 +1,5 @@
 const homeImages = {
   backgroundImage: require("../assets/home-pic/home-pic-cropped.jpg"),
-  backgroundVideo: require("../assets/home-pic/elegia-short-animation-1s.mp4"),
   geometryAndDecolonisationBackground: require("../assets/geometry-and-dec/IMG_2967_edited_edited.png"),
   assemblagesBackground: require("../assets/assemblages/IMG_3316_edited-3.jpg"),
   chanceAndSequenceBackground: require("../assets/chance-and-seq/IMG_2947_edited-3.png"),
