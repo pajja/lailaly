@@ -7,20 +7,29 @@ const BackgroundVideo = () => {
   useEffect(() => {
     const video = videoRef.current;
 
-    if (video) {
-      // Try to play the video as soon as it's ready
-      const tryPlay = async () => {
-        try {
-          await video.play();
-        } catch (err) {
-          // Some mobile browsers block autoplay with play() even when muted
-          console.warn("Autoplay failed:", err);
-        }
-      };
+    if (!video) return;
 
-      // Ensure it's triggered after DOM update
-      setTimeout(tryPlay, 100); // short delay to avoid race condition
-    }
+    const handleCanPlay = () => {
+      // Try to play when it's fully ready
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            // Autoplay success
+            console.log("Video autoplayed successfully.");
+          })
+          .catch((error) => {
+            // Autoplay failed
+            console.warn("Video autoplay failed:", error);
+          });
+      }
+    };
+
+    video.addEventListener("canplay", handleCanPlay);
+
+    return () => {
+      video.removeEventListener("canplay", handleCanPlay);
+    };
   }, []);
 
   return (
