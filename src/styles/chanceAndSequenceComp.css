@@ -145,14 +145,16 @@
   }
 
   .images-last-chance {
-    grid-template-columns: repeat(1, auto);
-    gap: 0px;
-    padding: 30px;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0px;
+    }
   
   .img-fluid-horizontal {
-    width: 95%;
-    height: 95%;
+    width: 90%;
+    height: 90%;
   }
 }
 
