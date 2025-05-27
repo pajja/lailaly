@@ -53,6 +53,7 @@
   margin-top: -7px;
   color: black;
   font-family: 'Inconsolata', monospace;
+  margin-left: 1px;
 }
 
 .main {
@@ -75,6 +76,9 @@
 
   .nav-menu-button {
     display: block;
+    margin-left: 7px; /* Adjust this value to move button more to the left */
+    text-align: left; /* Ensure text alignment is consistent */
+    padding-left: 0; /* Remove any potential padding */
   }
 
   .main {
