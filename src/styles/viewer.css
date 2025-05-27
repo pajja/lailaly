@@ -94,10 +94,10 @@
     /* DO THIS IN THE END */
     /* background-color: white;
     z-index: 1000; */
-  }
-
-  .col-xxl-8 {
-    padding: 0px;
-    margin: 0px;
+    background-image: url('../assets/home-pic/background-noise.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1000;
   }
 }

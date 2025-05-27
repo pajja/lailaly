@@ -82,7 +82,7 @@
 @media (max-width: 450px) {
   /* general futures2 container and scroll */
   .container-vertical-futures2 {
-    max-height: 83vh;
+    max-height: 80vh;
   }
 
   :root {

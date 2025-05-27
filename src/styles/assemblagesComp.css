@@ -155,7 +155,8 @@ img {
 @media (max-width: 450px) {
   /* general container and scroll */
   .container {
-    height: 83vh;
+    /* height: 83vh; */
+    height: 75vh;
     padding: 0px;
     padding-left: 5px;
     padding-right: 5px;
@@ -179,7 +180,7 @@ img {
 
   /* assemblages */
   .image-assemblages {
-    height: 83vh;
+    height: 80vh;
     width: 100%;
   }
 

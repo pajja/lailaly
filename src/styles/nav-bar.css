@@ -84,5 +84,9 @@
   .main {
     margin-top: 0px;
   }
+
+  .col-lg-8 {
+    padding: 0px;
+  }
 }
 
