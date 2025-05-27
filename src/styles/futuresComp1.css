@@ -50,7 +50,7 @@
 
 .image-futuresComp1 img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .clock-image {
@@ -112,7 +112,7 @@
 
   .image-futuresComp1 img {
     width: 63%;
-    height: 63%;
+    height: auto;
   }
 
   .image-futuresComp1.lastf1 {

@@ -41,7 +41,7 @@
 
 .image-geoDecComp3 img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .text-container-geoDecComp3 {
@@ -80,7 +80,7 @@
 
 .image-geoDecComp4 img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 @media (max-width: 450px) {
@@ -103,7 +103,7 @@
 
   .image-geoDecComp3 img {
     width: 92%;
-    height: 92%;
+    height: auto;
   }
 
   .text-container-geoDecComp3 {
@@ -122,6 +122,6 @@
 
   .middle-g4 img {
     width: 95%;
-    height: 95%;
+    height: auto;
   }
 }

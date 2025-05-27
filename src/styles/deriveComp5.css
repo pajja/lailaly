@@ -27,7 +27,7 @@
 
 .image-deriveComp5 img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 /* d6 */
@@ -60,7 +60,7 @@
 
 .image-deriveComp6 img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 /* d7 */
@@ -113,7 +113,7 @@
 
 .image-deriveComp7 img {
   width: 100%;
-  height: 100%;
+  height: auto;
 } 
 
 .gap-derive7 {

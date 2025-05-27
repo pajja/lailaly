@@ -43,7 +43,7 @@
 
 .image-geoAndDecComp2 img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .image-geoAndDecComp2.pad-1 {
@@ -66,7 +66,7 @@
 
   .image-geoAndDecComp2.normalg2 img {
     width: 84%;
-    height: 84%;
+    height: auto;
   }
 
   .image-geoAndDecComp2.pad-1 {
@@ -75,7 +75,7 @@
 
   .image-geoAndDecComp2.pad-1 img {
     width: 95%;
-    height: 95%;
+    height: auto;
   }
 
   .image-desc-container {
