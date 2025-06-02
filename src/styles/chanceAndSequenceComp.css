@@ -125,7 +125,8 @@
   .scroll-content-vertical {
     grid-template-columns: repeat(2, 1fr);
     gap: 0px;
-    margin-right: 7px;
+    margin-right: 17px;
+    padding: 7px;
   }
 
   /* Text */

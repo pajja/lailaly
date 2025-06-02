@@ -68,6 +68,7 @@
 .image-womanhoodComp3 img {
   width: 100%;
   height: auto;
+  max-height: 480px;
 }
 
 .gapw3 {
@@ -111,6 +112,7 @@
 .image-womanhoodComp4 img {
   width: 100%;
   height: auto;
+  max-height: 480px;
 }
 
 /* womanhood 6 */

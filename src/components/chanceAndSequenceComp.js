@@ -20,7 +20,15 @@ const ChanceAndSequenceComp = () => {
     const positionScrollbar = () => {
       const containerRect = container.getBoundingClientRect();
       const scrollbar = document.querySelector(".custom-scrollbar-vertical");
-      const offset = 11;
+
+      // Set different offset based on screen width
+      let offset;
+      if (window.innerWidth <= 450) {
+        offset = -5; // For small screens
+      } else {
+        offset = 15; // For normal screens
+      }
+
       // Position the scrollbar at the right edge of the container
       scrollbar.style.right = `${
         window.innerWidth - containerRect.right - offset
@@ -62,9 +70,20 @@ const ChanceAndSequenceComp = () => {
 
       thumb.style.height = `${thumbHeight}px`;
       thumb.style.top = `${thumbTop}px`;
+
+      // Force layout recalculation
+      void thumb.offsetHeight;
     };
 
+    // Use a timeout to ensure proper positioning after DOM is fully rendered
+    setTimeout(() => {
+      positionScrollbar();
+      updateThumbPosition();
+    }, 100);
+
     container.addEventListener("scroll", updateThumbPosition);
+
+    // Initial call for immediate feedback
     updateThumbPosition();
 
     const handleMouseDown = function (e) {

@@ -19,6 +19,7 @@
 .image-deriveComp3 img {
   width: 100%;
   height: auto;
+  max-height: 480px;
 }
 
 .gap-derive3 {
@@ -46,6 +47,7 @@
 .image-deriveComp4 img {
   width: 100%;
   height: auto;
+  max-height: 480px;
 }
 
 .gap-derive4 {

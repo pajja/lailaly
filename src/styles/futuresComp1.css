@@ -51,6 +51,7 @@
 .image-futuresComp1 img {
   width: 100%;
   height: auto;
+  max-height: 480px;
 }
 
 .clock-image {

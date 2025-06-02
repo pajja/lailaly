@@ -47,11 +47,15 @@ const WomanhoodComp16 = () => {
     // Improved positioning for responsive screens
     const positionScrollbar = () => {
       const containerRect = container.getBoundingClientRect();
-      const offset = 30; // Smaller offset for better mobile experience
+      let offset = 18; // Default offset
 
       // Position scrollbar correctly on all screen sizes
-      if (window.innerWidth <= 768) {
-        // Mobile positioning - closer to edge
+      if (window.innerWidth <= 450) {
+        // Small mobile screens
+        offset = 22; // Smaller offset for very small screens
+        scrollbar.style.right = `${offset}px`;
+      } else if (window.innerWidth <= 768) {
+        // Regular mobile positioning
         scrollbar.style.right = `${offset}px`;
       } else {
         // Desktop positioning

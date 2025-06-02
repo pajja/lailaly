@@ -26,6 +26,7 @@
 .image-futuresComp3 img {
   width: 100%;
   height: auto;
+  max-height: 480px;
 }
 
 @media (max-width: 450px) {

@@ -28,6 +28,7 @@
 .image-deriveComp1 img {
   width: 100%;
   height: auto;
+  max-height: 480px;
 }
 
 /* d2 */
@@ -60,6 +61,7 @@
 .image-deriveComp2 img {
   width: 97%;
   height: 97%;
+  max-height: 480px;
 }
 
 /* other... */
