@@ -26,7 +26,8 @@
   width: 100%;
   height: 20px;
   background-color: transparent;
-  z-index: 1000;
+  z-index: 1010;
+  
 }
 
 .scrollbar-thumb {
@@ -112,11 +113,11 @@ img {
 
 /* assemblages comp 1 */
 .custom-scrollbar.a1 {
-  left: 0;
+  left: 40px;
 }
 
 .scrollbar-thumb.a1 {
-  max-width: 250px;
+  max-width: 205px;
 }
 
 .image-container-assemblagesComp {
@@ -187,11 +188,11 @@ img {
 
   /* assemblages comp 1 (a1) */
   .custom-scrollbar.a1 {
-    left: -24px;
+    left: 10px;
   }
 
   .scrollbar-thumb.a1 {
-    max-width: 45px;
+    max-width: 35px;
   }
 
   .text-container-assemblagesComp {
