@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/Home.css";
 import Insta from "../components/instagram";
 import { Link } from "react-router-dom";
@@ -9,8 +9,34 @@ import "../styles/magnifier.css";
 import BackgroundVideo from "../components/backgroundVideo";
 
 function Home() {
-  // const [background, setBackground] = useState(null);
-  // const [showVideo, setShowVideo] = useState(true);
+  const [hasStarted, setHasStarted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if device is mobile and if user has already started the experience
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 450);
+    };
+
+    // Check if user has already started the experience in this session
+    const hasStartedBefore =
+      sessionStorage.getItem("hasStartedExperience") === "true";
+    setHasStarted(hasStartedBefore);
+
+    checkIfMobile();
+    window.addEventListener("resize", checkIfMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkIfMobile);
+    };
+  }, []);
+
+  // Function to handle starting the experience
+  const handleStart = () => {
+    setHasStarted(true);
+    // Save to session storage so it persists during navigation
+    sessionStorage.setItem("hasStartedExperience", "true");
+  };
 
   const imageList = [
     homeImages.geometryAndDecolonisationBackground,
@@ -20,6 +46,46 @@ function Home() {
     homeImages.futuresBackground,
     homeImages.womanhoodBackground,
   ];
+
+  // Start screen component for mobile view
+  const StartScreen = () => (
+    <div
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100vh",
+        backgroundColor: "white",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        zIndex: 1000,
+      }}
+    >
+      <Link className="home" to="/" style={{ marginBottom: "30px" }}>
+        laila sorabji
+      </Link>
+      <button
+        onClick={handleStart}
+        style={{
+          padding: "10px 20px",
+          backgroundColor: "transparent",
+          border: "1px solid black",
+          cursor: "pointer",
+          fontSize: "16px",
+        }}
+      >
+        start
+      </button>
+    </div>
+  );
+
+  // Show start screen only on mobile when not started
+  if (isMobile && !hasStarted) {
+    return <StartScreen />;
+  }
 
   return (
     <div
@@ -34,13 +100,7 @@ function Home() {
         <div className="col-lg-2">
           <ul className="ul-home">
             <li>
-              <Link
-                // onMouseEnter={() => {
-                //   setBackground(null);
-                // }}
-                className="home"
-                to="/"
-              >
+              <Link className="home" to="/">
                 laila sorabji
               </Link>
             </li>
@@ -48,68 +108,32 @@ function Home() {
           <nav className="nav-bar">
             <ul style={{ display: "block" }}>
               <li>
-                <Link
-                  // onMouseEnter={() => {
-                  //   setBackground(null);
-                  // }}
-                  className="page"
-                  to="/geometry-and-decolonisation"
-                >
+                <Link className="page" to="/geometry-and-decolonisation">
                   geometry and decolonisation
                 </Link>
               </li>
               <li>
-                <Link
-                  // onMouseEnter={() => {
-                  //   setBackground(null);
-                  // }}
-                  className="page"
-                  to="/assemblages"
-                >
+                <Link className="page" to="/assemblages">
                   assemblages
                 </Link>
               </li>
               <li>
-                <Link
-                  // onMouseEnter={() => {
-                  //   setBackground(null);
-                  // }}
-                  className="page"
-                  to="/chance-and-sequence"
-                >
+                <Link className="page" to="/chance-and-sequence">
                   chance and sequence
                 </Link>
               </li>
               <li>
-                <Link
-                  // onMouseEnter={() => {
-                  //   setBackground(null);
-                  // }}
-                  className="page"
-                  to="/derive"
-                >
+                <Link className="page" to="/derive">
                   dérive
                 </Link>
               </li>
               <li>
-                <Link
-                  // onMouseEnter={() => {
-                  //   setBackground(null);
-                  // }}
-                  className="page"
-                  to="/futures"
-                >
+                <Link className="page" to="/futures">
                   futures
                 </Link>
               </li>
               <li>
-                <Link
-                  // onMouseEnter={() => {
-                  //   setBackground(null);
-                  // }}
-                  className="page"
-                  to="/womanhood"
-                >
+                <Link className="page" to="/womanhood">
                   womanhood
                 </Link>
               </li>
