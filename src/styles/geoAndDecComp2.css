@@ -5,11 +5,12 @@
 
 /* g2 */
 .custom-scrollbar.g2 {
-  left: 0;
+  left: 15px;
 }
 
 .scrollbar-thumb.g2 {
-  max-width: 160px;}
+  max-width: 145px;
+}
 
 .text-container-geoAndDecComp2 {
   display: flex;
@@ -44,7 +45,6 @@
 .image-geoAndDecComp2 img {
   width: 100%;
   height: auto;
-  max-height: 480px;
 }
 
 .image-geoAndDecComp2.pad-1 {
@@ -54,11 +54,11 @@
 @media (max-width: 450px) {
   /* g2 */
   .custom-scrollbar.g2 {
-    left: 0px;
+    left: 35px;
   }
 
   .scrollbar-thumb.g2 {
-    max-width: 50px;
+    max-width: 40px;
   }
 
   .image-geoAndDecComp2.normalg2 {
@@ -87,6 +87,10 @@
     padding: 0px;
     width: 340%;
     margin: 0;
+  }
+
+  .image-geoAndDecComp2 img {
+    max-height: 480px;
   }
 
   /* specifications */

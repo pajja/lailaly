@@ -68,7 +68,6 @@
 .image-womanhoodComp3 img {
   width: 100%;
   height: auto;
-  max-height: 480px;
 }
 
 .gapw3 {
@@ -112,7 +111,6 @@
 .image-womanhoodComp4 img {
   width: 100%;
   height: auto;
-  max-height: 480px;
 }
 
 /* womanhood 6 */
@@ -432,6 +430,10 @@
     gap: 20px;
   }
 
+  .image-womanhoodComp3 img {
+    max-height: 480px;
+  }
+
   /* womanhood comp 4 */
   .custom-scrollbar.w4 {
     left: -20px;
@@ -458,6 +460,10 @@
     width: 100%;
     padding: 0;
     margin-right: 10px;
+  }
+
+  .image-womanhoodComp4 img {
+    max-height: 480px;
   }
 
   /* womanhood 6 */

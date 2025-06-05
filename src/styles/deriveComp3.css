@@ -19,7 +19,6 @@
 .image-deriveComp3 img {
   width: 100%;
   height: auto;
-  max-height: 480px;
 }
 
 .gap-derive3 {
@@ -32,7 +31,7 @@
 }
 
 .scrollbar-thumb.d4 {
-  max-width: 130px;
+  max-width: 122px;
 }
 
 .image-deriveComp4 {
@@ -47,7 +46,6 @@
 .image-deriveComp4 img {
   width: 100%;
   height: auto;
-  max-height: 480px;
 }
 
 .gap-derive4 {
@@ -61,20 +59,23 @@
   }
 
   .scrollbar-thumb.d3 {
-    max-width: 115px;
+    max-width: 112px;
   }
 
   .gap-derive3 {
     gap: 50px;
   }
+  .image-deriveComp3 img {
+    max-height: 480px;
+  }
 
   /* d4 */
   .custom-scrollbar.d4 {
-    left: -25px;
+    left: -15px;
   }
 
   .scrollbar-thumb.d4 {
-    max-width: 60px;
+    max-width: 55px;
   }
 
   .gap-derive4 {
@@ -84,5 +85,6 @@
   .image-deriveComp4 img {
     width: 95%;
     height: auto;
+    max-height: 480px;
   }
 }

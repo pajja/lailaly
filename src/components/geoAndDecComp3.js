@@ -9,116 +9,124 @@ import shapes4 from "../assets/geometry-and-dec/IMG_2965_edited.jpg";
 import shapes5 from "../assets/geometry-and-dec/IMG_2964_edited.jpg";
 
 const GeoAndDecComp3 = () => {
-  const [scrollText, setScrollText] = useState("scroll me");
-
   useEffect(() => {
-    // Function to update scroll text - now always set to "scroll me"
-    const updateScrollText = () => {
-      setScrollText("scroll me");
-    };
-
-    // Initial call
-    updateScrollText();
-
-    // Add event listener for window resize (keeping for any other potential functionality)
-    window.addEventListener("resize", updateScrollText);
-
     const timeoutId = setTimeout(() => {
       const container = document.querySelector(".container");
       const content = document.querySelector(".scroll-content-geo-dec-3");
-      const thumb = document.querySelector(".scrollbar-thumb");
+      const thumb = document.querySelector(".scrollbar-thumb.g3");
 
-      if (container && content && thumb) {
-        // Helper functions to disable and enable text selection
-        const disableTextSelection = () => {
-          document.body.style.userSelect = "none"; // Disable text selection
-        };
-
-        const enableTextSelection = () => {
-          document.body.style.userSelect = ""; // Re-enable text selection
-        };
-
-        const updateThumbPosition = () => {
-          const contentWidth = content.scrollWidth;
-          const containerWidth = container.clientWidth;
-          const scrollLeft = content.scrollLeft;
-
-          const thumbWidth = Math.max(
-            (containerWidth / contentWidth) * containerWidth,
-            50
-          );
-          const thumbLeft = (scrollLeft / contentWidth) * containerWidth;
-
-          thumb.style.width = `${thumbWidth}px`;
-          thumb.style.left = `${thumbLeft}px`;
-        };
-
-        content.addEventListener("scroll", updateThumbPosition);
-        updateThumbPosition();
-
-        const startDrag = (e, isTouch = false) => {
-          e.preventDefault(); // Add this line
-          disableTextSelection();
-
-          const startX = isTouch ? e.touches[0].clientX : e.clientX;
-          const startLeft = parseFloat(thumb.style.left) || 0; // Add fallback
-
-          const onMove = (moveEvent) => {
-            moveEvent.preventDefault(); // Add this line
-            const clientX = isTouch
-              ? moveEvent.touches[0].clientX
-              : moveEvent.clientX;
-            const deltaX = clientX - startX;
-            const newLeft = Math.min(
-              container.clientWidth - thumb.clientWidth,
-              Math.max(0, startLeft + deltaX)
-            );
-
-            thumb.style.left = `${newLeft}px`;
-            content.scrollLeft =
-              (newLeft / container.clientWidth) * content.scrollWidth;
-          };
-
-          const onEnd = () => {
-            enableTextSelection();
-            document.removeEventListener(
-              isTouch ? "touchmove" : "mousemove",
-              onMove
-            );
-            document.removeEventListener(
-              isTouch ? "touchend" : "mouseup",
-              onEnd
-            );
-          };
-
-          document.addEventListener(
-            isTouch ? "touchmove" : "mousemove",
-            onMove,
-            {
-              passive: false,
-            }
-          );
-          document.addEventListener(isTouch ? "touchend" : "mouseup", onEnd);
-        };
-
-        // Create bound event handlers
-        const handleMouseDown = (e) => startDrag(e, false);
-        const handleTouchStart = (e) => startDrag(e, true);
-
-        thumb.addEventListener("mousedown", handleMouseDown);
-        thumb.addEventListener("touchstart", handleTouchStart);
-
-        return () => {
-          content.removeEventListener("scroll", updateThumbPosition);
-          thumb.removeEventListener("mousedown", handleMouseDown);
-          thumb.removeEventListener("touchstart", handleTouchStart);
-        };
+      // Check if elements exist to prevent null errors
+      if (!container || !content || !thumb) {
+        console.error("Required DOM elements not found:", {
+          container,
+          content,
+          thumb,
+        });
+        return; // Exit early if elements aren't found
       }
+
+      // Helper functions to disable and enable text selection
+      const disableTextSelection = () => {
+        document.body.style.userSelect = "none"; // Disable text selection
+      };
+
+      const enableTextSelection = () => {
+        document.body.style.userSelect = ""; // Re-enable text selection
+      };
+
+      const updateThumbPosition = () => {
+        const contentWidth = content.scrollWidth;
+        const containerWidth = container.clientWidth;
+        const scrollLeft = content.scrollLeft;
+
+        // Get the scrollbar element
+        const scrollbar = document.querySelector(".custom-scrollbar.g3");
+
+        if (!scrollbar) {
+          console.error("Scrollbar not found");
+          return;
+        }
+
+        // Set track width to 80% of container width (making it shorter)
+        const trackWidthPercentage = 80; // Adjust this value as needed (80% = 20% shorter)
+        const trackWidth = containerWidth * (trackWidthPercentage / 100);
+        scrollbar.style.width = `${trackWidth}px`;
+
+        // Calculate thumb size based on the new track width
+        const thumbWidth = Math.max(
+          (containerWidth / contentWidth) * trackWidth,
+          50
+        );
+
+        // Calculate thumb position relative to the shorter track
+        const thumbLeft = (scrollLeft / contentWidth) * trackWidth;
+
+        thumb.style.width = `${thumbWidth}px`;
+        thumb.style.left = `${thumbLeft}px`;
+      };
+
+      content.addEventListener("scroll", updateThumbPosition);
+      updateThumbPosition();
+
+      const startDrag = (e, isTouch = false) => {
+        e.preventDefault(); // Add this line
+        disableTextSelection();
+
+        const startX = isTouch ? e.touches[0].clientX : e.clientX;
+        const startLeft = parseFloat(thumb.style.left) || 0; // Add fallback
+
+        const onMove = (moveEvent) => {
+          moveEvent.preventDefault();
+          const clientX = isTouch
+            ? moveEvent.touches[0].clientX
+            : moveEvent.clientX;
+          const deltaX = clientX - startX;
+
+          // Get scrollbar width for calculations
+          const scrollbar = document.querySelector(".custom-scrollbar");
+          const trackWidth =
+            parseFloat(scrollbar.style.width) || container.clientWidth;
+
+          const newLeft = Math.min(
+            trackWidth - thumb.clientWidth,
+            Math.max(0, startLeft + deltaX)
+          );
+
+          thumb.style.left = `${newLeft}px`;
+          content.scrollLeft = (newLeft / trackWidth) * content.scrollWidth;
+        };
+
+        const onEnd = () => {
+          enableTextSelection();
+          document.removeEventListener(
+            isTouch ? "touchmove" : "mousemove",
+            onMove
+          );
+          document.removeEventListener(isTouch ? "touchend" : "mouseup", onEnd);
+        };
+
+        document.addEventListener(isTouch ? "touchmove" : "mousemove", onMove, {
+          passive: false,
+        });
+        document.addEventListener(isTouch ? "touchend" : "mouseup", onEnd);
+      };
+
+      // Create bound event handlers
+      const handleMouseDown = (e) => startDrag(e, false);
+      const handleTouchStart = (e) => startDrag(e, true);
+
+      thumb.addEventListener("mousedown", handleMouseDown);
+      thumb.addEventListener("touchstart", handleTouchStart);
+
+      return () => {
+        content.removeEventListener("scroll", updateThumbPosition);
+        thumb.removeEventListener("mousedown", handleMouseDown);
+        thumb.removeEventListener("touchstart", handleTouchStart);
+      };
     }, 50); // Small delay (50ms)
 
     return () => {
       clearTimeout(timeoutId); // Clear the timeout if the component unmounts
-      window.removeEventListener("resize", updateScrollText); // Clean up the event listener
     };
   }, []);
 
@@ -221,7 +229,7 @@ const GeoAndDecComp3 = () => {
         </div>
         <div className="custom-scrollbar g3">
           <div className="scrollbar-thumb g3">
-            <span className="scrollbar-text">{scrollText}</span>
+            <span className="scrollbar-text">scroll me</span>
           </div>
         </div>
       </div>

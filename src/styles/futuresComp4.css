@@ -19,7 +19,6 @@
 .image-futuresComp4 img {
   width: 100%;
   height: auto;
-  max-height: 480px;
 }
 
 /* f5 */
@@ -50,6 +49,10 @@
 
   .scrollbar-thumb.f4 {
     max-width: 100px;
+  }
+
+  .image-futuresComp4 img {
+    max-height: 480px;
   }
 
   /* f5 */

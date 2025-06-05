@@ -28,7 +28,6 @@
 .image-deriveComp5 img {
   width: 100%;
   height: auto;
-  max-height: 480px;
 }
 
 /* d6 */
@@ -62,7 +61,6 @@
 .image-deriveComp6 img {
   width: 100%;
   height: auto;
-  max-height: 480px;
 }
 
 /* d7 */
@@ -116,7 +114,6 @@
 .image-deriveComp7 img {
   width: 100%;
   height: auto;
-  max-height: 480px;
 } 
 
 .gap-derive7 {
@@ -143,6 +140,10 @@
     padding: 0 10px;
   }
 
+  .image-deriveComp5 img {
+    max-height: 480px;
+  }
+
   /* d6 */
   .custom-scrollbar.d6 {
     left: -30px;
@@ -154,6 +155,10 @@
 
   .text-container-deriveComp6 {
     padding: 10px;
+  }
+
+  .image-deriveComp6 img {
+    max-height: 480px;
   }
 
   /* d7 */
@@ -182,5 +187,9 @@
 
   .gap-derive7 {
     gap: 40px;
+  }
+
+  .image-deriveComp7 img {
+    max-height: 480px;
   }
 }

@@ -28,7 +28,6 @@
 .image-geoAndDecComp1 img {
   width: 100%;
   height: auto;
-  max-height: 480px;
 }
 
 @media (max-width: 450px) {
@@ -43,6 +42,10 @@
 
   .image-container-geoAndDecComp1.g1 {
     gap: 80px;
+  }
+
+  .image-geoAndDecComp1 img {
+    max-height: 480px;
   }
 }
 
