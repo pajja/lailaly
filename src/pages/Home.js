@@ -80,19 +80,7 @@ function Home() {
         <div style={{ position: "absolute", top: "0px", left: "12px" }}>
           <TitleComponent />
         </div>
-        <button
-          onClick={handleStart}
-          style={{
-            backgroundColor: "transparent",
-            border: "none",
-            cursor: "pointer",
-            fontSize: "14px",
-            fontFamily: "Inconsolata",
-            fontStyle: "monospace",
-            textDecoration: "underline",
-            color: "blue",
-          }}
-        >
+        <button className="start-button" onClick={handleStart}>
           start
         </button>
       </div>
