@@ -7,18 +7,8 @@ const DeriveComp1 = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       const container = document.querySelector(".container");
-      const content = document.querySelector(".scroll-content-geo-dec-3"); // Updated selector to match JSX
-      const thumb = document.querySelector(".scrollbar-thumb.d1"); // Added .d1 to be specific
-
-      // Check if elements exist to prevent errors
-      if (!container || !content || !thumb) {
-        console.error("Required DOM elements not found:", {
-          container,
-          content,
-          thumb,
-        });
-        return; // Exit early if elements aren't found
-      }
+      const content = document.querySelector(".scroll-content");
+      const thumb = document.querySelector(".scrollbar-thumb");
 
       // Helper functions to disable and enable text selection
       const disableTextSelection = () => {
@@ -34,16 +24,11 @@ const DeriveComp1 = () => {
         const containerWidth = container.clientWidth;
         const scrollLeft = content.scrollLeft;
 
-        // Get the scrollbar element with specific class
-        const scrollbar = document.querySelector(".custom-scrollbar.d1"); // Added .d1 to be specific
+        // Get the scrollbar element
+        const scrollbar = document.querySelector(".custom-scrollbar");
 
-        if (!scrollbar) {
-          console.error("Scrollbar not found");
-          return;
-        }
-
-        // Set track width to 93% of container width (making it shorter)
-        const trackWidthPercentage = 93; // Adjust this value as needed (93% = 7% shorter)
+        // Set track width to 80% of container width (making it shorter)
+        const trackWidthPercentage = 80; // Adjust this value as needed (80% = 20% shorter)
         const trackWidth = containerWidth * (trackWidthPercentage / 100);
         scrollbar.style.width = `${trackWidth}px`;
 
@@ -77,14 +62,8 @@ const DeriveComp1 = () => {
             : moveEvent.clientX;
           const deltaX = clientX - startX;
 
-          // Get scrollbar width for calculations with specific class
-          const scrollbar = document.querySelector(".custom-scrollbar.d1"); // Added .d1 to be specific
-
-          if (!scrollbar) {
-            console.error("Scrollbar not found during drag");
-            return;
-          }
-
+          // Get scrollbar width for calculations
+          const scrollbar = document.querySelector(".custom-scrollbar");
           const trackWidth =
             parseFloat(scrollbar.style.width) || container.clientWidth;
 

@@ -12,18 +12,8 @@ const GeoAndDecComp3 = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       const container = document.querySelector(".container");
-      const content = document.querySelector(".scroll-content-geo-dec-3");
-      const thumb = document.querySelector(".scrollbar-thumb.g3");
-
-      // Check if elements exist to prevent null errors
-      if (!container || !content || !thumb) {
-        console.error("Required DOM elements not found:", {
-          container,
-          content,
-          thumb,
-        });
-        return; // Exit early if elements aren't found
-      }
+      const content = document.querySelector(".scroll-content");
+      const thumb = document.querySelector(".scrollbar-thumb");
 
       // Helper functions to disable and enable text selection
       const disableTextSelection = () => {
@@ -40,15 +30,10 @@ const GeoAndDecComp3 = () => {
         const scrollLeft = content.scrollLeft;
 
         // Get the scrollbar element
-        const scrollbar = document.querySelector(".custom-scrollbar.g3");
+        const scrollbar = document.querySelector(".custom-scrollbar");
 
-        if (!scrollbar) {
-          console.error("Scrollbar not found");
-          return;
-        }
-
-        // Set track width to 80% of container width (making it shorter)
-        const trackWidthPercentage = 80; // Adjust this value as needed (80% = 20% shorter)
+        // Set track width to 85% of container width (making it shorter)
+        const trackWidthPercentage = 85; // Adjust this value as needed (85% = 15% shorter)
         const trackWidth = containerWidth * (trackWidthPercentage / 100);
         scrollbar.style.width = `${trackWidth}px`;
 

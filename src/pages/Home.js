@@ -7,6 +7,7 @@ import homeImages from "../components/imagesHome";
 import Magnifier from "../components/magnifier";
 import "../styles/magnifier.css";
 import BackgroundVideo from "../components/backgroundVideo";
+import backgroundNoise from "../assets/home-pic/background-noise.png";
 
 function Home() {
   const [hasStarted, setHasStarted] = useState(false);
@@ -47,40 +48,56 @@ function Home() {
     homeImages.womanhoodBackground,
   ];
 
+  // Title component that will be shared across layouts
+  const TitleComponent = () => (
+    <ul className="ul-home">
+      <li>
+        <Link className="home" to="/">
+          laila sorabji
+        </Link>
+      </li>
+    </ul>
+  );
+
   // Start screen component for mobile view
-  const StartScreen = () => (
-    <div
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100vh",
-        backgroundColor: "white",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        zIndex: 1000,
-      }}
-    >
-      <Link className="home" to="/" style={{ marginBottom: "30px" }}>
-        laila sorabji
-      </Link>
-      <button
-        onClick={handleStart}
+  const StartScreen = () => {
+    return (
+      <div
         style={{
-          padding: "10px 20px",
-          backgroundColor: "transparent",
-          border: "1px solid black",
-          cursor: "pointer",
-          fontSize: "16px",
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100vh",
+          backgroundImage: `url(${backgroundNoise})`,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          zIndex: 1000,
         }}
       >
-        start
-      </button>
-    </div>
-  );
+        <div style={{ position: "absolute", top: "0px", left: "12px" }}>
+          <TitleComponent />
+        </div>
+        <button
+          onClick={handleStart}
+          style={{
+            backgroundColor: "transparent",
+            border: "none",
+            cursor: "pointer",
+            fontSize: "14px",
+            fontFamily: "Inconsolata",
+            fontStyle: "monospace",
+            textDecoration: "underline",
+            color: "blue",
+          }}
+        >
+          start
+        </button>
+      </div>
+    );
+  };
 
   // Show start screen only on mobile when not started
   if (isMobile && !hasStarted) {
@@ -98,13 +115,7 @@ function Home() {
       <BackgroundVideo />
       <div className="row">
         <div className="col-lg-2">
-          <ul className="ul-home">
-            <li>
-              <Link className="home" to="/">
-                laila sorabji
-              </Link>
-            </li>
-          </ul>
+          <TitleComponent />
           <nav className="nav-bar">
             <ul style={{ display: "block" }}>
               <li>
@@ -140,27 +151,7 @@ function Home() {
             </ul>
           </nav>
         </div>
-        <div className="col-lg-8 col-background-home">
-          {/* {showVideo && (
-            <video
-              src={homeImages.backgroundVideo}
-              autoPlay
-              muted
-              loop
-              className="background-image-home visible"
-            />
-          )} */}
-          {/* {imageList.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`Background ${index}`}
-              className={`background-image-home ${
-                background === image ? "visible" : ""
-              }`}
-            />
-          ))} */}
-        </div>
+        <div className="col-lg-8 col-background-home"></div>
         <div className="col-lg-2 ig-logo">
           <Insta />
         </div>
