@@ -22,19 +22,30 @@ const ChanceAndSequenceComp = () => {
       const scrollbar = document.querySelector(".custom-scrollbar-vertical");
 
       // Set different offset based on screen width
-      let offset;
+      let offsetRight;
+      let offsetTop;
       if (window.innerWidth <= 450) {
-        offset = -5; // For small screens
+        offsetRight = -5; // For small screens
+        offsetTop = -50; // Adjust top offset for small screens
       } else {
-        offset = 15; // For normal screens
+        offsetRight = 15; // For normal screens
+        offsetTop = 0; // No top offset for normal screens
       }
 
+      // Make the scrollbar shorter than the container (adjust percentage as needed)
+      const scrollbarHeight = containerRect.height * 0.8; // Using 80% of the container height
+
       // Position the scrollbar at the right edge of the container
+      // and center it vertically
       scrollbar.style.right = `${
-        window.innerWidth - containerRect.right - offset
+        window.innerWidth - containerRect.right - offsetRight
       }px`;
-      scrollbar.style.top = `${containerRect.top}px`;
-      scrollbar.style.height = `${containerRect.height}px`;
+      scrollbar.style.top = `${
+        containerRect.top +
+        (containerRect.height - scrollbarHeight) / 2 +
+        offsetTop
+      }px`;
+      scrollbar.style.height = `${scrollbarHeight}px`;
     };
 
     // Position scrollbar initially and on resize
@@ -54,10 +65,13 @@ const ChanceAndSequenceComp = () => {
       const contentHeight = content.scrollHeight;
       const containerHeight = container.clientHeight;
       const scrollTop = container.scrollTop;
+      const scrollbarHeight = parseFloat(
+        document.querySelector(".custom-scrollbar-vertical").style.height
+      );
 
       // Calculate thumb height proportionally with a minimum size
       const thumbHeight = Math.max(
-        (containerHeight / contentHeight) * containerHeight,
+        (containerHeight / contentHeight) * scrollbarHeight,
         30 // Minimum thumb height
       );
 
@@ -65,7 +79,7 @@ const ChanceAndSequenceComp = () => {
       const scrollableHeight = contentHeight - containerHeight;
       const scrollRatio =
         scrollableHeight <= 0 ? 0 : scrollTop / scrollableHeight;
-      const maxThumbTop = containerHeight - thumbHeight;
+      const maxThumbTop = scrollbarHeight - thumbHeight;
       const thumbTop = scrollRatio * maxThumbTop;
 
       thumb.style.height = `${thumbHeight}px`;
@@ -93,18 +107,21 @@ const ChanceAndSequenceComp = () => {
       // Get the container and scrollbar bounds for positioning
       const containerRect = container.getBoundingClientRect();
       const thumbRect = thumb.getBoundingClientRect();
+      const scrollbarRect = document
+        .querySelector(".custom-scrollbar-vertical")
+        .getBoundingClientRect();
 
       // Calculate the initial position
       const startY = e.clientY;
-      const startTop = thumbRect.top - containerRect.top;
+      const startTop = thumbRect.top - scrollbarRect.top;
 
       const onMouseMove = function (e) {
-        // Calculate the new position relative to the container
+        // Calculate the new position relative to the scrollbar
         const deltaY = e.clientY - startY;
 
         // Ensure the thumb stays within the scrollbar bounds
         const newTop = Math.min(
-          containerRect.height - thumbRect.height,
+          scrollbarRect.height - thumbRect.height,
           Math.max(0, startTop + deltaY)
         );
 
@@ -112,7 +129,7 @@ const ChanceAndSequenceComp = () => {
         thumb.style.top = `${newTop}px`;
 
         // Calculate scroll position
-        const scrollRatio = newTop / (containerRect.height - thumbRect.height);
+        const scrollRatio = newTop / (scrollbarRect.height - thumbRect.height);
         const maxScrollTop = content.scrollHeight - containerRect.height;
 
         // Update scroll position
@@ -139,18 +156,20 @@ const ChanceAndSequenceComp = () => {
       const touch = e.touches[0];
       const startY = touch.clientY;
       const startTop = parseFloat(thumb.style.top);
+      const scrollbarHeight = parseFloat(
+        document.querySelector(".custom-scrollbar-vertical").style.height
+      );
 
       const onTouchMove = (e) => {
         const touch = e.touches[0];
         const deltaY = touch.clientY - startY;
         const newTop = Math.min(
-          container.clientHeight - thumb.clientHeight,
+          scrollbarHeight - thumb.clientHeight,
           Math.max(0, startTop + deltaY)
         );
         thumb.style.top = `${newTop}px`;
 
-        const scrollRatio =
-          newTop / (container.clientHeight - thumb.clientHeight);
+        const scrollRatio = newTop / (scrollbarHeight - thumb.clientHeight);
         const maxScrollTop = content.scrollHeight - container.clientHeight;
         container.scrollTop = scrollRatio * maxScrollTop;
       };

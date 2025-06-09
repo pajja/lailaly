@@ -2,7 +2,7 @@
 .container-vertical {
   position: relative;
   max-height: 98vh;
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
   scrollbar-width: none;
 }
