@@ -12,7 +12,7 @@
   opacity: 0.6;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .background-video {
     bottom: -40%;
     left: -80%;

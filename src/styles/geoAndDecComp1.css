@@ -4,7 +4,7 @@
 }
 
 .scrollbar-thumb.g1 {
-  max-width: 380px;
+  max-width: 400px;
 }
 
 .image-container-geoAndDecComp1 {
@@ -30,14 +30,14 @@
   height: auto;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   /* g1 */
   .custom-scrollbar.g1 {
-    left: -35px;
+    left: -30px;
   }
 
   .scrollbar-thumb.g1 {
-    max-width: 170px;
+    max-width: 140px;
   }
 
   .image-container-geoAndDecComp1.g1 {

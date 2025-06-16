@@ -79,7 +79,7 @@
   clear: both;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   /* general futures2 container and scroll */
   .container-vertical-futures2 {
     max-height: 80vh;

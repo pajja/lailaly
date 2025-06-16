@@ -60,7 +60,7 @@
   margin-top: 0px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .nav-bar ul {
     margin-left: -25px;
     display: none;

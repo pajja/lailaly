@@ -116,7 +116,7 @@
   border: 1px solid #f9f9f9;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   /* Container and vertical scroll */
   .container-vertical {
     max-height: 90vh;

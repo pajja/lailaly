@@ -28,7 +28,7 @@
   height: auto;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   /* f3 */
   .custom-scrollbar.f3 {
     left: -30px;

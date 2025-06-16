@@ -63,7 +63,7 @@
   flex-direction: column;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .custom-scrollbar.f1 {
     left: 70px;
   }

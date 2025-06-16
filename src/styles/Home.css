@@ -11,7 +11,7 @@
 /* 1024x768 */
 
 /* my mobile widths */
-/* max-width: 450px; */
+/* max-width: 480px; */
 /* max-width: 400px; */
 /* max-width: 380px; */
 /* max-width: 360px; */
@@ -61,7 +61,7 @@ body {
   color: red;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .col-background-home {
     height: 60vh;
   }

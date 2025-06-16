@@ -12,8 +12,18 @@ const GeoAndDecComp3 = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       const container = document.querySelector(".container");
-      const content = document.querySelector(".scroll-content");
+      const content = document.querySelector(".scroll-content-geo-dec-3"); // Fixed class name
       const thumb = document.querySelector(".scrollbar-thumb");
+
+      // Check if all elements exist before proceeding
+      if (!container || !content || !thumb) {
+        console.error("One or more required DOM elements not found:", {
+          container: !!container,
+          content: !!content,
+          thumb: !!thumb,
+        });
+        return; // Exit early if elements aren't found
+      }
 
       // Helper functions to disable and enable text selection
       const disableTextSelection = () => {
@@ -108,7 +118,7 @@ const GeoAndDecComp3 = () => {
         thumb.removeEventListener("mousedown", handleMouseDown);
         thumb.removeEventListener("touchstart", handleTouchStart);
       };
-    }, 50); // Small delay (50ms)
+    }, 100); // Increased timeout to 100ms to ensure DOM is fully loaded
 
     return () => {
       clearTimeout(timeoutId); // Clear the timeout if the component unmounts

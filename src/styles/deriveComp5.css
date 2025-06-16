@@ -125,7 +125,7 @@
   column-count: 1;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   /* d5 */
   .custom-scrollbar.d5 {
     left: -25px;

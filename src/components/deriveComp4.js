@@ -30,8 +30,8 @@ const DeriveComp4 = () => {
       // Get the scrollbar element
       const scrollbar = document.querySelector(".custom-scrollbar");
 
-      // Set track width to 94% of container width (making it shorter)
-      const trackWidthPercentage = 94; // Adjust this value as needed (94% = 6% shorter)
+      // Set track width to 90% of container width (making it shorter)
+      const trackWidthPercentage = 90; // Adjust this value as needed (90% = 10% shorter)
       const trackWidth = containerWidth * (trackWidthPercentage / 100);
       scrollbar.style.width = `${trackWidth}px`;
 

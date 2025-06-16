@@ -7,8 +7,14 @@ const DeriveComp1 = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       const container = document.querySelector(".container");
-      const content = document.querySelector(".scroll-content");
+      const content = document.querySelector(".scroll-content-geo-dec-3");
       const thumb = document.querySelector(".scrollbar-thumb");
+
+      // Check if elements exist before proceeding
+      if (!container || !content || !thumb) {
+        console.error("Required DOM elements not found");
+        return;
+      }
 
       // Helper functions to disable and enable text selection
       const disableTextSelection = () => {
@@ -26,6 +32,7 @@ const DeriveComp1 = () => {
 
         // Get the scrollbar element
         const scrollbar = document.querySelector(".custom-scrollbar");
+        if (!scrollbar) return;
 
         // Set track width to 80% of container width (making it shorter)
         const trackWidthPercentage = 80; // Adjust this value as needed (80% = 20% shorter)

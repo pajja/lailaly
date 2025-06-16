@@ -28,8 +28,8 @@ const GeoAndDecComp2 = () => {
         // Get the scrollbar element
         const scrollbar = document.querySelector(".custom-scrollbar");
 
-        // Set track width to 85% of container width (making it shorter)
-        const trackWidthPercentage = 85; // Adjust this value as needed (85% = 15% shorter)
+        // Set track width to 80% of container width (making it shorter)
+        const trackWidthPercentage = 80; // Adjust this value as needed (80% = 20% shorter)
         const trackWidth = containerWidth * (trackWidthPercentage / 100);
         scrollbar.style.width = `${trackWidth}px`;
 

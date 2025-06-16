@@ -1,10 +1,10 @@
 /* a2 */
 .custom-scrollbar.a2 {
-  left: 0;
+  left: -20px;
 }
 
 .scrollbar-thumb.a2 {
-  max-width: 380px;
+  max-width: 390px;
 }
 
 .image-container-assemblagesComp2 {
@@ -28,14 +28,14 @@
   height: auto;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   /* a2 */
   .custom-scrollbar.a2 {
-    left: -40px;
+    left: -30px;
   }
 
   .scrollbar-thumb.a2 {
-    max-width: 180px;
+    max-width: 145px;
   }
 
   .image-assemblagesComp2 img {

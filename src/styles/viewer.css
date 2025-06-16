@@ -62,7 +62,7 @@
   padding: 0px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   #assemblages-image-1 {
     padding-top: 10px;
     padding-bottom: 10px;

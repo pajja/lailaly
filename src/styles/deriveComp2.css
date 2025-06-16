@@ -1,10 +1,10 @@
 /* d1 */
 .custom-scrollbar.d1 {
-  left: -5px;
+  left: 30px;
 }
 
 .scrollbar-thumb.d1 {
-  max-width: 235px;
+  max-width: 205px;
 }
 
 .text-container-deriveComp1 {
@@ -71,21 +71,19 @@
   column-count: 1;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   /* d1 */
   .custom-scrollbar.d1 {
-    left: -12px;
+    left: 10px;
   }
 
   .scrollbar-thumb.d1 {
-    max-width: 60px;
+    max-width: 45px;
   }
 
   .text-container-deriveComp1 {
-    width: 310%;
-    margin-top: 40px;
+    width: 311%;
     padding: 0;
-    margin-right: 60px;
   }
 
   .image-deriveComp1 img {
@@ -94,11 +92,11 @@
 
   /* d2 */
   .custom-scrollbar.d2 {
-    left: -10px;
+    left: -5px;
   }
 
   .scrollbar-thumb.d2 {
-    max-width: 47px;
+    max-width: 40px;
   }
 
   .text-container-deriveComp2 {

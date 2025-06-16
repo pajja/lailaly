@@ -5,11 +5,11 @@
 
 /* g2 */
 .custom-scrollbar.g2 {
-  left: 15px;
+  left: 40px;
 }
 
 .scrollbar-thumb.g2 {
-  max-width: 145px;
+  max-width: 135px;
 }
 
 .text-container-geoAndDecComp2 {
@@ -51,14 +51,14 @@
   width: 140%;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   /* g2 */
   .custom-scrollbar.g2 {
-    left: 35px;
+    left: 50px;
   }
 
   .scrollbar-thumb.g2 {
-    max-width: 40px;
+    max-width: 35px;
   }
 
   .image-geoAndDecComp2.normalg2 {

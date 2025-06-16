@@ -8,12 +8,12 @@
 
 .scroll-content {
   display: flex;
-  min-width: 750px;
-  width: 100%;
-  height: 100%;
-  overflow-x: scroll;
-  box-sizing: content-box;
   flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  min-width: 750px;
+  height: 100%;
+  width: 100%;
   /* Hide scrollbar for Chrome, Safari and Opera */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
@@ -113,7 +113,7 @@ img {
 
 /* assemblages comp 1 */
 .custom-scrollbar.a1 {
-  left: 40px;
+  left: 60px;
 }
 
 .scrollbar-thumb.a1 {
@@ -153,7 +153,7 @@ img {
 }
 
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   /* general container and scroll */
   .container {
     /* height: 83vh; */
@@ -191,7 +191,7 @@ img {
   }
 
   .scrollbar-thumb.a1 {
-    max-width: 35px;
+    max-width: 30px;
   }
 
   .text-container-assemblagesComp {
