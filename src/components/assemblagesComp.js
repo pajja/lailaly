@@ -37,7 +37,7 @@ const AssemblagesComp = () => {
         50
       );
 
-      // Calculate thumb position relative to the shorter trackAdd commentMore actions
+      // Calculate thumb position
       const thumbLeft = (scrollLeft / contentWidth) * trackWidth;
 
       thumb.style.width = `${thumbWidth}px`;

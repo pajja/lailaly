@@ -4,7 +4,7 @@
 }
 
 .scrollbar-thumb.d5 {
-  max-width: 170px;
+  max-width: 162px;
 }
 
 .text-container-deriveComp5 {
@@ -36,7 +36,7 @@
 }
 
 .scrollbar-thumb.d6 {
-  max-width: 170px;
+  max-width: 160px;
 }
 
 .text-container-deriveComp6 {
@@ -65,11 +65,11 @@
 
 /* d7 */
 .custom-scrollbar.d7 {
-  left: 0;
+  left: 15px;
 }
 
 .scrollbar-thumb.d7 {
-  max-width: 130px;
+  max-width: 110px;
 }
 
 .text-container-deriveComp7-1 {
@@ -128,11 +128,11 @@
 @media (max-width: 480px) {
   /* d5 */
   .custom-scrollbar.d5 {
-    left: -25px;
+    left: -10px;
   }
 
   .scrollbar-thumb.d5 {
-    max-width: 70px;
+    max-width: 50px;
   }
 
   .text-container-deriveComp5 {
@@ -146,11 +146,11 @@
 
   /* d6 */
   .custom-scrollbar.d6 {
-    left: -30px;
+    left: -7px;
   }
 
   .scrollbar-thumb.d6 {
-    max-width: 85px;
+    max-width: 60px;
   }
 
   .text-container-deriveComp6 {
@@ -163,16 +163,16 @@
 
   /* d7 */
   .custom-scrollbar.d7 {
-    left: -25px;
+    left: 10px;
   }
 
   .scrollbar-thumb.d7 {
-    max-width: 40px;
+    max-width: 30px;
   }
 
   .text-container-deriveComp7-1 {
     padding: 0px;
-    width: 210%;
+    width: 208%;
   }
 
   .text-container-deriveComp7-2 {
