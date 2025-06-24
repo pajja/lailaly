@@ -275,11 +275,11 @@
 
 /* womanhood comp 13 */
 .custom-scrollbar.w13 {
-  left: 0;
+  left: 50px;
 }
 
 .scrollbar-thumb.w13 {
-  max-width: 95px;
+  max-width: 80px;
 }
 
 .image-womanhoodComp13 {
@@ -468,11 +468,11 @@
 
   /* womanhood 6 */
   .custom-scrollbar.w6 {
-    left: -30px;
+    left: -25px;
   }
   
   .scrollbar-thumb.w6 {
-    max-width: 90px;
+    max-width: 74px;
   }
   
   .womanhood-6 {
@@ -504,11 +504,11 @@
 
   /* womanhood comp 8 */
   .custom-scrollbar.w8 {
-    left: -30px;
+    left: -28px;
   }
 
   .scrollbar-thumb.w8 {
-    max-width: 95px;
+    max-width: 90px;
   }
 
   .image-container-geoAndDecComp1.w8 {
@@ -517,11 +517,11 @@
 
   /* womanhood comp 9 */
   .custom-scrollbar.w9 {
-    left: -30px;
+    left: -28px;
   }
 
   .scrollbar-thumb.w9 {
-    max-width: 105px;
+    max-width: 96px;
   }
 
   .image-womanhoodComp9.smallerw9 {
@@ -534,7 +534,7 @@
   }
   
   .scrollbar-thumb.w10 {
-    max-width: 85px;
+    max-width: 75px;
   }
 
   /* womanhood comp 11 */
@@ -543,7 +543,7 @@
   }
   
   .scrollbar-thumb.w11 {
-    max-width: 80px;
+    max-width: 70px;
   }
   
   .image-container-geoAndDecComp1.w11 {
@@ -556,7 +556,7 @@
   }
 
   .scrollbar-thumb.w12 {
-    max-width: 85px;
+    max-width: 70px;
   }
 
   .image-womanhoodComp12 {
@@ -570,31 +570,26 @@
 
   /* womanhood comp 13 */
   .custom-scrollbar.w13 {
-    left: 180px;
+    left: 0px;
   }
 
   .scrollbar-thumb.w13 {
-    max-width: 50px;
+    max-width: 10px;
   }
 
   .image-womanhoodComp13 {
-    width: 40%;
-    margin-left: 50px;
+    width: 100%;
+    margin-right: 50px
   }
 
   .image-womanhoodComp13.wanker {
-    width: 45%;
-    margin-left: -30px;
+    width: 100%;
   }
 
   .image-womanhoodComp13.lastw13 {
     width: 100%;
-    margin-left: -200px;
-  }
-
-  .image-womanhoodComp13.lastw13 img {
-    width: 35%;
-    height: 35%;
+    margin: 0;
+    padding: 0;
   }
 
   .text-container-womanhoodComp13 {
@@ -602,19 +597,19 @@
   }
 
   .text-container-womanhoodComp13.firstw13 {
-    width: 130%;
-    margin: 0 70px 0 210px;
+    width: 325%;
+    margin: 0 50px 0 0px;
   }
 
   .text-container-womanhoodComp13.secondw13 {
-    width: 90%;
+    width: 215%;
     padding: 0px;
-    margin-left: 0px;
+    margin-right: 70px;
   }
 
   .text-container-womanhoodComp13.thirdw13 {
-    width: 42%;
-    margin: 0 60px 0 80px;
+    width: 100%;
+    margin: 0 20px 0 10px;
   }
 
   /* womanhood comp 14 */
