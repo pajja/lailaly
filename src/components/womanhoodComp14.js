@@ -28,11 +28,22 @@ const WomanhoodComp14 = () => {
       const containerWidth = container.clientWidth;
       const scrollLeft = content.scrollLeft;
 
+      // Get the scrollbar elementAdd commentMore actions
+      const scrollbar = document.querySelector(".custom-scrollbar");
+
+      // Set track width to 85% of container width (making it shorter)
+      const trackWidthPercentage = 85; // Adjust this value as needed (85% = 15% shorter)
+      const trackWidth = containerWidth * (trackWidthPercentage / 100);
+      scrollbar.style.width = `${trackWidth}px`;
+
+      // Calculate thumb size based on the new track width
       const thumbWidth = Math.max(
-        (containerWidth / contentWidth) * containerWidth,
+        (containerWidth / contentWidth) * trackWidth,
         50
       );
-      const thumbLeft = (scrollLeft / contentWidth) * containerWidth;
+
+      // Calculate thumb position
+      const thumbLeft = (scrollLeft / contentWidth) * trackWidth;
 
       thumb.style.width = `${thumbWidth}px`;
       thumb.style.left = `${thumbLeft}px`;
@@ -49,19 +60,24 @@ const WomanhoodComp14 = () => {
       const startLeft = parseFloat(thumb.style.left) || 0; // Add fallback
 
       const onMove = (moveEvent) => {
-        moveEvent.preventDefault(); // Add this line
+        moveEvent.preventDefault();
         const clientX = isTouch
           ? moveEvent.touches[0].clientX
           : moveEvent.clientX;
         const deltaX = clientX - startX;
+
+        // Get scrollbar width for calculationsAdd commentMore actions
+        const scrollbar = document.querySelector(".custom-scrollbar");
+        const trackWidth =
+          parseFloat(scrollbar.style.width) || container.clientWidth;
+
         const newLeft = Math.min(
-          container.clientWidth - thumb.clientWidth,
+          trackWidth - thumb.clientWidth,
           Math.max(0, startLeft + deltaX)
         );
 
         thumb.style.left = `${newLeft}px`;
-        content.scrollLeft =
-          (newLeft / container.clientWidth) * content.scrollWidth;
+        content.scrollLeft = (newLeft / trackWidth) * content.scrollWidth;
       };
 
       const onEnd = () => {

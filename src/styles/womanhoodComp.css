@@ -275,7 +275,7 @@
 
 /* womanhood comp 13 */
 .custom-scrollbar.w13 {
-  left: 50px;
+  left: 45px;
 }
 
 .scrollbar-thumb.w13 {
@@ -324,11 +324,11 @@
 
 /* womanhood comp 14 */
 .custom-scrollbar.w14 {
-  left: 0;
+  left: 20px;
 }
 
 .scrollbar-thumb.w14 {
-  max-width: 90px;
+  max-width: 80px;
 }
 
 .text-container-womanhoodComp14 {
@@ -387,7 +387,6 @@
 }
 
 /* womanhood comp 16 */
-
 
 @media (max-width: 480px) {
   /* womanhood 1 */
@@ -570,26 +569,31 @@
 
   /* womanhood comp 13 */
   .custom-scrollbar.w13 {
-    left: 0px;
+    left: 150px;
   }
 
   .scrollbar-thumb.w13 {
-    max-width: 10px;
+    max-width: 50px;
   }
 
   .image-womanhoodComp13 {
-    width: 100%;
-    margin-right: 50px
+    width: 40%;
+    margin-left: 50px;
   }
 
   .image-womanhoodComp13.wanker {
-    width: 100%;
+    width: 45%;
+    margin-left: -30px;
   }
 
   .image-womanhoodComp13.lastw13 {
     width: 100%;
-    margin: 0;
-    padding: 0;
+    margin-left: -200px;
+  }
+
+  .image-womanhoodComp13.lastw13 img {
+    width: 35%;
+    height: 35%;
   }
 
   .text-container-womanhoodComp13 {
@@ -597,28 +601,28 @@
   }
 
   .text-container-womanhoodComp13.firstw13 {
-    width: 325%;
-    margin: 0 50px 0 0px;
+    width: 145%;
+    margin: 0 70px 0 178px;
   }
 
   .text-container-womanhoodComp13.secondw13 {
-    width: 215%;
+    width: 94%;
     padding: 0px;
-    margin-right: 70px;
+    margin-left: 0px;
   }
 
   .text-container-womanhoodComp13.thirdw13 {
-    width: 100%;
-    margin: 0 20px 0 10px;
+    width: 42%;
+    margin: 0 60px 0 80px;
   }
 
   /* womanhood comp 14 */
   .custom-scrollbar.w14 {
-    left: -22px;
+    left: 5px;
   }
   
   .scrollbar-thumb.w14 {
-    max-width: 35px;
+    max-width: 24px;
   }
 
   .text-container-womanhoodComp14 {
@@ -635,15 +639,119 @@
   }
 
   /* womanhood comp 15 */
-.custom-scrollbar.w15 {
-  left: -30px;
+  .custom-scrollbar.w15 {
+    left: -22px;
+  }
+
+  .scrollbar-thumb.w15 {
+    max-width: 75px;
+  }
+
+  .image-container-geoAndDecComp1.gapw15 {
+    gap: 20px;
+  }
 }
 
-.scrollbar-thumb.w15 {
-  max-width: 95px;
+
+@media (max-width: 380px) {
+  /* womanhood comp 13 */
+  .custom-scrollbar.w13 {
+    left: 165px;
+  }
+
+  .scrollbar-thumb.w13 {
+    max-width: 45px;
+  }
+
+  .image-womanhoodComp13 {
+    width: 40%;
+    margin-left: 50px;
+  }
+
+  .image-womanhoodComp13.wanker {
+    width: 45%;
+    margin-left: -30px;
+  }
+
+  .image-womanhoodComp13.lastw13 {
+    width: 100%;
+    margin-left: -200px;
+  }
+
+  .image-womanhoodComp13.lastw13 img {
+    width: 35%;
+    height: 35%;
+  }
+
+  .text-container-womanhoodComp13 {
+    padding: 0px;
+  }
+
+  .text-container-womanhoodComp13.firstw13 {
+    width: 145%;
+    margin: 0 70px 0 178px;
+  }
+
+  .text-container-womanhoodComp13.secondw13 {
+    width: 94%;
+    padding: 0px;
+    margin-left: 0px;
+  }
+
+  .text-container-womanhoodComp13.thirdw13 {
+    width: 42%;
+    margin: 0 60px 0 80px;
+  }
 }
 
-.image-container-geoAndDecComp1.gapw15 {
-  gap: 20px;
+@media (max-width: 330px) {
+  /* womanhood comp 13 */
+  .custom-scrollbar.w13 {
+    left: 190px;
+  }
+
+  .scrollbar-thumb.w13 {
+    max-width: 45px;
+  }
+
+  .image-womanhoodComp13 {
+    width: 40%;
+    margin-left: 50px;
+  }
+
+  .image-womanhoodComp13.wanker {
+    width: 45%;
+    margin-left: -30px;
+  }
+
+  .image-womanhoodComp13.lastw13 {
+    width: 100%;
+    margin-left: -200px;
+  }
+
+  .image-womanhoodComp13.lastw13 img {
+    width: 35%;
+    height: 35%;
+  }
+
+  .text-container-womanhoodComp13 {
+    padding: 0px;
+  }
+
+  .text-container-womanhoodComp13.firstw13 {
+    width: 145%;
+    margin: 0 70px 0 178px;
+  }
+
+  .text-container-womanhoodComp13.secondw13 {
+    width: 94%;
+    padding: 0px;
+    margin-left: 0px;
+  }
+
+  .text-container-womanhoodComp13.thirdw13 {
+    width: 42%;
+    margin: 0 60px 0 80px;
+  }
 }
-}
+

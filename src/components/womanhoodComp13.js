@@ -30,10 +30,10 @@ const WomanhoodComp13 = () => {
         const scrollLeft = content.scrollLeft;
 
         // Get the scrollbar element
-        const scrollbar = document.querySelector(".scroll-content-geo-dec-3");
+        const scrollbar = document.querySelector(".custom-scrollbar");
 
-        // Set track width to 80% of container width (making it shorter)
-        const trackWidthPercentage = 80; // Adjust this value as needed (80% = 20% shorter)
+        // Set track width to 85% of container width (making it shorter)
+        const trackWidthPercentage = 85; // Adjust this value as needed (85% = 15% shorter)
         const trackWidth = containerWidth * (trackWidthPercentage / 100);
         scrollbar.style.width = `${trackWidth}px`;
 
