@@ -52,18 +52,19 @@ const WomanhoodComp16 = () => {
       // Position scrollbar correctly on all screen sizes
       if (window.innerWidth <= 330) {
         // Small mobile screens
-        offset = 16; // Smaller offset for very small screens
+        offset = 16;
         scrollbar.style.right = `${offset}px`;
       } else if (window.innerWidth <= 380) {
         // Small mobile screens
-        offset = 20; // Smaller offset for very small screens
+        offset = 20;
         scrollbar.style.right = `${offset}px`;
       } else if (window.innerWidth <= 480) {
         // Small mobile screens
-        offset = 24; // Smaller offset for very small screens
+        offset = 24;
         scrollbar.style.right = `${offset}px`;
       } else if (window.innerWidth <= 768) {
         // Regular mobile positioning
+        let offset = 18;
         scrollbar.style.right = `${offset}px`;
       } else {
         // Desktop positioning
@@ -259,7 +260,7 @@ const WomanhoodComp16 = () => {
         </div>
       </div>
 
-      <div className="custom-scrollbar-vertical">
+      <div className="custom-scrollbar-vertical w7">
         <div className="scrollbar-thumb-vertical">
           <span className="scrollbar-text-vertical">
             s<br />

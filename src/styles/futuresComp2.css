@@ -79,6 +79,42 @@
   clear: both;
 }
 
+@media (max-width: 991px) {
+  :root {
+    --scrollbar-offset: -30px;
+  }
+
+
+  /* general futures2 container and scroll */
+  .container-vertical-futures2 {
+    max-height: 78vh;
+  }
+
+  /* f2 */
+  .wrapper-futuresComp2 {
+    margin-left: 15px;
+  }
+
+  .float-right-1 {
+    width: 70%;
+  }
+
+  .float-right-2 {
+    width: 70%; 
+  }
+
+  .float-right-1 img, 
+  .float-right-2 img {
+    width: 89%;
+  }
+
+  .text-container-futuresComp2 {
+    width: 85%;  
+    margin: 0 0 0 25px;
+    text-align-last: left;
+  }
+}
+
 @media (max-width: 480px) {
   /* general futures2 container and scroll */
   .container-vertical-futures2 {

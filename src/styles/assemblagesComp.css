@@ -152,6 +152,18 @@ img {
   white-space: normal;
 }
 
+@media (max-width: 991px) {
+  .container {
+    height: 78vh;
+  }
+
+  /* assemblages */
+  .image-assemblages {
+    height: 78vh;
+    width: 100%;
+  }
+}
+
 
 @media (max-width: 480px) {
   /* general container and scroll */

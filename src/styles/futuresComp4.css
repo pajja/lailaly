@@ -41,6 +41,20 @@
   flex-direction: column;
 }
 
+@media (max-width: 991px) {
+  /* f5 */
+  .image-futures5 {
+    height: 78vh;
+    width: 100%;
+  }
+
+  /* f6 */
+  .image-futures6 {
+    height: 78vh;
+    width: 100%;
+  }
+}
+
 @media (max-width: 480px) {
   /* f4 */
   .custom-scrollbar.f4 {

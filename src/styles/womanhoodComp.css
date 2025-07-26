@@ -141,6 +141,7 @@
 /* womanhood 7 */
 .container-vertical-futures2.w7 {
   width: 100%;
+  height: 100vh;
 }
 
 .womanhood-7-3 {
@@ -388,6 +389,23 @@
 
 /* womanhood comp 16 */
 
+@media (max-width: 991px) {
+  /* womanhood 1 */
+  .mind-map {
+    height: 78vh;
+  }
+
+  /* womanhood 7 */
+  .container-vertical-futures2.w7 {
+    width: 100%;
+    height: 78vh;
+  }
+
+  .custom-scrollbar-vertical.w7 {
+    display: none;
+  }
+}
+
 @media (max-width: 480px) {
   /* womanhood 1 */
   .mind-map {
@@ -499,7 +517,7 @@
   .main-text.w7 {
     text-align: justify;
     text-align-last: center;
-  }
+    }
 
   /* womanhood comp 8 */
   .custom-scrollbar.w8 {
