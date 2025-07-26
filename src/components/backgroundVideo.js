@@ -29,16 +29,18 @@ const BackgroundVideo = () => {
   }, []);
 
   return (
-    <video
-      ref={videoRef}
-      className="background-video"
-      autoPlay
-      loop
-      muted
-      playsInline
-    >
-      <source src="/elegia-short-animation-1s-output.mp4" type="video/mp4" />
-    </video>
+    <div className="background-video-container">
+      <video
+        ref={videoRef}
+        className="background-video"
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src="/elegia-short-animation-1s-output.mp4" type="video/mp4" />
+      </video>
+    </div>
   );
 };
 

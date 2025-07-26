@@ -61,6 +61,12 @@ body {
   color: red;
 }
 
+@media (max-width: 991px) {
+  .col-background-home {
+    height: 75vh;
+  }
+}
+
 @media (max-width: 480px) {
   .col-background-home {
     height: 60vh;
