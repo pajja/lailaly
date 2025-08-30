@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import "../styles/Home.css";
 import Insta from "../components/instagram";
 import { Link } from "react-router-dom";
 import "../styles/nav-bar.css";
-import homeImages from "../components/imagesHome";
-import Magnifier from "../components/magnifier";
 import "../styles/magnifier.css";
 import BackgroundVideo from "../components/backgroundVideo";
 import backgroundNoise from "../assets/home-pic/background-noise.png";
@@ -38,15 +37,6 @@ function Home() {
     // Save to session storage so it persists during navigation
     sessionStorage.setItem("hasStartedExperience", "true");
   };
-
-  const imageList = [
-    homeImages.geometryAndDecolonisationBackground,
-    homeImages.assemblagesBackground,
-    homeImages.chanceAndSequenceBackground,
-    homeImages.deriveBackground,
-    homeImages.futuresBackground,
-    homeImages.womanhoodBackground,
-  ];
 
   // Title component that will be shared across layouts
   const TitleComponent = () => (
@@ -100,6 +90,42 @@ function Home() {
         overflowY: "hidden",
       }}
     >
+      <Helmet>
+        <title>laila sorabji</title>
+        <meta
+          name="description"
+          content="Laila Sorabji is a contemporary artist exploring themes of abstraction, womanhood, and decolonisation. Discover and explore her innovative visual art projects."
+        />
+        <meta
+          name="keywords"
+          content="Laila Sorabji, contemporary artist, visual art, feminist art, decolonial art, geometry, decolonisation, assemblages, derive, futures, womanhood, artist portfolio, contemporary art"
+        />
+
+        {/* Open Graph tags for social media */}
+        <meta property="og:title" content="laila sorabji" />
+        <meta
+          property="og:description"
+          content="Laila Sorabji is a contemporary artist exploring themes of abstraction, womanhood, and decolonisation. Discover and explore her innovative visual art projects."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://lailasorabji.netlify.app" />
+
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="laila sorabji" />
+        <meta
+          name="twitter:description"
+          content="Laila Sorabji is a contemporary artist exploring themes of abstraction, womanhood, and decolonisation. Discover and explore her innovative visual art projects."
+        />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://lailasorabji.netlify.app" />
+
+        {/* Additional meta tags for artist portfolio */}
+        <meta name="author" content="Laila Sorabji" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+
       <BackgroundVideo />
       <div className="row">
         <div className="col-lg-2">

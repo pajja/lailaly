@@ -175,13 +175,13 @@ const FuturesComp2 = () => {
       <div className="scroll-content-vertical-futures2">
         <div className="wrapper-futuresComp2">
           <div className="float-right-1">
-            <img src={ShapeFutures} alt="Image of shapes from Futures" />
+            <img src={ShapeFutures} alt="Shapes from Futures" />
             <p className="image-description times-new-roman">
               Oil and charcoal on unprimed canvas
             </p>
           </div>
           <div className="float-right-2">
-            <img src={FearFutures} alt="Image of Fear from Futures" />
+            <img src={FearFutures} alt="Fear from Futures" />
             <p className="image-description times-new-roman">
               Oil and charcoal on unprimed canvas
             </p>

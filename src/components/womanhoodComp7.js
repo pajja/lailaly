@@ -173,6 +173,7 @@ const WomanhoodComp7 = () => {
             <a
               href="https://docs.google.com/presentation/d/1rZHBxCStT1x1JZ5BbWboeYcxa7YSCuEU9bknt1Qskxs/edit?usp=sharing"
               target="_blank"
+              rel="noreferrer"
             >
               Link to the presentation
             </a>

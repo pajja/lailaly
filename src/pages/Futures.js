@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import NavBar from "../components/nav-bar";
 import "../styles/times-new-roman.css";
 import "../styles/project-name.css";
@@ -14,41 +15,78 @@ import "../styles/nav-bar.css";
 
 function Futures() {
   return (
-    <div
-      className="container-fluid"
-      style={{ overflowX: "hidden", overflowY: "hidden" }}
-    >
-      <div className="row">
-        <div className="col-lg-2">
-          <NavBar />
+    <>
+      <Helmet>
+        <title>futures</title>
+        <meta
+          name="description"
+          content="Explore Laila Sorabji's Futures project."
+        />
+        <meta
+          name="keywords"
+          content="Laila Sorabji, futures, contemporary art, oil painting, visual art, artist portfolio"
+        />
+
+        {/* Open Graph tags for social media */}
+        <meta property="og:title" content="futures - laila sorabji" />
+        <meta
+          property="og:description"
+          content="Explore Laila Sorabji's Futures project."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://lailasorabji.netlify.app/futures"
+        />
+
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="futures - laila sorabji" />
+        <meta
+          name="twitter:description"
+          content="Explore Laila Sorabji's Futures project."
+        />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://lailasorabji.netlify.app/futures" />
+      </Helmet>
+
+      <div
+        className="container-fluid"
+        style={{ overflowX: "hidden", overflowY: "hidden" }}
+      >
+        <div className="row">
+          <div className="col-lg-2">
+            <NavBar />
+          </div>
+          <div className="col-lg-8 main">
+            <ViewerFutures
+              composition1={<FuturesComp1 />}
+              composition2={<FuturesComp2 />}
+              composition3={<FuturesComp3 />}
+              composition4={<FuturesComp4 />}
+              composition5={
+                <div className="image-futures5">
+                  <img alt="" src={ShapesFutures1}></img>
+                  <p className="image-description times-new-roman">
+                    Oil on unprimed canvas
+                  </p>
+                </div>
+              }
+              composition6={
+                <div className="image-futures6">
+                  <img alt="" src={ShapesFutures2}></img>
+                  <p className="image-description times-new-roman">
+                    Oil on unprimed canvas{" "}
+                  </p>
+                </div>
+              }
+            />
+          </div>
+          <div className="col-lg-2 times-new-roman project-name">futures</div>
         </div>
-        <div className="col-lg-8 main">
-          <ViewerFutures
-            composition1={<FuturesComp1 />}
-            composition2={<FuturesComp2 />}
-            composition3={<FuturesComp3 />}
-            composition4={<FuturesComp4 />}
-            composition5={
-              <div className="image-futures5">
-                <img alt="" src={ShapesFutures1}></img>
-                <p className="image-description times-new-roman">
-                  Oil on unprimed canvas
-                </p>
-              </div>
-            }
-            composition6={
-              <div className="image-futures6">
-                <img alt="" src={ShapesFutures2}></img>
-                <p className="image-description times-new-roman">
-                  Oil on unprimed canvas{" "}
-                </p>
-              </div>
-            }
-          />
-        </div>
-        <div className="col-lg-2 times-new-roman project-name">futures</div>
       </div>
-    </div>
+    </>
   );
 }
 

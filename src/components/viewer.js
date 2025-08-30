@@ -53,7 +53,7 @@ const Viewer = ({ images, composition, composition2 }) => {
                     <img
                       id={images[currentIndex].id}
                       src={images[currentIndex].src}
-                      alt={`Image ${currentIndex + 1}`}
+                      alt={`Assemblages ${currentIndex + 1}`}
                     />
                     <p className="image-description">
                       {images[currentIndex].description}

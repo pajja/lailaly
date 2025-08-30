@@ -10,6 +10,7 @@
     "react": "^18.2.0",
     "react-custom-scrollbars-2": "^4.5.0",
     "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.5",
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
     "react-window": "^1.8.10",
@@ -17,9 +18,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI=false react-scripts build",
+    "build": "cross-env CI=false react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postbuild": "react-snap"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +42,32 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "cross-env": "^10.0.0",
+    "react-snap": "^1.23.0"
+  },
+  "reactSnap": {
+    "inlineCss": true,
+    "minifyHtml": true,
+    "crawlFrom": "/",
+    "puppeteerArgs": [
+      "--no-sandbox", 
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-web-security",
+      "--disable-features=VizDisplayCompositor"
+    ],
+    "skipThirdPartyRequests": true,
+    "cacheAjaxRequests": false,
+    "preconnectThirdParty": false,
+    "include": [
+      "/",
+      "/assemblages",
+      "/chance-and-sequence",
+      "/derive",
+      "/futures",
+      "/geometry-and-decolonisation",
+      "/womanhood"
+    ]
   }
 }

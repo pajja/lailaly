@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "../styles/geoAndDecComp3.css";
 import blueYellow1 from "../assets/geometry-and-dec/IMG_3183_edited.jpg";
 import blueYellow2 from "../assets/geometry-and-dec/IMG_3181_edited.jpg";
