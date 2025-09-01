@@ -8,24 +8,63 @@ const BackgroundVideo = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    const tryPlay = () => {
-      requestAnimationFrame(() => {
-        setTimeout(() => {
-          const promise = video.play();
-          if (promise !== undefined) {
-            promise
-              .then(() => {
-                console.log("Video started");
-              })
-              .catch((err) => {
-                console.warn("Autoplay blocked", err);
-              });
-          }
-        }, 200); // Delay helps bypass timing issues
-      });
+    let hasPlayed = false;
+
+    const playVideo = () => {
+      if (hasPlayed) return;
+
+      const promise = video.play();
+      if (promise !== undefined) {
+        promise
+          .then(() => {
+            console.log("Video started");
+            hasPlayed = true;
+            // Remove event listeners once video plays
+            removeEventListeners();
+          })
+          .catch((err) => {
+            console.warn("Video play failed", err);
+          });
+      }
     };
 
-    tryPlay();
+    const removeEventListeners = () => {
+      document.removeEventListener("click", playVideo);
+      document.removeEventListener("scroll", playVideo);
+      document.removeEventListener("touchstart", playVideo);
+      document.removeEventListener("keydown", playVideo);
+    };
+
+    // Try to play immediately when video is ready
+    const handleCanPlay = () => {
+      playVideo();
+    };
+
+    // Add event listeners for user interaction
+    const addEventListeners = () => {
+      document.addEventListener("click", playVideo, { once: true });
+      document.addEventListener("scroll", playVideo, { once: true });
+      document.addEventListener("touchstart", playVideo, { once: true });
+      document.addEventListener("keydown", playVideo, { once: true });
+    };
+
+    // Wait for video to be ready
+    video.addEventListener("canplay", handleCanPlay);
+
+    // Try initial play attempt
+    setTimeout(() => {
+      if (!hasPlayed) {
+        playVideo();
+      }
+    }, 100);
+
+    // Add interaction listeners as fallback
+    addEventListeners();
+
+    return () => {
+      removeEventListeners();
+      video.removeEventListener("canplay", handleCanPlay);
+    };
   }, []);
 
   return (
@@ -37,6 +76,7 @@ const BackgroundVideo = () => {
         loop
         muted
         playsInline
+        preload="auto"
       >
         <source src="/elegia-short-animation-1s-output.mp4" type="video/mp4" />
       </video>
