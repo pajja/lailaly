@@ -1,10 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom"; // Remove "/client"
+import { createRoot, hydrateRoot } from "react-dom/client";
 import App from "./App";
 
 const rootElement = document.getElementById("root");
+
 if (rootElement.hasChildNodes()) {
-  ReactDOM.hydrate(<App />, rootElement);
+  // Use hydrateRoot for server-side rendered content (react-snap)
+  hydrateRoot(rootElement, <App />);
 } else {
-  ReactDOM.render(<App />, rootElement);
+  // Use createRoot for client-side rendering
+  const root = createRoot(rootElement);
+  root.render(<App />);
 }

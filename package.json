@@ -19,6 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "cross-env CI=false react-scripts build",
+    "build-with-snap": "cross-env CI=false react-scripts build && react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "postbuild": "react-snap"
@@ -47,19 +48,29 @@
     "react-snap": "^1.23.0"
   },
   "reactSnap": {
+    "404": "200.html",
     "inlineCss": true,
     "minifyHtml": true,
     "crawlFrom": "/",
+    "waitFor": 3000,
+    "headless": true,
     "puppeteerArgs": [
-      "--no-sandbox", 
+      "--no-sandbox",
       "--disable-setuid-sandbox",
       "--disable-dev-shm-usage",
+      "--enable-features=NetworkService",
       "--disable-web-security",
-      "--disable-features=VizDisplayCompositor"
+      "--ignore-certificate-errors",
+      "--ignore-ssl-errors",
+      "--ignore-certificate-errors-spki-list",
+      "--autoplay-policy=no-user-gesture-required"
     ],
-    "skipThirdPartyRequests": true,
+    "skipThirdPartyRequests": false,
     "cacheAjaxRequests": false,
     "preconnectThirdParty": false,
+    "fixWebpackChunksIssue": "false",
+    "puppeteerExecutablePath": "",
+    "asyncScriptTags": true,
     "include": [
       "/",
       "/assemblages",

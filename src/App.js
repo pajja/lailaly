@@ -28,6 +28,7 @@ function App() {
             <Route path="/derive" element={<Derive />} />
             <Route path="/futures" element={<Futures />} />
             <Route path="/womanhood" element={<Womanhood />} />
+            <Route path="*" element={<Home />} />
           </Routes>
         </Router>
       </div>
