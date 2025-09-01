@@ -77,8 +77,8 @@ function Home() {
     );
   };
 
-  // Show start screen only on mobile when not started
-  if (isMobile && !hasStarted) {
+  // Show start screen only when not started
+  if (!hasStarted) {
     return <StartScreen />;
   }
 
