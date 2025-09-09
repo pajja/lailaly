@@ -388,6 +388,9 @@
 }
 
 /* womanhood comp 16 */
+.custom-scrollbar-vertical.w16 {
+  display: block;
+}
 
 @media (max-width: 991px) {
   /* womanhood 1 */

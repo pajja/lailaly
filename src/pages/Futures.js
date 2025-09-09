@@ -67,7 +67,10 @@ function Futures() {
               composition4={<FuturesComp4 />}
               composition5={
                 <div className="image-futures5">
-                  <img alt="" src={ShapesFutures1}></img>
+                  <img
+                    alt="Futures series - Oil on unprimed canvas 1"
+                    src={ShapesFutures1}
+                  ></img>
                   <p className="image-description times-new-roman">
                     Oil on unprimed canvas
                   </p>
@@ -75,7 +78,10 @@ function Futures() {
               }
               composition6={
                 <div className="image-futures6">
-                  <img alt="" src={ShapesFutures2}></img>
+                  <img
+                    alt="Futures series - Oil on unprimed canvas 2"
+                    src={ShapesFutures2}
+                  ></img>
                   <p className="image-description times-new-roman">
                     Oil on unprimed canvas{" "}
                   </p>

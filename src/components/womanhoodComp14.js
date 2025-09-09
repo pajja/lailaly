@@ -139,22 +139,40 @@ const WomanhoodComp14 = () => {
             </div>
           </div>
           <div className="image-womanhoodComp14">
-            <img src={Painting1} alt="" />
+            <img
+              src={Painting1}
+              alt="Womanhood series - The sexualisation of women 1"
+            />
           </div>
           <div className="image-womanhoodComp14">
-            <img src={Painting2} alt="" />
+            <img
+              src={Painting2}
+              alt="Womanhood series - The sexualisation of women 2"
+            />
           </div>
           <div className="image-womanhoodComp14">
-            <img src={Painting3} alt="" />
+            <img
+              src={Painting3}
+              alt="Womanhood series - The sexualisation of women 3"
+            />
           </div>
           <div className="image-womanhoodComp14">
-            <img src={Painting4} alt="" />
+            <img
+              src={Painting4}
+              alt="Womanhood series - The sexualisation of women 4"
+            />
           </div>
           <div className="image-womanhoodComp14">
-            <img src={Painting5} alt="" />
+            <img
+              src={Painting5}
+              alt="Womanhood series - The sexualisation of women 5"
+            />
           </div>
           <div className="image-womanhoodComp14 last-w14">
-            <img src={Painting6} alt="" />
+            <img
+              src={Painting6}
+              alt="Womanhood series - The sexualisation of women 6"
+            />
           </div>
           <div className="text-container-womanhoodComp14 last-pad-w14">
             <div className="columns-two">

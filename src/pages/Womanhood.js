@@ -76,7 +76,10 @@ function Womanhood() {
             <ViewerWomanhood
               composition1={
                 <div className="mind-map">
-                  <img src={mindMap1} alt="Starting Mind Map" />
+                  <img
+                    src={mindMap1}
+                    alt="Womanhood series - Starting Mind Map"
+                  />
                   <p className="image-description font14px times-new-roman black">
                     Starting mind map{" "}
                   </p>
@@ -89,7 +92,7 @@ function Womanhood() {
                 <div className="mind-map">
                   <img
                     src={mindMap2}
-                    alt="Mind Map for imagery used in prints"
+                    alt="Womanhood series - Mind Map for imagery used in prints"
                   />
                   <p
                     className="image-description font14px times-new-roman black"

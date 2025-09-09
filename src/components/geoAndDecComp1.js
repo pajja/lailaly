@@ -93,13 +93,19 @@ const GeoAndDecComp1 = () => {
       <div className="scroll-content">
         <div className="image-container-geoAndDecComp1 times-new-roman g1">
           <div className="image-geoAndDecComp1">
-            <img src={geoDecImg} alt="Geo and Dec 1" />
+            <img
+              src={geoDecImg}
+              alt="Geometry and Decolonisation series - Ink and pen on paper"
+            />
             <p className="image-description">
               Ink and pen on paper, 210 x 297 mm
             </p>
           </div>
           <div className="image-geoAndDecComp1 last-g1">
-            <img src={geoDecImg2} alt="Geo and Dec 2" />
+            <img
+              src={geoDecImg2}
+              alt="Geometry and Decolonisation series - Acrylic and pencil on paper"
+            />
             <p className="image-description">
               Acrylic and pencil on paper, 210 x 297 mm
             </p>

@@ -129,7 +129,10 @@ const WomanhoodComp12 = () => {
           </div>
         </div>
         <div className="image-womanhoodComp12 times-new-roman">
-          <img src={image} alt="" />
+          <img
+            src={image}
+            alt="Womanhood series - Life drawing - And So I Kissed You"
+          />
           <p className="image-description">Life drawing</p>
         </div>
       </div>

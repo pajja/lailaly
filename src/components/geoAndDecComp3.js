@@ -132,14 +132,14 @@ const GeoAndDecComp3 = () => {
           <div className="image-geoDecComp3 g3first times-new-roman">
             <img
               src={blueYellow1}
-              alt="First of Blue and yellow geometric shapes"
+              alt="Geometry and Decolonisation series - Blue and yellow geometric shapes 1 - Oil on paper"
             />
             <p className="image-description">Oil on paper, 148.4 x 210 mm</p>
           </div>
           <div className="image-geoDecComp3 times-new-roman">
             <img
               src={blueYellow2}
-              alt="Second of Blue and yellow geometric shapes"
+              alt="Geometry and Decolonisation series - Blue and yellow geometric shapes 2 - Oil on paper"
             />
             <p className="image-description">Oil on paper, 148.4 x 210 mm</p>
           </div>
@@ -197,25 +197,40 @@ const GeoAndDecComp3 = () => {
             </div>
           </div>
           <div className="image-geoDecComp3 times-new-roman">
-            <img src={shapes1} alt="" />
+            <img
+              src={shapes1}
+              alt="Geometry and Decolonisation series - Oil on paper 1"
+            />
             <p className="image-description">Oil on paper, 148.4 x 210 mm</p>
           </div>
           <div className="image-geoDecComp3 times-new-roman">
-            <img src={shapes2} alt="" />
+            <img
+              src={shapes2}
+              alt="Geometry and Decolonisation series - Oil on paper 2"
+            />
             <p className="image-description">Oil on paper, 148.4 x 210 mm</p>
           </div>
           <div className="image-geoDecComp3 times-new-roman">
-            <img src={shapes3} alt="" />
+            <img
+              src={shapes3}
+              alt="Geometry and Decolonisation series - Oil on paper 3"
+            />
             <p className="image-description">Oil on paper, 148.4 x 210 mm</p>
           </div>
           <div className="image-geoDecComp3 times-new-roman">
-            <img src={shapes4} alt="" />
+            <img
+              src={shapes4}
+              alt="Geometry and Decolonisation series - Oil and acrylic on paper"
+            />
             <p className="image-description">
               Oil and acrylic on paper, 148.4 x 210 mm
             </p>
           </div>
           <div className="image-geoDecComp3 g3last times-new-roman">
-            <img src={shapes5} alt="" />
+            <img
+              src={shapes5}
+              alt="Geometry and Decolonisation series - This oil on paper piece is a more direct response to the pandemic"
+            />
             <p className="image-description">Oil on paper, 420 x 594 mm</p>
             <p className="image-description-more black">
               This oil piece is a more direct response to the pandemic.{" "}

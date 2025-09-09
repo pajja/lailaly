@@ -119,37 +119,37 @@ const WomanhoodComp3 = () => {
       <div className="scroll-content">
         <div className="image-container-geoAndDecComp1 times-new-roman gapw3">
           <div className="image-womanhoodComp3 firstw3">
-            <img src={Painting1} alt="" />
+            <img src={Painting1} alt="Womanhood series - painting 1" />
           </div>
           <div className="image-womanhoodComp3">
-            <img src={Painting2} alt="" />
+            <img src={Painting2} alt="Womanhood series - painting 2" />
           </div>
           <div className="image-womanhoodComp3">
-            <img src={Painting3} alt="" />
+            <img src={Painting3} alt="Womanhood series - painting 3" />
           </div>
           <div className="image-womanhoodComp3">
-            <img src={Painting4} alt="" />
+            <img src={Painting4} alt="Womanhood series - painting 4" />
           </div>
           <div className="image-womanhoodComp3">
-            <img src={Painting5} alt="" />
+            <img src={Painting5} alt="Womanhood series - painting 5" />
           </div>
           <div className="image-womanhoodComp3">
-            <img src={Painting6} alt="" />
+            <img src={Painting6} alt="Womanhood series - painting 6" />
           </div>
           <div className="image-womanhoodComp3">
-            <img src={Painting7} alt="" />
+            <img src={Painting7} alt="Womanhood series - painting 7" />
           </div>
           <div className="image-womanhoodComp3">
-            <img src={Painting8} alt="" />
+            <img src={Painting8} alt="Womanhood series - painting 8" />
           </div>
           <div className="image-womanhoodComp3">
-            <img src={Painting9} alt="" />
+            <img src={Painting9} alt="Womanhood series - painting 9" />
           </div>
           <div className="image-womanhoodComp3">
-            <img src={Painting10} alt="" />
+            <img src={Painting10} alt="Womanhood series - painting 10" />
           </div>
           <div className="image-womanhoodComp3 lastw3">
-            <img src={Painting11} alt="" />
+            <img src={Painting11} alt="Womanhood series - painting 11" />
           </div>
         </div>
       </div>

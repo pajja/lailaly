@@ -107,16 +107,25 @@ const GeoAndDecComp4 = () => {
       <div className="scroll-content-geo-dec-3">
         <div className="image-container-geoDecComp3">
           <div className="image-geoDecComp4 times-new-roman">
-            <img src={blueYellow1} alt="" />
+            <img
+              src={blueYellow1}
+              alt="Geometry and Decolonisation series - Photograph of game pieces on chess board"
+            />
             <p className="image-description">
               Photograph of game pieces on chess board
             </p>
           </div>
           <div className="image-geoDecComp4 middle-g4 times-new-roman">
-            <img src={blueYellow2} alt="" />
+            <img
+              src={blueYellow2}
+              alt="Geometry and Decolonisation series - shelves, flowers, thread"
+            />
           </div>
           <div className="image-geoDecComp4 times-new-roman">
-            <img src={shapes1} alt="" />
+            <img
+              src={shapes1}
+              alt="Geometry and Decolonisation series - Acrylic, watercolour and pen on paper"
+            />
             <p className="image-description">
               Acrylic, watercolour and pen on paper, 297 x 420 mm
             </p>

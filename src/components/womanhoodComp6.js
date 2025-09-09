@@ -96,19 +96,19 @@ const WomanhoodComp6 = () => {
       <div className="scroll-content">
         <div className="image-container-geoAndDecComp1 times-new-roman">
           <div className="image-womanhoodComp3 womanhood-6">
-            <img src={Painting1} alt="" />
+            <img src={Painting1} alt="Womanhood series - Life drawing 1" />
             <p className="image-description">Life drawing</p>
           </div>
           <div className="image-womanhoodComp3 womanhood-6 twow6">
-            <img src={Painting2} alt="" />
+            <img src={Painting2} alt="Womanhood series - Life drawing 2" />
             <p className="image-description">Life drawing</p>
           </div>
           <div className="image-womanhoodComp3 womanhood-6 threew6">
-            <img src={Painting3} alt="" />
+            <img src={Painting3} alt="Womanhood series - Life drawing 3" />
             <p className="image-description">Life drawing</p>
           </div>
           <div className="image-womanhoodComp3 womanhood-6">
-            <img src={Painting4} alt="" />
+            <img src={Painting4} alt="Womanhood series - Life drawing 4" />
             <p className="image-description">Life drawing</p>
           </div>
         </div>

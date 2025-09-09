@@ -139,14 +139,14 @@ const DeriveComp5 = () => {
             </div>
           </div>
           <div className="image-deriveComp5">
-            <img src={leafCollage} alt="" />
+            <img src={leafCollage} alt="Dérive series - Collage of leaves" />
           </div>
           <div className="image-deriveComp5">
-            <img src={ballpoint1} alt="" />
+            <img src={ballpoint1} alt="Dérive series - Ballpoint drawing 1" />
             <p className="image-description">Ballpoint pen on paper A4</p>
           </div>
           <div className="image-deriveComp5">
-            <img src={ballpoint2} alt="" />
+            <img src={ballpoint2} alt="Dérive series - Ballpoint drawing 2" />
             <p className="image-description">Ballpoint pen on paper A4</p>
           </div>
         </div>

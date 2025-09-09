@@ -166,10 +166,10 @@ const WomanhoodComp4 = () => {
           </p>
         </div>
         <div className="image-womanhoodComp4">
-          <img src={shapes1} alt="" />
+          <img src={shapes1} alt="Womanhood series - shapes painting 1" />
         </div>
         <div className="image-womanhoodComp4">
-          <img src={shapes2} alt="" />
+          <img src={shapes2} alt="Womanhood series - shapes painting 2" />
         </div>
       </div>
       <div className="custom-scrollbar w4">

@@ -113,37 +113,37 @@ const DeriveComp4 = () => {
       <div className="scroll-content">
         <div className="image-container-geoAndDecComp1 times-new-roman gap-derive4">
           <div className="image-deriveComp4">
-            <img src={Painting1} alt="" />
+            <img src={Painting1} alt="Dérive series - Oil pastel on paper 1" />
             <p className="image-description">
               Oil pastel on paper, 148 x 210 mm{" "}
             </p>
           </div>
           <div className="image-deriveComp4">
-            <img src={Painting2} alt="" />
+            <img src={Painting2} alt="Dérive series - Oil pastel on paper 2" />
             <p className="image-description">
               Oil pastel on paper, 148 x 210 mm{" "}
             </p>
           </div>
           <div className="image-deriveComp4">
-            <img src={Painting3} alt="" />
+            <img src={Painting3} alt="Dérive series - Oil pastel on paper 3" />
             <p className="image-description">
               Oil pastel on paper, 148 x 210 mm{" "}
             </p>
           </div>
           <div className="image-deriveComp4">
-            <img src={Painting4} alt="" />
+            <img src={Painting4} alt="Dérive series - Oil pastel on paper 4" />
             <p className="image-description">
               Oil pastel on paper, 148 x 210 mm{" "}
             </p>
           </div>
           <div className="image-deriveComp4">
-            <img src={Painting5} alt="" />
+            <img src={Painting5} alt="Dérive series - Oil pastel on paper 5" />
             <p className="image-description">
               Oil pastel on paper, 148 x 210 mm{" "}
             </p>
           </div>
           <div className="image-deriveComp4">
-            <img src={Painting6} alt="" />
+            <img src={Painting6} alt="Dérive series - Oil pastel on paper 6" />
             <p className="image-description">
               Oil pastel on paper, 148 x 210 mm{" "}
             </p>

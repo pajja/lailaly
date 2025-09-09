@@ -146,16 +146,16 @@ const DeriveComp2 = () => {
             </div>
           </div>
           <div className="image-deriveComp2 times-new-roman">
-            <img src={shapes1} alt="" />
+            <img src={shapes1} alt="Dérive series - Photograph 1" />
           </div>
           <div className="image-deriveComp2 times-new-roman">
-            <img src={shapes2} alt="" />
+            <img src={shapes2} alt="Dérive series - Photograph 2" />
           </div>
           <div className="image-deriveComp2 times-new-roman">
-            <img src={shapes3} alt="" />
+            <img src={shapes3} alt="Dérive series - Photograph 3" />
           </div>
           <div className="image-deriveComp2 times-new-roman">
-            <img src={shapes4} alt="" />
+            <img src={shapes4} alt="Dérive series - Photograph 4" />
           </div>
         </div>
       </div>

@@ -178,13 +178,16 @@ const WomanhoodComp13 = () => {
           </div>
         </div>
         <div className="image-womanhoodComp13 times-new-roman">
-          <img src={shapes1} alt="" />
+          <img src={shapes1} alt="Womanhood series - The male gaze" />
           <p className="image-description font14px times-new-roman black">
             'He forces her to become the thing that causes him an erection.'
           </p>
         </div>
         <div className="image-womanhoodComp13 times-new-roman">
-          <img src={shapes2} alt="" />
+          <img
+            src={shapes2}
+            alt="Womanhood series - The draining of maternal devotion"
+          />
           <p className="image-description font14px times-new-roman black">
             {" "}
             'The first thing woman he drains is his mother. She is devoted.{" "}
@@ -192,7 +195,10 @@ const WomanhoodComp13 = () => {
           </p>
         </div>
         <div className="image-womanhoodComp13 times-new-roman">
-          <img src={shapes3} alt="" />
+          <img
+            src={shapes3}
+            alt="Womanhood series - The corruption of motherhood"
+          />
           <p className="image-description font14px times-new-roman black">
             'Our whole lives, before and after, will always be corrupted by the
             biological ability to create human life.'
@@ -212,13 +218,13 @@ const WomanhoodComp13 = () => {
           </p>
         </div>
         <div className="image-womanhoodComp13 wanker times-new-roman">
-          <img src={shapes4} alt="" />
+          <img src={shapes4} alt="Marlene Dumas' work 1" />
           <p className="image-description times-new-roman">
             Marlene Dumas' work
           </p>
         </div>
         <div className="image-womanhoodComp13 lastw13 times-new-roman">
-          <img src={shapes5} alt="" />
+          <img src={shapes5} alt="Marlene Dumas' work 2" />
           <p className="image-description times-new-roman">
             Marlene Dumas' work
           </p>

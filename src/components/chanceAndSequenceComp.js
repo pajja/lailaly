@@ -267,8 +267,16 @@ const ChanceAndSequenceComp = () => {
         </div>
         <div className="container-last-chance">
           <div className="images-last-chance">
-            <img src={image1} alt="" className="img-fluid-horizontal" />
-            <img src={image2} alt="" className="img-fluid-horizontal" />
+            <img
+              src={image1}
+              alt="Chance and Sequence series artwork 1"
+              className="img-fluid-horizontal"
+            />
+            <img
+              src={image2}
+              alt="Chance and Sequence series artwork 2"
+              className="img-fluid-horizontal"
+            />
           </div>
         </div>
       </div>

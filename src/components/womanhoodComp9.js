@@ -94,13 +94,13 @@ const WomanhoodComp9 = () => {
       <div className="scroll-content">
         <div className="image-container-geoAndDecComp1 times-new-roman">
           <div className="image-womanhoodComp9">
-            <img src={Respect1} alt="" />
+            <img src={Respect1} alt="Womanhood series - red drawing 1" />
           </div>
           <div className="image-womanhoodComp9 smallerw9">
-            <img src={Respect2} alt="" />
+            <img src={Respect2} alt="Womanhood series - red drawing 2" />
           </div>
           <div className="image-womanhoodComp9">
-            <img src={Respect3} alt="" />
+            <img src={Respect3} alt="Womanhood series - red drawing 3" />
           </div>
         </div>
       </div>

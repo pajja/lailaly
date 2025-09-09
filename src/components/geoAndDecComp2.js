@@ -118,7 +118,7 @@ const GeoAndDecComp2 = () => {
           <div className="image-geoAndDecComp2 pad-1 times-new-roman">
             <img
               src={hilmaCollage}
-              alt="Hilma af Klint Coll"
+              alt="Hilma af Klint paintings collage"
               className="collage"
             />
             <div className="image-desc-container">
@@ -188,13 +188,19 @@ const GeoAndDecComp2 = () => {
             </div>
           </div>
           <div className="image-geoAndDecComp2 normalg2">
-            <img src={tree} alt="" />
+            <img
+              src={tree}
+              alt="Geometry and Decolonisation series - Acrylic on paper 1"
+            />
             <p className="image-description times-new-roman">
               Acrylic on paper, 297 x 420 mm
             </p>
           </div>
           <div className="image-geoAndDecComp2 normalg2">
-            <img src={lovers} alt="" />
+            <img
+              src={lovers}
+              alt="Geometry and Decolonisation series - Acrylic on paper 2"
+            />
             <p className="image-description times-new-roman">
               Acrylic on paper, 148.5 x 210 mm
             </p>

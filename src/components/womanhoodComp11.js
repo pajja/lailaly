@@ -96,22 +96,37 @@ const WomanhoodComp11 = () => {
       <div className="scroll-content">
         <div className="image-container-geoAndDecComp1 times-new-roman w11">
           <div className="image-womanhoodComp11">
-            <img src={Respect1} alt="" />
+            <img
+              src={Respect1}
+              alt="Womanhood series - painting red and blue"
+            />
           </div>
           <div className="image-womanhoodComp11">
-            <img src={Respect2} alt="" />
+            <img
+              src={Respect2}
+              alt="Womanhood series - The saddest sack of organs I ever did see"
+            />
             <p className="image-description font14px black">
               'The saddest sack of organs I ever did see'
             </p>
           </div>
           <div className="image-womanhoodComp11">
-            <img src={Respect3} alt="" />
+            <img
+              src={Respect3}
+              alt="Womanhood series - The unwanted watchful eye of the disease of creating life"
+            />
             <p className="image-description font14px black">
               'The unwanted watchful eye of the disease of creating life'
             </p>
           </div>
           <div className="image-womanhoodComp11">
-            <img src={Respect4} alt="" />
+            <img
+              src={Respect4}
+              alt="Womanhood series - The burden of carrying life"
+            />
+            <p className="image-description font14px black">
+              'The burden of carrying life'
+            </p>
           </div>
         </div>
       </div>

@@ -73,11 +73,17 @@ const FuturesComp5 = () => {
       <div className="scroll-content">
         <div className="image-container-geoAndDecComp1 times-new-roman">
           <div className="image-geoAndDecComp1">
-            <img src={ShapesFutures1} alt="" />
+            <img
+              src={ShapesFutures1}
+              alt="Futures series - Oil on unprimed canvas 1"
+            />
             <p className="image-description">Oil on unprimed canvas</p>
           </div>
           <div className="image-geoAndDecComp1">
-            <img src={ShapesFutures2} alt="" />
+            <img
+              src={ShapesFutures2}
+              alt="Futures series - Oil on unprimed canvas 2"
+            />
             <p className="image-description">Oil on unprimed canvas </p>
           </div>
         </div>

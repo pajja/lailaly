@@ -96,18 +96,28 @@ const WomanhoodComp10 = () => {
       <div className="scroll-content">
         <div className="image-container-geoAndDecComp1 times-new-roman gapw15">
           <div className="image-womanhoodComp10">
-            <img src={Respect1} alt="" />
+            <img
+              src={Respect1}
+              alt="Womanhood series - drawing of pregnant person"
+            />
           </div>
           <div className="image-womanhoodComp10">
-            <img src={Respect2} alt="" />
+            <img
+              src={Respect2}
+              alt="Womanhood series - Prints on shiny print paper"
+            />
             <p className="image-description">Prints on shiny print paper</p>
           </div>
           <div className="image-womanhoodComp10">
-            <img src={Respect3} alt="" />
+            <img src={Respect3} alt="Womanhood series - Print on Hosho paper" />
             <p className="image-description">Print on Hosho paper</p>
           </div>
           <div className="image-womanhoodComp10">
-            <img src={Respect4} alt="" />
+            <img
+              src={Respect4}
+              alt="Womanhood series - Print on uncoated paper"
+            />
+            <p className="image-description">Print on uncoated paper</p>
           </div>
         </div>
       </div>

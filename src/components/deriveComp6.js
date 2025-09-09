@@ -122,13 +122,13 @@ const DeriveComp6 = () => {
             </p>
           </div>
           <div className="image-deriveComp6">
-            <img src={leaf1} alt="" />
+            <img src={leaf1} alt="Dérive series - Leaves on threads 1" />
           </div>
           <div className="image-deriveComp6">
-            <img src={leaf2} alt="" />
+            <img src={leaf2} alt="Dérive series - Leaves on threads 2" />
           </div>
           <div className="image-deriveComp6">
-            <img src={leafCollage} alt="" />
+            <img src={leafCollage} alt="Dérive series - Leaves on threads 3" />
           </div>
         </div>
       </div>

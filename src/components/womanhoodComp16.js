@@ -64,7 +64,7 @@ const WomanhoodComp16 = () => {
         scrollbar.style.right = `${offset}px`;
       } else if (window.innerWidth <= 768) {
         // Regular mobile positioning
-        let offset = 18;
+        let offset = 36;
         scrollbar.style.right = `${offset}px`;
       } else {
         // Desktop positioning
@@ -260,7 +260,7 @@ const WomanhoodComp16 = () => {
         </div>
       </div>
 
-      <div className="custom-scrollbar-vertical w7">
+      <div className="custom-scrollbar-vertical w16">
         <div className="scrollbar-thumb-vertical">
           <span className="scrollbar-text-vertical">
             s<br />

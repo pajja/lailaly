@@ -109,7 +109,11 @@ const AssemblagesComp = () => {
       <div className="scroll-content">
         <div className="image-container-assemblagesComp times-new-roman">
           <div className="image-assemblagesComp marginleft100">
-            <img src={collage} alt="" className="collage" />
+            <img
+              src={collage}
+              alt="Assemblages series - Ink and collage on paper"
+              className="collage"
+            />
             <p className="image-description">
               Ink and collage on paper, 594 x 841mm
             </p>
@@ -167,7 +171,11 @@ const AssemblagesComp = () => {
             </div>
           </div>
           <div className="image-assemblagesComp last-a1">
-            <img src={putTogether} alt="" className="collage" />
+            <img
+              src={putTogether}
+              alt="Assemblages series - Neo Rauche, Max Ernst, Akiko Tangiguchi"
+              className="collage"
+            />
             <p className="image-description">
               Neo Rauche, Max Ernst, Akiko Tangiguchi
             </p>

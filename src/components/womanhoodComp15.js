@@ -102,16 +102,25 @@ const WomanhoodComp15 = () => {
             </p>
           </div>
           <div className="image-womanhoodComp15">
-            <img src={Painting4} alt="" />
+            <img
+              src={Painting4}
+              alt="Womanhood series - The sexualisation of women 7"
+            />
           </div>
           <div className="image-womanhoodComp15">
-            <img src={Painting5} alt="" />
+            <img
+              src={Painting5}
+              alt="Womanhood series - The sexualisation of women 8"
+            />
             <p className="image-description font14px times-new-roman black">
               'It is his very nature to do so'
             </p>
           </div>
           <div className="image-womanhoodComp15">
-            <img src={Painting6} alt="" />
+            <img
+              src={Painting6}
+              alt="Womanhood series - The sexualisation of women 9"
+            />
             <p className="image-description font14px times-new-roman black">
               'You'll be fucked with or without it, whatever you do'
             </p>
